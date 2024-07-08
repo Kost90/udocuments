@@ -19,9 +19,9 @@ const config = {
     },
     extend: {
       fontSize: {
-        "large-mobile": ["36px", "40px"],
-        "base-mobile": ["14px", "16px"],
-        "large-desctope": "56px",
+        "large-mobile": "36px",
+        "base-mobile": "16px",
+        "large-desctope": "48px",
         "base-desctope": "24px",
       },
       colors: {
@@ -66,6 +66,9 @@ const config = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      borderColor:{
+        orange:"rgba(234, 126, 31, 1)",
       },
       keyframes: {
         "accordion-down": {

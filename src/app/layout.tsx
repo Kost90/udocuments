@@ -6,6 +6,7 @@ import Header from "@/components/header/Header";
 
 const author = {
   name: "UDocument",
+  // TODO: Поменять на мой url
   url: "https://yourwebsite.com",
 };
 
