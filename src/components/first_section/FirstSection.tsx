@@ -1,6 +1,8 @@
+"use client";
 import SectionContainer from "../containers/Container";
 import { Titel, Paragraph } from "../typography/Typography";
 import Button from "../ui/Button";
+import { motion } from "framer-motion";
 
 function FirstSection() {
   return (
@@ -12,7 +14,10 @@ function FirstSection() {
 
 function CardMainSec() {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, x: -20 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.3, ease: "linear" }}
       className="flex flex-col w-full h-80 sm:w-[420px] md:w-[520px] lg:w-[588px] md:h-[391px] bg-darkTransparent p-4 items-start justify-around rounded-2xl mt-[200px] md:mt-[320px] mb-[200px] md:mb-[320px] border-orange border"
       aria-labelledby="card-main-title"
     >
@@ -30,7 +35,7 @@ function CardMainSec() {
       >
         Замовити дзвінок
       </Button>
-    </div>
+    </motion.div>
   );
 }
 

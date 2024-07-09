@@ -1,5 +1,5 @@
 import SectionContainer from "../containers/Container";
-import ContactsList from "../first_section/Contacts_list";
+import ContactsList from "./Contacts_list";
 import { Titel, Paragraph } from "../typography/Typography";
 import { Mail, Phone, MapPin } from "lucide-react";
 
