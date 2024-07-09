@@ -31,8 +31,8 @@ export function NavLink({ className, href, ...rest }: NavLinkProps) {
       {...rest}
       href={href}
       className={clsx(
-        `p-2 text-cream font-bold hover:text-orange-500 ${className}`,
-        href === pathname && "text-orange-500"
+        `p-2 text-cream font-bold hover:text-orange text-[14px] lg:text-lg ${className}`,
+        href === pathname && "text-orange"
       )}
     />
   );

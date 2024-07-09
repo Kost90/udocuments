@@ -19,8 +19,8 @@ function Header() {
     <header className="w-full bg-transparent absolute z-[1] border-b border-b-white">
       <Nav className="relative container z-10 mt-0 md:flex hidden">
         <NavLink href="/">
-          <div className="md:h-[80px] h-11 w-full">
-            <Image src={LogoWhite} alt="logo" width={120} />
+          <div className="md:h-[120px] h-11 sm:h-16 w-full">
+            <Image src={LogoWhite} alt="logo" width={180} />
           </div>
         </NavLink>
         <div className="flex flex-row items-center justify-between gap-7">
@@ -31,7 +31,7 @@ function Header() {
             <NavLink href="/services">Послуги</NavLink>
             <NavLink href="/contacts">Контакти</NavLink>
           </div>
-          <Button type="button" className="h-10 group:text-black">
+          <Button type="button" className="h-10 md:w-36 group:text-black">
             <NavLink
               href="/consultation"
               className="!text-black hover:!text-cream"
