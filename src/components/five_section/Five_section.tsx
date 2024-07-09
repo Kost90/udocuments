@@ -8,7 +8,7 @@ function FiveSection() {
     <SectionContainer className="bg-sectionBg h-full py-10 md:py-32">
       <div className="flex flex-col md:flex-row justify-center md:justify-between items-center md:items-start">
         <Titel
-          text="Укспертна юридична допомога та консультації"
+          text="Eкспертна юридична допомога та консультації"
           id="main_section_titel"
           className="text-large-desctope leading-[44px] lg:leading-[57px]"
         />

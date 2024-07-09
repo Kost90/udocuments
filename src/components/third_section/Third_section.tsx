@@ -19,7 +19,7 @@ const cardData = [
 
 function ThirdSection() {
   return (
-    <SectionContainer className="bg-sectionBg h-full border-y border-y-cream py-10 md:py-20">
+    <SectionContainer className="bg-general-gradient h-full border-y border-y-cream py-10 md:py-20">
       <Titel text="Наші послуги" id="main_titel" />
       <Paragraph
         text="We specialize in real estate law consultation, legal documentation, and general legal assistance."

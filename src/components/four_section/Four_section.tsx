@@ -28,7 +28,7 @@ const sectionData = [
 
 function FourSection() {
   return (
-    <SectionContainer className="bg-sectionBg h-full border-y border-y-cream py-10 md:py-20">
+    <SectionContainer className="bg-general-gradient h-full border-y border-y-cream py-10 md:py-20">
       <div className="flex flex-col justify-start items-start gap-5">
         {sectionData.map((el, i) => (
           <div>
