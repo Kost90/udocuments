@@ -31,10 +31,9 @@ function FourSection() {
     <SectionContainer className="bg-general-gradient h-full border-y border-y-cream py-10 md:py-20">
       <div className="flex flex-col justify-start items-start gap-5">
         {sectionData.map((el, i) => (
-          <div>
+          <div key={el.id}>
             <div
               className="flex flex-row justify-start items-center gap-5"
-              key={el.id}
             >
               <Image src={el.svgIcone} alt="svg_icon" />
               <Paragraph text={el.description} />

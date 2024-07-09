@@ -13,7 +13,7 @@ function SixSection() {
         <Paragraph text="Нам довіряють провідні компанії з усієї країни" className="!text-black font-semibold"/>
         <div className="flex flex-row justify-center items-center gap-10 flex-wrap">
           {iconsArr.map((el, i) => (
-            <Image src={el} alt="icon" />
+            <Image src={el} alt="icon" key={i}/>
           ))}
         </div>
       </div>
