@@ -2,7 +2,7 @@ import SectionContainer from "../containers/Container";
 import { Titel, Paragraph } from "../typography/Typography";
 import Button from "../ui/Button";
 
-function HelloSection() {
+function FirstSection() {
   return (
     <SectionContainer className="bg-header-section bg-cover h-full">
       <CardMainSec />
@@ -34,4 +34,4 @@ function CardMainSec() {
   );
 }
 
-export default HelloSection;
+export default FirstSection;

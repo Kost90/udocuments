@@ -20,7 +20,7 @@ export function Titel({ text, id, className = "mt-2 md:mb-2" }: PropsTitel) {
 export function Paragraph({ text, className }: PropsParagraph) {
   return (
     <p
-      className={`text-base-mobile lg:text-base-desctope text-cream text-wrap lg:!leading-8 mt-4 mb-4 ${className}`}
+      className={`text-base-mobile lg:text-base-desctope text-cream text-wrap lg:leading-8 mt-4 mb-4 ${className}`}
     >
       {text}
     </p>

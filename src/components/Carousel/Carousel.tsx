@@ -1,10 +1,7 @@
-import * as React from "react";
+
 import {
   Card,
-  CardTitle,
   CardContent,
-  CardDescription,
-  CardHeader,
   CardFooter,
 } from "../ui/Card";
 import Image from "next/image";
@@ -53,9 +50,9 @@ export function CarouselSpacing() {
     <Carousel className="w-full py-8">
       <CarouselContent className="-mr-1">
         {teamArray.map((el) => (
-          <CarouselItem key={el.id} className="pl-1 md:basis-1/2 lg:basis-1/3">
+          <CarouselItem key={el.id} className="pl-4 pr-6 md:basis-1/2 lg:basis-1/3">
             <div className="p-1">
-              <Card className="border-orange cursor-pointer overflow-hidden h-full my-4 md:my-10">
+              <Card className="border-orange cursor-pointer overflow-hidden h-full my-4 md:my-10 shadow-cardShadow">
                 <CardContent className="w-full p-0 overflow-hidden max-h-[450px]">
                   <Image
                     src={el.image}

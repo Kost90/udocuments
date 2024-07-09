@@ -1,13 +1,13 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -32,7 +32,7 @@ const config = {
         foreground: "hsl(var(--foreground))",
         cream: "rgba(253, 250, 236, 1)",
         black: "rgba(0, 0, 0, 1)",
-        orange:"rgba(234, 126, 31, 1)",
+        orange: "rgba(234, 126, 31, 1)",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -62,13 +62,16 @@ const config = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      boxShadow: {
+        cardShadow: "0px 10px 16px 4px rgba(0,0,0,0.86)",
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
-      borderColor:{
-        orange:"rgba(234, 126, 31, 1)",
+      borderColor: {
+        orange: "rgba(234, 126, 31, 1)",
       },
       keyframes: {
         "accordion-down": {
@@ -85,12 +88,13 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       backgroundColor: {
+        sectionBg: "rgba(21, 52, 60, 1)",
         navBar: "rgba(28, 46, 56, 1)",
         orange: "rgba(234, 126, 31, 1)",
         transparent: "rgba(0, 0, 0, 0.2)",
-        darkTransparent:"rgba(0, 0, 0, 0.5)",
+        darkTransparent: "rgba(0, 0, 0, 0.5)",
         cream: "rgba(253, 250, 236, 1)",
-        cardTransparent:"rgba(17, 42, 48, 0.9)",
+        cardTransparent: "rgba(17, 42, 48, 0.9)",
       },
       backgroundImage: {
         "general-gradient":
@@ -98,11 +102,11 @@ const config = {
         "dark-gradient": "linear-gradient(180deg, #000102 0%, #112A30 100%)",
         "light-gradient":
           "radial-gradient(57.57% 159.92% at 117.85% -4.92%, #5B7075 0%, #15343C 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))",
-          "header-section": "url(/assets/head_section_bg.jpg)",
+        "header-section": "url(/assets/head_section_bg.jpg)",
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;

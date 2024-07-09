@@ -33,7 +33,7 @@ const cardsData: ICardsData[] = [
 
 function SecondSection() {
   return (
-    <SectionContainer className="relative h-full bg-dark-gradient">
+    <SectionContainer className="relative h-full bg-dark-gradient pb-10 md:pb-20">
       <div className="flex flex-col md:flex-row justify-center items-center w-full md:flex-wrap m-auto left-0 right-0 gap-5 mt-2 lg:absolute lg:top-[-5%]">
         {cardsData.map((el) => (
           <CardSecondSection
