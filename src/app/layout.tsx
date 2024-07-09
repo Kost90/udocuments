@@ -3,6 +3,7 @@ import clsx from "clsx";
 import { roboto } from "../components/ui/fonts";
 import "./globals.css";
 import Header from "@/components/header/Header";
+import Footer from "@/components/footer/Footer";
 
 const author = {
   name: "UDocument",
@@ -43,7 +44,11 @@ export default function RootLayout({
       >
         <Header />
 
-        {children}
+        <main className="flex min-h-screen flex-col w-full top-0">
+          {children}
+        </main>
+
+        <Footer />
       </body>
     </html>
   );

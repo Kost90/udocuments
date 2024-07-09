@@ -19,7 +19,7 @@ function Header() {
     <header className="w-full bg-transparent absolute z-[1] border-b border-b-white">
       <Nav className="relative container z-10 mt-0 md:flex hidden">
         <NavLink href="/">
-          <div className="md:h-[120px] h-11 sm:h-16 w-full">
+          <div className="flex w-24 md:w-36 md:h-[120px]">
             <Image src={LogoWhite} alt="logo" width={180} />
           </div>
         </NavLink>

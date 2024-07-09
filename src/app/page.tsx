@@ -1,4 +1,3 @@
-
 import HelloSection from "@/components/first_section/FirstSection";
 import FiveSection from "@/components/five_section/Five_section";
 import FourSection from "@/components/four_section/Four_section";
@@ -10,15 +9,13 @@ import ContactSection from "@/components/contact_section/Contact_section";
 export default function Home() {
   return (
     <>
-      <main className="flex min-h-screen flex-col absolute w-full top-0">
-        <HelloSection />
-        <SecondSection />
-        <ThirdSection />
-        <FourSection />
-        <FiveSection/>
-        <SixSection/>
-        <ContactSection/>
-      </main>
+      <HelloSection />
+      <SecondSection />
+      <ThirdSection />
+      <FourSection />
+      <FiveSection />
+      <SixSection />
+      <ContactSection />
     </>
   );
 }
