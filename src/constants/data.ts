@@ -6,6 +6,10 @@ import LightIcon from "../../public/assets/Light-icon.png";
 import HandsIcone from "../../public/assets/hands_cone.svg";
 import FolderIcon from "../../public/assets/folder-icone.svg";
 import ShieldIcon from "../../public/assets/shield_icone.svg";
+import Bilozor from "../../public/assets/belozor_image.png";
+import Daniluk from "../../public/assets/daniluk_image.png";
+import Dontsov from "../../public/assets/dontsov_image.png";
+import Tsapushel from "../../public/assets/tsapushel_image.png";
 
 export interface ICardsData {
   id: string;
@@ -66,22 +70,49 @@ export const sectionData = [
 ];
 
 export const contactData = [
-    {
-      id: "mail",
-      svgIcone: Mail,
-      titel: "Email",
-      contact: "hello@gmail.com",
-    },
-    {
-      id: "phone",
-      svgIcone: Phone,
-      titel: "Телефон",
-      contact: "+38(00)000 000",
-    },
-    {
-      id: "map",
-      svgIcone: MapPin,
-      titel: "Офіс",
-      contact: "м.Одеса, вул. Катерининська, буд. 8",
-    },
-  ];
+  {
+    id: "mail",
+    svgIcone: Mail,
+    titel: "Email",
+    contact: "hello@gmail.com",
+  },
+  {
+    id: "phone",
+    svgIcone: Phone,
+    titel: "Телефон",
+    contact: "+38(00)000 000",
+  },
+  {
+    id: "map",
+    svgIcone: MapPin,
+    titel: "Офіс",
+    contact: "м.Одеса, вул. Катерининська, буд. 8",
+  },
+];
+
+export const teamArray = [
+  {
+    id: "belozor",
+    image: Bilozor,
+    name: "Олеся Білозор",
+    role: "керуючий партнер",
+  },
+  {
+    id: "daniluk",
+    image: Daniluk,
+    name: "Микола Данилюк",
+    role: "партнер",
+  },
+  {
+    id: "dontsov",
+    image: Dontsov,
+    name: "Костянтин Донцов",
+    role: "партнер, адвокат",
+  },
+  {
+    id: "tsapushel",
+    image: Tsapushel,
+    name: "Тсапушел Ірина",
+    role: "юрист",
+  },
+];
