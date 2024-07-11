@@ -39,7 +39,7 @@ function OurHistirySection() {
           <Image
             src={Picture}
             alt="our_history_image"
-            className="max-w-96 md:max-w-[520px] lg:max-w-[640px]"
+            className="max-w-full md:max-w-[520px] lg:max-w-[640px]"
           />
         </motion.div>
       </div>

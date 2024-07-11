@@ -16,7 +16,7 @@ function ContactSection() {
       >
         <div className="flex flex-col items-start justify-start mb-10 md:mb-20">
           <Titel text="Наші контакти" id="section_titel" />
-          <Paragraph text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. " />
+          <Paragraph text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. " className="mt-3 md:mt-0"/>
         </div>
         <div className="flex flex-col lg:flex-row justify-center lg:justify-between items-center gap-10">
           <div className="flex flex-col md:flex-row lg:flex-col items-center justify-center md:items-start md:justify-start lg:items-start lg:justify-start gap-8">

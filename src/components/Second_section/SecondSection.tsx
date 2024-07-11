@@ -43,6 +43,7 @@ function SecondSection() {
         transition={transition}
         viewport={viewPort}
         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        className="mt-3 md:mt-3"
       />
       <CarouselSpacing />
     </SectionContainer>
