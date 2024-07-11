@@ -6,7 +6,7 @@ import { Separator } from "../ui/separator";
 import { sectionData } from "@/constants/data";
 import { motion } from "framer-motion";
 
-function FourSection() {
+function ApproachSection() {
   return (
     <SectionContainer className="bg-general-gradient h-full border-y border-y-slate-400 py-10 md:py-20">
       <div className="flex flex-col justify-start items-start gap-5">
@@ -32,4 +32,4 @@ function FourSection() {
   );
 }
 
-export default FourSection;
+export default ApproachSection;
