@@ -1,5 +1,5 @@
 "use client";
-import  CarouselSpacing  from "@/components/carousel/Carousel";
+import  CarouselSpacing  from "@/components/Carousel/Carousel";
 import SectionContainer from "@/components/containers/Container";
 import { Paragraph, Titel } from "@/components/typography/Typography";
 import { animateTyphograpyVariants} from "@/constants/animation_variants";

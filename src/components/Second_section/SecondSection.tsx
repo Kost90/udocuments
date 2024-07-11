@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import SectionContainer from "../containers/Container";
 import CardSecondSection from "./Card/Card_second_section";
 import { Paragraph, Titel } from "../typography/Typography";
-import CarouselSpacing from "../carousel/Carousel";
+import CarouselSpacing from "../Carousel/Carousel";
 import {
   animateTyphograpyVariants,
   transition,
