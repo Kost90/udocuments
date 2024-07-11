@@ -1,50 +1,38 @@
+"use client";
 import SectionContainer from "../containers/Container";
 import ContactsList from "./Contacts_list";
 import { Titel, Paragraph } from "../typography/Typography";
-import { Mail, Phone, MapPin } from "lucide-react";
-
-const contactData = [
-  {
-    id: "mail",
-    svgIcone: Mail,
-    titel: "Email",
-    contact: "hello@gmail.com",
-  },
-  {
-    id: "phone",
-    svgIcone: Phone,
-    titel: "Телефон",
-    contact: "+38(00)000 000",
-  },
-  {
-    id: "map",
-    svgIcone: MapPin,
-    titel: "Офіс",
-    contact: "м.Одеса, вул. Катерининська, буд. 8",
-  },
-];
+import { contactData } from "@/constants/data";
+import { motion } from "framer-motion";
 
 function ContactSection() {
   return (
     <SectionContainer className="bg-light-gradient py-10 md:py-20 h-full border-b border-b-cream">
-      <div className="flex flex-col items-start justify-start mb-10 md:mb-20">
-        <Titel text="Наші контакти" id="section_titel" />
-        <Paragraph text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. " />
-      </div>
-      <div className="flex flex-col lg:flex-row justify-center lg:justify-between items-center gap-10">
-        <div className="flex flex-col md:flex-row lg:flex-col items-center justify-center md:items-start md:justify-start lg:items-start lg:justify-start gap-8">
-          {contactData.map((el) => (
-            <ContactsList
-              id={el.id}
-              titel={el.titel}
-              svgIcone={el.svgIcone}
-              contact={el.contact}
-              key={el.id}
-            />
-          ))}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3, ease: "linear" }}
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <div className="flex flex-col items-start justify-start mb-10 md:mb-20">
+          <Titel text="Наші контакти" id="section_titel" />
+          <Paragraph text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. " />
         </div>
-        <GoogleMapFrame />
-      </div>
+        <div className="flex flex-col lg:flex-row justify-center lg:justify-between items-center gap-10">
+          <div className="flex flex-col md:flex-row lg:flex-col items-center justify-center md:items-start md:justify-start lg:items-start lg:justify-start gap-8">
+            {contactData.map((el) => (
+              <ContactsList
+                id={el.id}
+                titel={el.titel}
+                svgIcone={el.svgIcone}
+                contact={el.contact}
+                key={el.id}
+              />
+            ))}
+          </div>
+          <GoogleMapFrame />
+        </div>
+      </motion.div>
     </SectionContainer>
   );
 }

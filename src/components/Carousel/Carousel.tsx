@@ -1,42 +1,10 @@
-
 import {
   Card,
   CardContent,
   CardFooter,
 } from "../ui/Card";
 import Image from "next/image";
-import Bilozor from "../../../public/assets/belozor_image.png";
-import Daniluk from "../../../public/assets/daniluk_image.png";
-import Dontsov from "../../../public/assets/dontsov_image.png";
-import Tsapushel from "../../../public/assets/tsapushel_image.png";
-
-const teamArray = [
-  {
-    id: "belozor",
-    image: Bilozor,
-    name: "Олеся Білозор",
-    role: "керуючий партнер",
-  },
-  {
-    id: "daniluk",
-    image: Daniluk,
-    name: "Микола Данилюк",
-    role: "партнер",
-  },
-  {
-    id: "dontsov",
-    image: Dontsov,
-    name: "Костянтин Донцов",
-    role: "партнер, адвокат",
-  },
-  {
-    id: "tsapushel",
-    image: Tsapushel,
-    name: "Тсапушел Ірина",
-    role: "юрист",
-  },
-];
-
+import { teamArray } from "@/constants/data";
 import {
   Carousel,
   CarouselContent,
@@ -45,7 +13,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-export function CarouselSpacing() {
+function CarouselSpacing() {
   return (
     <Carousel className="w-full py-8">
       <CarouselContent className="-mr-1">
@@ -74,3 +42,5 @@ export function CarouselSpacing() {
     </Carousel>
   );
 }
+
+export default CarouselSpacing

@@ -34,7 +34,8 @@ export const Paragraph = React.forwardRef<HTMLParagraphElement, PropsParagraph>(
   ) => {
     return (
       <p
-        className={`text-base-mobile lg:text-base-desctope text-cream text-wrap lg:leading-8 mt-4 mb-4 ${className}`}
+      ref={ref}
+        className={`text-base-mobile lg:text-base-desctope text-cream text-wrap lg:leading-8 ${className}`}
       >
         {text}
       </p>

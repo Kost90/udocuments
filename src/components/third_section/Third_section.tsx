@@ -1,31 +1,46 @@
+"use client";
 import SectionContainer from "../containers/Container";
 import { Titel, Paragraph } from "../typography/Typography";
 import { Card, CardHeader, CardContent } from "../ui/Card";
 import Link from "next/link";
+import { cardData } from "@/constants/data";
+import { motion } from "framer-motion";
+import {
+  animateTyphograpyVariants,
+  transition,
+  viewPort,
+} from "@/constants/animation_variants";
 
-const cardData = [
-  {
-    id: "firstCard",
-    titel: "Юридичний супровід бізнесу",
-    description: "Ми надаємо повний цикл юридичного супроводу бізнесу",
-  },
-  {
-    id: "secondCard",
-    titel: "Послуги у сфері нерухомості",
-    description:
-      "Наша команда досвідчених юристів та інженерів з оформлення нерухомості",
-  },
-];
+const MotionTitel = motion(Titel);
+const MotionParagraph = motion(Paragraph);
 
 function ThirdSection() {
   return (
-    <SectionContainer className="bg-general-gradient h-full border-y border-y-cream py-10 md:py-20">
-      <Titel text="Наші послуги" id="main_titel" />
-      <Paragraph
-        text="We specialize in real estate law consultation, legal documentation, and general legal assistance."
-        className="md:mt-10"
+    <SectionContainer className="bg-general-gradient h-full border-y border-y-slate-400 py-10 md:py-20">
+      <MotionTitel
+        initial="initial"
+        whileInView="whileInView"
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.3, ease: "linear" }}
+        variants={animateTyphograpyVariants}
+        text="Наші послуги"
+        id="main_titel"
       />
-      <div className="flex flex-col md:flex-row justify-center md:justify-between items-center gap-5 my-10 md:my-20">
+      <MotionParagraph
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={transition}
+        viewport={viewPort}
+        text="We specialize in real estate law consultation, legal documentation, and general legal assistance."
+        className="md:mt-8"
+      />
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3, delay: 0.3, ease: "linear" }}
+        viewport={{ once: true, amount: 0.2 }}
+        className="flex flex-col md:flex-row justify-center md:justify-between items-center gap-5 my-10 md:my-20"
+      >
         {cardData.map((el) => (
           <Card
             key={el.id}
@@ -39,7 +54,7 @@ function ThirdSection() {
             </Link>
           </Card>
         ))}
-      </div>
+      </motion.div>
     </SectionContainer>
   );
 }
