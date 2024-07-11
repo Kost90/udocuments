@@ -32,7 +32,7 @@ function ThirdSection() {
         transition={transition}
         viewport={viewPort}
         text="We specialize in real estate law consultation, legal documentation, and general legal assistance."
-        className="md:mt-8"
+        className="mt-3 md:mt-8"
       />
       <motion.div
         initial={{ opacity: 0, y: 20 }}
