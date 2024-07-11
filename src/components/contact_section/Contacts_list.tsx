@@ -5,12 +5,14 @@ type IContacProps = {
   titel: string;
   contact: string;
   svgIcone: React.ElementType;
+  className?:string;
+  paragraphStyle?:string;
 };
 
 function ContactsList({ ...props }: IContacProps) {
   return (
     <div
-      className="flex flex-col justify-center items-center text-center md:text-start md:items-start md:justify-start gap-1"
+      className={`flex flex-col justify-center items-center text-center md:text-start md:items-start md:justify-start gap-1 ${props.className}`}
       key={props.id}
     >
       <props.svgIcone className="text-cream w-[26px] h-[26px]" />
@@ -37,7 +39,7 @@ function ContactsList({ ...props }: IContacProps) {
       {props.id !== "mail" && props.id !== "phone" ? (
         <Paragraph
           text={props.contact}
-          className="font-light text-sm lg:!text-[16px] mt-0 mb-0 md:mt-0 md:mb-0 lg:mt-0 lg:mb-0 max-w-32"
+          className={`font-light text-sm lg:!text-[16px] mt-0 mb-0 md:mt-0 md:mb-0 lg:mt-0 lg:mb-0 max-w-32 ${props.paragraphStyle}`}
         />
       ) : null}
     </div>
