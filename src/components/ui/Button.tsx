@@ -1,4 +1,6 @@
+'use client'
 import clsx from "clsx";
+import { useFormStatus } from "react-dom";
 
 interface IProps {
   type: "submit" | "reset" | "button";
@@ -9,6 +11,8 @@ interface IProps {
   disabled?:boolean;
 }
 function Button({ type, onClick, name, className = "", children, disabled }: IProps) {
+  const { pending } = useFormStatus();
+
   return (
     <button
       type={type}
@@ -17,7 +21,7 @@ function Button({ type, onClick, name, className = "", children, disabled }: IPr
         `flex items-center justify-center p-2 md:py-2 md:px-5 border border-black rounded-xl w-40 bg-orange text-black hover:bg-navBar hover:border-orange hover:text-cream active:bg-cream active:text-black transition duration-75 cursor-pointer`,
         className
       )}
-      disabled={disabled}
+      disabled={pending}
     >
       {name}
       {children}
