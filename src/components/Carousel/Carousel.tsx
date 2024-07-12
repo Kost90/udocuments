@@ -1,3 +1,4 @@
+'use client'
 import {
   Card,
   CardContent,
@@ -12,10 +13,19 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { motion } from "framer-motion";
+import { transitionWithoutDelay, viewPort } from "@/constants/animation_variants";
+
+const MotionCarousel = motion(Carousel);
 
 function CarouselSpacing() {
   return (
-    <Carousel className="w-full py-8">
+    <MotionCarousel 
+    initial={{opacity:0}}
+    whileInView={{opacity:1}}
+    transition={transitionWithoutDelay}
+    viewport={viewPort}
+    className="w-full py-8">
       <CarouselContent className="-mr-1">
         {teamArray.map((el) => (
           <CarouselItem key={el.id} className="pl-4 pr-6 md:basis-1/2 lg:basis-1/3">
@@ -39,7 +49,7 @@ function CarouselSpacing() {
       </CarouselContent>
       <CarouselPrevious type={"button"} />
       <CarouselNext type={"button"} />
-    </Carousel>
+    </MotionCarousel>
   );
 }
 

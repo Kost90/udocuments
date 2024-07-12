@@ -5,9 +5,9 @@ import { Titel, Paragraph } from "../typography/Typography";
 import { contactData } from "@/constants/data";
 import { motion } from "framer-motion";
 
-function ContactSection() {
+function ContactSection({className}:{className?:string}) {
   return (
-    <SectionContainer className="bg-light-gradient py-10 md:py-20 h-full border-b border-b-cream">
+    <SectionContainer className={`bg-light-gradient py-10 md:py-20 h-full border-b border-b-cream ${className}`}>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -18,7 +18,7 @@ function ContactSection() {
           <Titel text="Наші контакти" id="section_titel" />
           <Paragraph text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. " className="mt-3 md:mt-0"/>
         </div>
-        <div className="flex flex-col lg:flex-row justify-center lg:justify-between items-center gap-10">
+        <div className="flex flex-col lg:flex-row justify-center lg:justify-between items-center gap-10 bg-general-gradient border border-orange p-4 rounded-lg">
           <div className="flex flex-col md:flex-row lg:flex-col items-center justify-center md:items-start md:justify-start lg:items-start lg:justify-start gap-8">
             {contactData.map((el) => (
               <ContactsList

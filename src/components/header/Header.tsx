@@ -43,7 +43,7 @@ function Header() {
 
         <div className="flex flex-row items-center">
           {/* Делаю переключение на страницы с другим языком */}
-          <NavLink href="/" className="font-light">
+          {/* <NavLink href="/" className="font-light">
             Ua
           </NavLink>
           <div className="h-6 w-[1px] bg-white" />
@@ -53,7 +53,7 @@ function Header() {
           <div className="h-6 w-[1px] bg-white" />
           <NavLink href="/en" className="font-light">
             Eng
-          </NavLink>
+          </NavLink> */}
         </div>
       </Nav>
       <Nav className="relative container z-10 mt-0 md:hidden">

@@ -76,13 +76,13 @@ export const contactData = [
     id: "mail",
     svgIcone: Mail,
     titel: "Email",
-    contact: "hello@gmail.com",
+    contact: "leparker@ukr.net",
   },
   {
     id: "phone",
     svgIcone: Phone,
     titel: "Телефон",
-    contact: "+38(00)000 000",
+    contact: "+38(99)773 10 93",
   },
   {
     id: "map",

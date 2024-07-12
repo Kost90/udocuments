@@ -7,7 +7,7 @@ function SectionContainer({
 }>) {
   return (
     <section className={`w-full ${className}`}>
-      <div className="container">{children}</div>
+      <div className="container h-full">{children}</div>
     </section>
   );
 }

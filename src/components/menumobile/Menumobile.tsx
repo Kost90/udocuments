@@ -51,7 +51,7 @@ function Menumobile({ isOpen, onClick }: IProps) {
       </NavLink>
       <div className="flex flex-row items-center">
         {/* Делаю переключение на страницы с другим языком */}
-        <NavLink href="/" className="font-light" onClick={onClick}>
+        {/* <NavLink href="/" className="font-light" onClick={onClick}>
           Ua
         </NavLink>
         <div className="h-6 w-[1px] bg-white" />
@@ -61,7 +61,7 @@ function Menumobile({ isOpen, onClick }: IProps) {
         <div className="h-6 w-[1px] bg-white" />
         <NavLink href="/en" className="font-light" onClick={onClick}>
           Eng
-        </NavLink>
+        </NavLink> */}
       </div>
     </motion.div>
   );
