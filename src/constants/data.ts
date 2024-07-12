@@ -7,9 +7,11 @@ import HandsIcone from "../../public/assets/hands_cone.svg";
 import FolderIcon from "../../public/assets/folder-icone.svg";
 import ShieldIcon from "../../public/assets/shield_icone.svg";
 import Bilozor from "../../public/assets/belozor_image.png";
-import Daniluk from "../../public/assets/daniluk_image.png";
 import Dontsov from "../../public/assets/dontsov_image.png";
 import Tsapushel from "../../public/assets/tsapushel_image.png";
+import Barda from "../../public/assets/barda_image.png";
+import Loshakova from "../../public/assets/loshakova_image.png";
+import Sherbin from "../../public/assets/sherbin_image.png";
 
 export interface ICardsData {
   id: string;
@@ -95,13 +97,7 @@ export const teamArray = [
     id: "belozor",
     image: Bilozor,
     name: "Олеся Білозор",
-    role: "керуючий партнер",
-  },
-  {
-    id: "daniluk",
-    image: Daniluk,
-    name: "Микола Данилюк",
-    role: "партнер",
+    role: "керуючий партнер, адвокат",
   },
   {
     id: "dontsov",
@@ -110,9 +106,27 @@ export const teamArray = [
     role: "партнер, адвокат",
   },
   {
+    id: "loshakova",
+    image: Loshakova,
+    name: "Лошакова Юлія",
+    role: "адвокат",
+  },
+  {
+    id: "barda",
+    image: Barda,
+    name: "Барда Катерина",
+    role: "адвокат",
+  },
+  {
     id: "tsapushel",
     image: Tsapushel,
     name: "Тсапушел Ірина",
     role: "юрист",
+  },
+  {
+    id: "sherbin",
+    image: Sherbin,
+    name: "Щербін Андрій",
+    role: "інженер з технічної інвентаризації",
   },
 ];

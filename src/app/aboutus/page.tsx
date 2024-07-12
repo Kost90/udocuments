@@ -3,6 +3,7 @@ import HeadingSection from "./_components/HeadingSection"
 import OurTeamSection from "./_components/OurTeamSection"
 import OurHistirySection from "./_components/OurHistirySection"
 import ContactsSection from "./_components/ContactsSection"
+import FormSection from "./_components/FormSection"
 
 function page() {
   return (
@@ -12,6 +13,7 @@ function page() {
     <OurTeamSection/>
     <OurPertnersSection/>
     <ContactsSection/>
+    <FormSection/>
     </>
   )
 }
