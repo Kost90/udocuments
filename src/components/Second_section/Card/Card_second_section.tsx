@@ -17,7 +17,7 @@ function CardSecondSection({ ...props }: IProps) {
     <MotionCard
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3, delay: 0.2 * props.index, ease: "linear" }}
+      transition={{ duration: 0.2, delay: 0.1 * props.index, ease: "linear" }}
       viewport={{ once: true, amount:0.2 }}
       className="bg-cardTransparent border border-orange h-full sm:h-[230px] w-full sm:max-w-[430px] flex items-center flex-col justify-center p-2"
     >

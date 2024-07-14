@@ -46,7 +46,7 @@ function Modal() {
               placeholder="Ваше телефон"
               error={error?.phone}
             />
-            <div className="flex flex-row items-center justify-between gap-3">
+            <div className="flex flex-row flex-wrap items-center justify-center gap-3">
               <Button type="submit">Надіслати</Button>
               <Link href={pathname}>
                 <Button type="button">Скасувати</Button>
