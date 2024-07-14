@@ -7,6 +7,7 @@ import CarouselSpacing from "../Carousel/Carousel";
 import {
   animateTyphograpyVariants,
   transition,
+  transitionWithoutDelay,
   viewPort,
 } from "@/constants/animation_variants";
 import { cardsData } from "@/constants/data";
@@ -38,9 +39,9 @@ function SecondSection() {
         className="xl:mt-[320px] lg:mt-[500px] md:mt-[140px] mt-[120px]"
       />
       <MotionParagraph
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={transition}
+        initial={{ opacity: 0, y:20 }}
+        whileInView={{ opacity: 1, y:0 }}
+        transition={transitionWithoutDelay}
         viewport={viewPort}
         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         className="mt-3 md:mt-3"

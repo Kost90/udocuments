@@ -1,4 +1,4 @@
-import { InputProps } from "./Input";
+import { InputProps } from "../Input/Input";
 
 type TextAreaProps = Omit<InputProps, "type">;
 
