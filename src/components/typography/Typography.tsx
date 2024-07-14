@@ -17,7 +17,7 @@ export const Titel = React.forwardRef<HTMLHeadingElement, PropsTitel>(
       <h1
         ref={ref}
         id={id}
-        className={`text-large-mobile lg:text-large-desktop text-orange font-semibold leading-4 lg:leading-[40px] ${className}`}
+        className={`text-large-mobile lg:text-large-desktop text-orange font-semibold leading-8 lg:leading-[40px] ${className}`}
       >
         {text}
       </h1>
@@ -34,7 +34,7 @@ export const Paragraph = React.forwardRef<HTMLParagraphElement, PropsParagraph>(
   ) => {
     return (
       <p
-      ref={ref}
+        ref={ref}
         className={`text-base-mobile lg:text-base-desctope text-cream text-wrap lg:leading-8 ${className}`}
       >
         {text}

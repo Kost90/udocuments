@@ -27,21 +27,17 @@ function Modal() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={transitionWithoutDelay}
             viewport={viewPort}
-            className="flex flex-col gap-4 justify-center items-start p-6 bg-general-gradient w-full h-full rounded-xl border border-orange text-start max-w-full md:max-w-[50%] max-h-[60%]"
+            className="flex flex-col gap-4 justify-center items-start p-6 bg-general-gradient w-full h-full rounded-xl border border-orange text-start max-w-full md:max-w-[50%] max-h-full md:max-h-[60%]"
           >
             <Titel
               text="Замовити зворотній звонок"
               id="titel_of_modal_window"
-              className="mb-0 md:leading-3"
+              className="mb-0 leading-10 md:leading-3"
             />
-            <Paragraph text="Наш менеджер надасть вам безкоштовну консультацію"/>
+            <Paragraph text="Наш менеджер надасть вам безкоштовну консультацію" />
             <form
-              // initial={{ opacity: 0, y: 20 }}
-              // whileInView={{ opacity: 1, y: 0 }}
-              // transition={transitionWithoutDelay}
-              // viewport={viewPort}
               action={sendCallbackMessAction}
-              className="flex flex-col gap-6 justify-center items-start bg-general-gradient w-full"
+              className="flex flex-col gap-6 justify-center items-start bg-general-gradient w-full h-full"
             >
               <Input
                 label="Імя"
