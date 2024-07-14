@@ -3,7 +3,7 @@ import React from 'react'
 
 function Loader() {
   return (
-    <div className="bg-general-gradient flex justify-center h-screen w-full">
+    <div className="hidden bg-general-gradient justify-center h-screen w-full">
       <Loader2 className="size-24 animate-spin text-orange" />
     </div>
   )

@@ -6,7 +6,7 @@ import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import Modal from "@/components/Modal/Modal";
 import { Suspense } from "react";
-import Loader from "../components/Loader/loading";
+import Loader from "../components/Loader/Loader";
 
 const author = {
   name: "UDocument",
