@@ -82,7 +82,7 @@ export const contactData = [
     id: "phone",
     svgIcone: Phone,
     titel: "Телефон",
-    contact: "+38(99)773 10 93",
+    contact: "+380(99)773 10 93",
   },
   {
     id: "map",
