@@ -27,14 +27,14 @@ function Modal() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={transitionWithoutDelay}
             viewport={viewPort}
-            className="flex flex-col gap-4 justify-center items-start p-6 bg-general-gradient w-full h-full rounded-xl border border-orange text-start max-w-full md:max-w-[50%] max-h-full md:max-h-[60%]"
+            className="flex flex-col gap-2 md:gap-4 justify-center items-start p-6 bg-general-gradient w-full h-full rounded-xl border border-orange text-start max-w-full md:max-w-[60%] max-h-full lg:max-h-[60%] lg:max-w-[50%]"
           >
             <Titel
-              text="Замовити зворотній звонок"
+              text="Замовити зворотній дзвінок"
               id="titel_of_modal_window"
-              className="mb-0 leading-10 md:leading-3"
+              className="mb-0 leading-10"
             />
-            <Paragraph text="Наш менеджер надасть вам безкоштовну консультацію" />
+            <Paragraph text="Наш менеджер надасть вам безкоштовну консультацію" className="mt-0"/>
             <form
               action={sendCallbackMessAction}
               className="flex flex-col gap-6 justify-center items-start bg-general-gradient w-full h-full"
@@ -59,7 +59,7 @@ function Modal() {
               <div className="flex flex-row flex-wrap items-center justify-center gap-3">
                 <Button type="submit">Надіслати</Button>
                 <Link href={pathname}>
-                  <Button type="button">Скасувати</Button>
+                  <Button type="button" className="hover:bg-cream hover:!text-black hover:font-bold">Скасувати</Button>
                 </Link>
               </div>
             </form>

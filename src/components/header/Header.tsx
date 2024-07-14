@@ -30,14 +30,15 @@ function Header() {
             <NavLink href="/services">Послуги</NavLink>
             <NavLink href="/contacts">Контакти</NavLink>
           </div>
-          <Button type="button" className="h-10 md:w-36 group:text-black">
-            <NavLink
+          <NavLink
               href="?modal=true"
-              className="!text-black hover:!text-cream"
             >
+          <Button type="button" className="h-10 md:w-36 group:text-black font-normal">
+           
               Консультація
-            </NavLink>
+            
           </Button>
+          </NavLink>
         </div>
         <div className="flex flex-row items-center">
           {/* Делаю переключение на страницы с другим языком */}
