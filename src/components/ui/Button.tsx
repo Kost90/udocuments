@@ -8,9 +8,8 @@ interface IProps {
   className?: string;
   name?: string;
   children?: React.ReactNode;
-  disabled?:boolean;
 }
-function Button({ type, onClick, name, className = "", children, disabled }: IProps) {
+function Button({ type, onClick, name, className = "", children}: IProps) {
   const { pending } = useFormStatus();
 
   return (

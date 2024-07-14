@@ -4,6 +4,7 @@ import { roboto } from "../components/ui/fonts";
 import "./globals.css";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
+import Modal from "@/components/Modal/Modal";
 
 const author = {
   name: "UDocument",
@@ -45,6 +46,7 @@ export default function RootLayout({
         <Header />
 
         <main className="flex min-h-screen flex-col w-full top-0">
+          <Modal />
           {children}
         </main>
 
