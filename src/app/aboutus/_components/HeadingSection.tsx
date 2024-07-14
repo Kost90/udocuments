@@ -6,6 +6,7 @@ import {
   animateTyphograpyVariants,
   viewPort,
   transition,
+  transitionWithoutDelay,
 } from "@/constants/animation_variants";
 
 const MotionTitel = motion(Titel);
@@ -19,7 +20,7 @@ function HeadingSection() {
           initial="initial"
           whileInView="whileInView"
           viewport={viewPort}
-          transition={transition}
+          transition={transitionWithoutDelay}
           variants={animateTyphograpyVariants}
           text="Досвідчені фахівці в галузі права"
           id="heading_aboutus_page"
@@ -29,7 +30,7 @@ function HeadingSection() {
           initial="initial"
           whileInView="whileInView"
           viewport={viewPort}
-          transition={transition}
+          transition={transitionWithoutDelay}
           variants={animateTyphograpyVariants}
           text="Надання експертних юридичних консультацій та допомоги у сфері нерухомості та не тільки"
         />

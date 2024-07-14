@@ -3,9 +3,9 @@ import React from "react";
 import Button from "@/components/ui/Button";
 import { sendMessage } from "../../_actions/actions";
 import { useFormState } from "react-dom";
-import Input from "./Input";
-import SelectComponent from "./SelectComponent";
-import TextAreaComponent from "./TextAreaComponent";
+import Input from "../../../../components/Input/Input";
+import SelectComponent from "../../../../components/Select/SelectComponent";
+import TextAreaComponent from "../../../../components/TextArea/TextAreaComponent";
 
 function Form() {
   const [error, sendMessageAction] = useFormState(sendMessage, {});

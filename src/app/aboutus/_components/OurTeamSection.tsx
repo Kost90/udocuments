@@ -6,6 +6,7 @@ import {
   animateTyphograpyVariants,
   transition,
   viewPort,
+  transitionWithoutDelay,
 } from "@/constants/animation_variants";
 import { motion } from "framer-motion";
 
@@ -25,9 +26,9 @@ function OurTeamSection() {
         id="titel_our_team_section"
       />
       <MotionParagraph
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={transition}
+        initial={{ opacity: 0, y:20 }}
+        whileInView={{ opacity: 1, y:0 }}
+        transition={transitionWithoutDelay}
         viewport={viewPort}
         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         className="mt-3 md:mt-3"

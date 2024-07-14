@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import SectionContainer from "@/components/containers/Container";
 import ContactsList from "@/components/contact_section/Contacts_list";
 import { contactData } from "@/constants/data";
-import { transition, viewPort } from "@/constants/animation_variants";
+import { transition,transitionWithoutDelay, viewPort } from "@/constants/animation_variants";
 
 function ContactsSection() {
   return (
@@ -11,7 +11,7 @@ function ContactsSection() {
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={transition}
+        transition={transitionWithoutDelay}
         viewport={viewPort}
         className="flex flex-col md:flex-row justify-around items-start gap-10"
       >

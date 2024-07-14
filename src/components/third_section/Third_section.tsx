@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import {
   animateTyphograpyVariants,
   transition,
+  transitionWithoutDelay,
   viewPort,
 } from "@/constants/animation_variants";
 
@@ -27,12 +28,12 @@ function ThirdSection() {
         id="main_titel"
       />
       <MotionParagraph
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={transition}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={transitionWithoutDelay}
         viewport={viewPort}
         text="We specialize in real estate law consultation, legal documentation, and general legal assistance."
-        className="mt-3 md:mt-8"
+        className="mt-3 md:mt-3"
       />
       <motion.div
         initial={{ opacity: 0, y: 20 }}
