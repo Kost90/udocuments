@@ -1,14 +1,14 @@
 "use client";
 import React from "react";
 import Button from "@/components/ui/Button";
-import { sendMessage } from "../../_actions/actions";
+import { sendContactMessage } from "../../_actions/actions";
 import { useFormState } from "react-dom";
 import Input from "../../../../components/Input/Input";
 import SelectComponent from "../../../../components/Select/SelectComponent";
 import TextAreaComponent from "../../../../components/TextArea/TextAreaComponent";
 
 function Form() {
-  const [error, sendMessageAction] = useFormState(sendMessage, {});
+  const [error, sendMessageAction] = useFormState(sendContactMessage, {});
 
   return (
     <form

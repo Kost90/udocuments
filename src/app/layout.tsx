@@ -4,6 +4,9 @@ import { roboto } from "../components/ui/fonts";
 import "./globals.css";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
+import Modal from "@/components/Modal/Modal";
+import { Suspense } from "react";
+import Loader from "../components/Loader/loading";
 
 const author = {
   name: "UDocument",
@@ -45,6 +48,10 @@ export default function RootLayout({
         <Header />
 
         <main className="flex min-h-screen flex-col w-full top-0">
+          <Suspense fallback={<Loader />}>
+            <Modal />
+          </Suspense>
+
           {children}
         </main>
 

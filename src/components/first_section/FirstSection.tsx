@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import SectionContainer from "../containers/Container";
 import { Titel, Paragraph } from "../typography/Typography";
 import Button from "../ui/Button";
@@ -30,12 +31,14 @@ function CardMainSec() {
         допоможуть вам вирішити складні правові питання."
         className="mt-3 md:mt-0"
       />
-      <Button
-        type="button"
-        className="h-12 md:w-48 flex items-center justify-center text-sm md:text-base"
-      >
-        Замовити дзвінок
-      </Button>
+      <Link href="?modal=true">
+        <Button
+          type="button"
+          className="h-12 md:w-48 flex items-center justify-center text-sm md:text-base"
+        >
+          Замовити дзвінок
+        </Button>
+      </Link>
     </motion.div>
   );
 }

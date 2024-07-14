@@ -10,7 +10,6 @@ import { AnimatePresence } from "framer-motion";
 
 function Header() {
   const [isOpen, setIsOpend] = useState<boolean>(false);
-
   const handelChange = () => {
     setIsOpend(!isOpen);
   };
@@ -33,14 +32,13 @@ function Header() {
           </div>
           <Button type="button" className="h-10 md:w-36 group:text-black">
             <NavLink
-              href="/consultation"
+              href="?modal=true"
               className="!text-black hover:!text-cream"
             >
               Консультація
             </NavLink>
           </Button>
         </div>
-
         <div className="flex flex-row items-center">
           {/* Делаю переключение на страницы с другим языком */}
           {/* <NavLink href="/" className="font-light">
