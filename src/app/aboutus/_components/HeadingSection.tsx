@@ -16,16 +16,15 @@ function HeadingSection() {
   return (
     <SectionContainer className="bg-sectionBg h-full w-full pt-32 md:pt-[185px] pb-28 border-b border-b-slate-400">
       <div className="flex flex-col gap-6 justify-start items-start pt-10 md:py-20">
-        <MotionTitel
+        <motion.h1
           initial="initial"
           whileInView="whileInView"
           viewport={viewPort}
           transition={transitionWithoutDelay}
           variants={animateTyphograpyVariants}
-          text="Досвідчені фахівці в галузі права"
           id="heading_aboutus_page"
-          className="leading-9"
-        />
+          className="text-large-mobile lg:text-large-desktop text-orange font-semibold leading-8 lg:leading-[40px] leading-9"
+        >Досвідчені фахівці в галузі права</motion.h1>
         <MotionParagraph
           initial="initial"
           whileInView="whileInView"

@@ -14,13 +14,13 @@ export const Titel = React.forwardRef<HTMLHeadingElement, PropsTitel>(
     ref: ForwardedRef<HTMLHeadingElement>
   ) => {
     return (
-      <h1
+      <h2
         ref={ref}
         id={id}
         className={`text-large-mobile lg:text-large-desktop text-orange font-semibold leading-8 lg:leading-[40px] ${className}`}
       >
         {text}
-      </h1>
+      </h2>
     );
   }
 );

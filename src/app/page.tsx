@@ -1,4 +1,4 @@
-import HelloSection from "@/components/first_section/FirstSection";
+import FirstSection from "@/components/first_section/FirstSection";
 import ConsultationSection from "@/components/Consultation_section/ConsultationSection";
 import ApproachSection from "@/components/ApproachSection/ApproachSection";
 import SecondSection from "@/components/Second_section/SecondSection";
@@ -9,7 +9,7 @@ import ContactSection from "@/components/contact_section/Contact_section";
 export default function Home() {
   return (
     <>
-      <HelloSection />
+      <FirstSection />
       <SecondSection />
       <ThirdSection />
       <ApproachSection />

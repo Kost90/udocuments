@@ -22,7 +22,7 @@ function CardMainSec() {
       className="flex flex-col w-full h-full max-h-96 sm:w-[420px] md:w-[520px] lg:w-[588px] md:h-[391px] bg-darkTransparent p-4 items-start justify-around rounded-2xl mt-[200px] md:mt-[300px] mb-[200px] md:mb-[320px] border-orange border"
       aria-labelledby="card-main-title"
     >
-      <Titel text="U Document" id="card-main-title" />
+      <h1 className="text-large-mobile lg:text-large-desktop text-orange font-semibold leading-8 lg:leading-[40px]" id="card-main-title">UDocument</h1>
       <Paragraph
         text="Пропонує комплексні юридичні послуги у сфері нерухомості,
         отримання та легалізації документів на території України,
