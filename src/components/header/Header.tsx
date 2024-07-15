@@ -7,6 +7,7 @@ import Button from "../ui/Button";
 import Menumobile from "../menumobile/Menumobile";
 import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
+import NavigationMenuServices from "../services_navigationmenu/NavigationMenu";
 
 function Header() {
   const [isOpen, setIsOpend] = useState<boolean>(false);
@@ -23,21 +24,19 @@ function Header() {
           </div>
         </NavLink>
         <div className="flex flex-row items-center justify-between gap-7">
-          <div>
+          <div className="flex justify-center items-center">
             <NavLink href="/">Головна</NavLink>
             <NavLink href="/aboutus">Про нас</NavLink>
-            {/* Делаю дропдаун */}
-            <NavLink href="/services">Послуги</NavLink>
+            <NavigationMenuServices />
             <NavLink href="/contacts">Контакти</NavLink>
           </div>
-          <NavLink
-              href="?modal=true"
+          <NavLink href="?modal=true">
+            <Button
+              type="button"
+              className="h-10 md:w-36 group:text-black font-normal"
             >
-          <Button type="button" className="h-10 md:w-36 group:text-black font-normal">
-           
               Консультація
-            
-          </Button>
+            </Button>
           </NavLink>
         </div>
         <div className="flex flex-row items-center">
