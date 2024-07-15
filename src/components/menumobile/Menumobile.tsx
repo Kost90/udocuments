@@ -2,6 +2,7 @@
 import clsx from "clsx";
 import { motion } from "framer-motion";
 import { NavLink } from "../ui/Nav";
+import NavigationMenuServices from "../services_navigationmenu/NavigationMenu";
 
 type IProps = {
   isOpen: boolean;
@@ -43,8 +44,14 @@ function Menumobile({ isOpen, onClick }: IProps) {
         Про нас
       </NavLink>
       {/* Делаю дропдаун */}
-      <NavLink href="/services" onClick={onClick}>
-        Послуги
+      <span className="p-2 text-cream font-bold hover:text-orange text-[14px] lg:text-lg">
+        Послуги:
+      </span>
+      <NavLink href="/propertyservice" onClick={onClick}>
+        у сфері нерухомості
+      </NavLink>
+      <NavLink href="/advocateservice" onClick={onClick}>
+        адвоката, супровід бізнесу
       </NavLink>
       <NavLink href="/contacts" onClick={onClick}>
         Контакти
