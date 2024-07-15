@@ -1,5 +1,5 @@
 import HeadingSection from "@/components/headingsection/HeadingSection";
-import MainSection from "./_components/mainsection/MainSection";
+import MainSection from "./_components/MainSection";
 
 function page() {
   return (
