@@ -5,7 +5,7 @@ import { sendContactMessage } from "../../_actions/actions";
 import { useFormState } from "react-dom";
 import Input from "../../../../components/Input/Input";
 import SelectComponent from "../../../../components/Select/SelectComponent";
-import TextAreaComponent from "../../../../components/TextArea/TextAreaComponent";
+import TextAreaComponent from "../../../../components/textArea/TextAreaComponent";
 
 function Form() {
   const [error, sendMessageAction] = useFormState(sendContactMessage, {});

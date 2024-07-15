@@ -8,7 +8,7 @@ import {
   transitionWithoutDelay,
   viewPort,
 } from "@/constants/animation_variants";
-import { propertyServiceData } from "@/constants/data";
+import { advocateServiceData } from "@/constants/data";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -17,7 +17,7 @@ const MotionParagraph = motion(Paragraph);
 
 function MainSection() {
   return (
-    <SectionContainer className="bg-light-gradient h-full w-full py-10 border-b border-b-slate-400">
+    <SectionContainer className="bg-light-gradient h-full w-full py-20 border-b border-b-slate-400">
       <MotionTitel
         initial="initial"
         whileInView="whileInView"
@@ -35,7 +35,7 @@ function MainSection() {
         variants={verticalAnimate}
         className="my-5"
         text="Залежать від наявної документації та поточного стану справ.
-Ми готові надати вам кваліфікований супровід введення в експлуатацію вашої нерухомості.
+Ми готові надати вам кваліфікований юридичний супровід вашого бізнесу.
 Ви можете отримати БЕЗКОШТОВНУ консультацію і ми індивідуально вкажемо вам терміни та вартість та запропонуємо відповідний варіант."
       />
 
@@ -47,7 +47,7 @@ function MainSection() {
         variants={verticalAnimate}
         className="mt-5 md:mt-10"
       >
-        {propertyServiceData.map((el, i) => (
+        {advocateServiceData.map((el, i) => (
           <AccordionComponent
             value={el.titel}
             triggerName={el.titel}

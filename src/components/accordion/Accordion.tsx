@@ -13,18 +13,12 @@ interface AccordionProps {
 
 function AccordionComponent({ ...props }: AccordionProps) {
   return (
-    <Accordion
-      type="single"
-      collapsible
-      className="flex justify-center items-center md:max-w-[70%] gap-4 m-auto my-3"
-    >
+    <Accordion type="single" collapsible className="flex justify-center items-center md:max-w-[70%] gap-4 m-auto my-3">
       <AccordionItem
         value={props.value}
         className="bg-cream rounded-lg p-3 border border-slate-600 w-full"
       >
-        <AccordionTrigger className="text-lg font-bold">
-          {props.triggerName}
-        </AccordionTrigger>
+        <AccordionTrigger className="text-lg font-bold">{props.triggerName}</AccordionTrigger>
         <AccordionContent className="flex flex-col justify-start items-start gap-2">
           <h3 className="text-black font-semibold">Документи:</h3>
           <ul className="flex flex-col justify-start items-start gap-2 px-4">

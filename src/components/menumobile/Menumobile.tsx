@@ -2,7 +2,12 @@
 import clsx from "clsx";
 import { motion } from "framer-motion";
 import { NavLink } from "../ui/Nav";
-import NavigationMenuServices from "../services_navigationmenu/NavigationMenu";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "../ui/accordion";
 
 type IProps = {
   isOpen: boolean;
@@ -44,15 +49,26 @@ function Menumobile({ isOpen, onClick }: IProps) {
         Про нас
       </NavLink>
       {/* Делаю дропдаун */}
-      <span className="p-2 text-cream font-bold hover:text-orange text-[14px] lg:text-lg">
-        Послуги:
-      </span>
-      <NavLink href="/propertyservice" onClick={onClick}>
-        у сфері нерухомості
-      </NavLink>
-      <NavLink href="/advocateservice" onClick={onClick}>
-        адвоката, супровід бізнесу
-      </NavLink>
+      <Accordion
+        type="single"
+        collapsible
+        className="flex justify-center items-center md:max-w-[70%] gap-4"
+      >
+        <AccordionItem value="service_links1">
+          <AccordionTrigger className="p-2 text-cream font-bold hover:text-orange text-[14px] lg:text-lg border-b-0">
+            Послуги
+          </AccordionTrigger>
+          <AccordionContent className="flex flex-col justify-start items-start gap-2">
+            <NavLink href="/propertyservice" onClick={onClick}>
+              у сфері нерухомості
+            </NavLink>
+            <NavLink href="/advocateservice" onClick={onClick}>
+              адвоката, супровід бізнесу
+            </NavLink>
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
+
       <NavLink href="/contacts" onClick={onClick}>
         Контакти
       </NavLink>

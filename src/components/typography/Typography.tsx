@@ -10,7 +10,7 @@ type PropsParagraph = Omit<PropsTitel, "id">;
 
 export const Titel = React.forwardRef<HTMLHeadingElement, PropsTitel>(
   (
-    { text, id, className = "mt-2 md:mb-2" }: PropsTitel,
+    { text, id, className = "mt-1 md:mb-1" }: PropsTitel,
     ref: ForwardedRef<HTMLHeadingElement>
   ) => {
     return (
