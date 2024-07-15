@@ -7,7 +7,6 @@ import { cardData } from "@/constants/data";
 import { motion } from "framer-motion";
 import {
   animateTyphograpyVariants,
-  transition,
   transitionWithoutDelay,
   viewPort,
 } from "@/constants/animation_variants";
@@ -47,7 +46,7 @@ function ThirdSection() {
             key={el.id}
             className="w-full sm:w-[520px] md:w-1/2 md:max-w-[640px] h-[300px] bg-navBar border-orange cursor-pointer hover:bg-orange hover:border-cream shadow-cardShadow rounded-[15px] hover:scale-105 transition-all ease-in-out duration-300 text-cream hover:text-black justify-center items-center flex flex-col text-center"
           >
-            <Link href="/services">
+            <Link href={el.href}>
               <CardHeader className="text-base md:text-2xl font-bold">
                 {el.titel}
               </CardHeader>

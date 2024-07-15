@@ -3,6 +3,7 @@ import Image from "next/image";
 import { NavLink } from "../ui/Nav";
 import { Instagram, Facebook, Youtube } from "lucide-react";
 import { Separator } from "../ui/separator";
+import NavigationMenuServices from "../services_navigationmenu/NavigationMenu";
 
 function Footer() {
   return (
@@ -15,9 +16,9 @@ function Footer() {
             </div>
           </NavLink>
 
-          <div className="flex flex-col md:flex-row">
+          <div className="flex flex-col md:flex-row text-cream">
             <NavLink href="/">Головна</NavLink>
-            <NavLink href="/services">Послуги</NavLink>
+            <NavigationMenuServices />
             <NavLink href="/contacts">Контакти</NavLink>
           </div>
           <div className="flex justify-center items-center">
