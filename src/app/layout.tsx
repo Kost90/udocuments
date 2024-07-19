@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   keywords:
     "юридические услуги, оформлення нерухомості, адвокатська допомога, UDocument",
   authors: [author],
+  icons:{
+    icon:"/public/FullLogo_Transparent.png",
+  }
 };
 
 export default function RootLayout({
