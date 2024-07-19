@@ -38,7 +38,7 @@ export default function RootLayout({
         <meta name="author" content="UDocument" />
         <meta property="og:title" content="UDocument" />
         <meta property="og:description" content="Юридические услуги" />
-        <meta property="og:image" content="/path/to/social-image.jpg" />
+        <meta property="og:image" content="/public/Print_Transparent.svg" />
         <meta property="og:url" content="https://yourwebsite.com" />
         <meta name="twitter:card" content="summary_large_image" />
       </head>

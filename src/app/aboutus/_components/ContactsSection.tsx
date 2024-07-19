@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import SectionContainer from "@/components/containers/Container";
 import ContactsList from "@/components/contact_section/Contacts_list";
 import { contactData } from "@/constants/data";
-import { transition,transitionWithoutDelay, viewPort } from "@/constants/animation_variants";
+import {transitionWithoutDelay, viewPort } from "@/constants/animation_variants";
 
 function ContactsSection() {
   return (

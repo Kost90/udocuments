@@ -17,10 +17,11 @@ function Header() {
 
   return (
     <header className="w-full bg-transparent absolute z-[1] border-b border-b-white">
+      {/* Desktop navigation */}
       <Nav className="relative container z-10 mt-0 md:flex hidden">
         <NavLink href="/">
           <div className="flex w-24 md:w-36 md:h-[120px]">
-            <Image src={LogoWhite} alt="logo" width={180} />
+            <Image src={LogoWhite} alt="Print Transparent Logo" width={180} />
           </div>
         </NavLink>
         <div className="flex flex-row items-center justify-between gap-7">
@@ -54,6 +55,8 @@ function Header() {
           </NavLink> */}
         </div>
       </Nav>
+
+      {/* Mobile navigation */}
       <Nav className="relative container z-10 mt-0 md:hidden">
         <NavLink href="/" className="z-[10]" onClick={handelChange}>
           <div className="md:h-[80px] w-24">

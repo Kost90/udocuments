@@ -14,6 +14,7 @@ function Form() {
     <form
       action={sendMessageAction}
       className="flex flex-col gap-6 justify-center items-start p-6 bg-general-gradient w-full h-full rounded-xl border border-orange text-start max-w-full md:max-w-[50%]"
+      aria-labelledby="form-title"
     >
       <Input
         label="Імя"

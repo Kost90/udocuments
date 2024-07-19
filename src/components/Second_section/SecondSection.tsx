@@ -6,7 +6,6 @@ import { Paragraph, Titel } from "../typography/Typography";
 import CarouselSpacing from "../Carousel/Carousel";
 import {
   animateTyphograpyVariants,
-  transition,
   transitionWithoutDelay,
   viewPort,
 } from "@/constants/animation_variants";
@@ -29,23 +28,25 @@ function SecondSection() {
         ))}
       </div>
       <MotionTitel
-        initial="initial"
-        whileInView="whileInView"
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.3, ease: "linear" }}
-        variants={animateTyphograpyVariants}
-        text="Наша команда"
-        id="section_main_titel"
-        className="xl:mt-[320px] lg:mt-[500px] md:mt-[140px] mt-[120px]"
-      />
-      <MotionParagraph
-        initial={{ opacity: 0, y:20 }}
-        whileInView={{ opacity: 1, y:0 }}
-        transition={transitionWithoutDelay}
-        viewport={viewPort}
-        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        className="mt-3 md:mt-3"
-      />
+          initial="initial"
+          whileInView="whileInView"
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.3, ease: "linear" }}
+          variants={animateTyphograpyVariants}
+          text="Наша команда"
+          id="section_main_titel"
+          className="xl:mt-[320px] lg:mt-[500px] md:mt-[140px] mt-[120px]"
+          aria-label="Our Team Section Title"
+        />
+        <MotionParagraph
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={transitionWithoutDelay}
+          viewport={viewPort}
+          text="Познайомтесь з нашою командою професіоналів, яка спеціалізується на наданні високоякісних юридичних послуг у сфері нерухомості та інших юридичних областях."
+          className="mt-3 md:mt-3"
+          aria-label="Section Description"
+        />
       <CarouselSpacing />
     </SectionContainer>
   );

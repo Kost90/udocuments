@@ -19,7 +19,7 @@ function ApproachSection() {
             key={el.id}
           >
             <div className="flex flex-row justify-start items-center gap-5">
-              <Image src={el.svgIcone} alt="svg_icon" />
+              <Image src={el.svgIcone} alt={`${el.id} icon`} />
               <Paragraph text={el.description} />
             </div>
             {i < 2 ? (

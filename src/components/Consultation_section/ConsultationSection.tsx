@@ -15,17 +15,18 @@ const MotionTitel = motion(Titel);
 
 function ConsultationSection() {
   return (
-    <SectionContainer className="bg-sectionBg h-full py-10 md:py-32">
+    <SectionContainer className="bg-sectionBg h-full py-10 md:py-32" ariaLabelledby="consultation-section-title">
       <div className="flex flex-col md:flex-row justify-center md:justify-between items-center md:items-start">
-        <MotionTitel
+      <MotionTitel
           initial="initial"
           whileInView="whileInView"
           viewport={viewPort}
           transition={transitionWithoutDelay}
           variants={animateTyphograpyVariants}
-          text="Eкспертна юридична допомога та консультації"
-          id="main_section_titel"
-          className="text-large-desctope leading-[36px] lg:leading-[40px]"
+          text="Експертна юридична допомога та консультації"
+          id="consultation-section-title"
+          className="text-large-desktop leading-[36px] lg:leading-[40px]"
+          aria-label="Expert Legal Assistance and Consultations"
         />
         <motion.div
           initial="initial"
@@ -38,8 +39,9 @@ function ConsultationSection() {
           <Paragraph
             text="Заплануйте безкоштовну консультацію з нашими юристами, щоб отримати необхідну допомогу."
             className="lg:leading-[34px]"
+            aria-label="Schedule a free consultation with our lawyers to get the necessary assistance."
           />
-          <Button type="button">
+          <Button type="button" aria-label="Schedule Consultation">
             <Link href="?modal=true">Консультація</Link>
           </Button>
         </motion.div>
