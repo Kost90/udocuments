@@ -12,7 +12,7 @@ function Footer() {
         <div className="flex justify-between items-center pb-10">
           <NavLink href={"/"}>
             <div className="flex w-24 md:w-36 md:h-[120px]">
-              <Image src={LogoWhite} alt="logo" width={180} />
+              <Image src={LogoWhite} alt="Print Transparent Logo" width={180} />
             </div>
           </NavLink>
 

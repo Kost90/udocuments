@@ -29,7 +29,7 @@ function HeadingSection({ ...props }: HeadingSectionProps) {
           transition={transitionWithoutDelay}
           variants={animateTyphograpyVariants}
           id="page_titel"
-          className="text-large-mobile lg:text-large-desktop text-orange font-semibold leading-8 lg:leading-[40px] leading-9"
+          className="text-large-mobile lg:text-large-desktop text-orange font-semibold lg:leading-[40px] leading-9"
         >{props.titelText}</motion.h1>
         <MotionParagraph
           initial="initial"

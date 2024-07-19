@@ -15,7 +15,7 @@ const MotionParagraph = motion(Paragraph);
 
 function OurTeamSection() {
   return (
-    <SectionContainer className="bg-sectionBg h-full w-full py-20 md:py-32">
+    <SectionContainer className="bg-sectionBg h-full w-full py-20 md:py-32" ariaLabelledby="title-our-team-section">
       <MotionTitel
         initial="initial"
         whileInView="whileInView"
@@ -30,7 +30,7 @@ function OurTeamSection() {
         whileInView={{ opacity: 1, y:0 }}
         transition={transitionWithoutDelay}
         viewport={viewPort}
-        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        text="Познайомтеся з нашою командою досвідчених юристів, готових надати вам кваліфіковану юридичну допомогу у будь-якій ситуації."
         className="mt-3 md:mt-3"
       />
       <CarouselSpacing />
