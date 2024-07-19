@@ -10,8 +10,7 @@ import Loader from "../components/Loader/Loader";
 
 const author = {
   name: "UDocument",
-  // TODO: Поменять на мой url
-  url: "https://yourwebsite.com",
+  url: "https://www.udocument.net/",
 };
 
 export const metadata: Metadata = {
@@ -42,7 +41,7 @@ export default function RootLayout({
         <meta property="og:title" content="UDocument" />
         <meta property="og:description" content="Юридические услуги" />
         <meta property="og:image" content="/public/Print_Transparent.svg" />
-        <meta property="og:url" content="https://yourwebsite.com" />
+        <meta property="og:url" content="https://www.udocument.net/" />
         <meta name="twitter:card" content="summary_large_image" />
       </head>
       <body
