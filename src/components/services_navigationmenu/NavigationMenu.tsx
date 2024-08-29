@@ -1,4 +1,4 @@
-import React from "react";
+'use client'
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -10,8 +10,11 @@ import {
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
 import { navigationMenuData } from "@/constants/data";
+import {useSearchParams} from "next/navigation";
 
 function NavigationMenuServices() {
+  const searchParams = useSearchParams();
+  const lang = searchParams.get("lang");
   return (
     <NavigationMenu>
       <NavigationMenuList>
@@ -19,7 +22,7 @@ function NavigationMenuServices() {
           <NavigationMenuTrigger>Послуги</NavigationMenuTrigger>
           <NavigationMenuContent>
             {navigationMenuData.map((el) => (
-              <Link href={el.href} key={el.id} legacyBehavior passHref>
+              <Link href={`${el.href}?lang=${lang}`} key={el.id} legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   {el.text}
                 </NavigationMenuLink>

@@ -11,11 +11,14 @@ import {
 import { propertyServiceData } from "@/constants/data";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import {useSearchParams} from "next/navigation";
 
 const MotionTitel = motion(Titel);
 const MotionParagraph = motion(Paragraph);
 
 function MainSection() {
+    const searchParams = useSearchParams();
+    const lang = searchParams.get("lang");
   return (
     <SectionContainer className="bg-light-gradient h-full w-full py-10 border-b border-b-slate-400">
       <MotionTitel
@@ -55,7 +58,7 @@ function MainSection() {
         ))}
       </motion.div>
       <Button type="button" className="m-auto">
-        <Link href="?modal=true">Консультація</Link>
+        <Link href={`?modal=true&lang=${lang}`}>Консультація</Link>
       </Button>
     </SectionContainer>
   );

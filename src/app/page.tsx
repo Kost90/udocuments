@@ -7,6 +7,7 @@ import ThirdSection from "@/components/third_section/Third_section";
 import ContactSection from "@/components/contact_section/Contact_section";
 
 export default function Home() {
+
   return (
     <>
       <FirstSection />

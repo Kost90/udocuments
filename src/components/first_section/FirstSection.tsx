@@ -4,6 +4,7 @@ import SectionContainer from "../containers/Container";
 import { Paragraph } from "../typography/Typography";
 import Button from "../ui/Button";
 import { motion } from "framer-motion";
+import {useSearchParams} from "next/navigation";
 
 function FirstSection() {
   return (
@@ -14,6 +15,8 @@ function FirstSection() {
 }
 
 function CardMainSec() {
+  const searchParams = useSearchParams();
+  const lang = searchParams.get("lang");
   return (
     <motion.div
       initial={{ opacity: 0, x: -20 }}
@@ -36,7 +39,7 @@ function CardMainSec() {
         допоможуть вам вирішити складні правові питання."
         className="mt-3 md:mt-0"
       />
-      <Link href="?modal=true">
+      <Link href={`?modal=true&lang=${lang}`}>
         <Button
           type="button"
           className="h-12 md:w-48 flex items-center justify-center text-sm md:text-base"

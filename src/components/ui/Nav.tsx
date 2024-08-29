@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { ComponentProps } from "react";
-import { usePathname } from "next/navigation";
+import {usePathname, useSearchParams} from "next/navigation";
 import clsx from "clsx";
 
 export function Nav({
@@ -22,17 +22,21 @@ export function Nav({
 
 interface NavLinkProps extends Omit<ComponentProps<typeof Link>, "className"> {
   className?: string;
+  language?: string;
 }
 
-export function NavLink({ className, href, ...rest }: NavLinkProps) {
+export function NavLink({ className, href, language, ...rest }: NavLinkProps) {
   const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const lang = searchParams.get("lang");
+
   return (
     <Link
       {...rest}
       href={href}
       className={clsx(
         `p-2 text-cream font-bold hover:text-orange text-[14px] lg:text-lg ${className}`,
-        href === pathname && "text-orange"
+        href === `${pathname}?lang=${lang}` || language === lang ? "text-orange" : null
       )}
     />
   );
