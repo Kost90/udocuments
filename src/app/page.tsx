@@ -6,6 +6,7 @@ import OurPartnersSection from "@/components/OurPartners_section/OurPartners_sec
 import ThirdSection from "@/components/third_section/Third_section";
 import ContactSection from "@/components/contact_section/Contact_section";
 
+// TODO: Think about Suspense where is useSearchParams
 export default function Home() {
 
   return (
