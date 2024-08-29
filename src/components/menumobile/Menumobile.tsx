@@ -8,6 +8,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../ui/accordion";
+import {useSearchParams} from "next/navigation";
 
 type IProps = {
   isOpen: boolean;
@@ -32,6 +33,8 @@ const MenuVariants = {
 };
 
 function Menumobile({ isOpen, onClick }: IProps) {
+  const searchParams = useSearchParams();
+  const lang = searchParams.get("lang");
   return (
     <motion.div
       initial="hidden"
@@ -73,18 +76,17 @@ function Menumobile({ isOpen, onClick }: IProps) {
         Контакти
       </NavLink>
       <div className="flex flex-row items-center">
-        {/* Делаю переключение на страницы с другим языком */}
-        {/* <NavLink href="/" className="font-light" onClick={onClick}>
+        <NavLink href="?lang=ua" className="font-light" onClick={onClick} language="ua">
           Ua
         </NavLink>
         <div className="h-6 w-[1px] bg-white" />
-        <NavLink href="/ru" className="font-light" onClick={onClick}>
+        <NavLink href="?lang=ru" className="font-light" onClick={onClick} language="ru">
           Ru
         </NavLink>
         <div className="h-6 w-[1px] bg-white" />
-        <NavLink href="/en" className="font-light" onClick={onClick}>
+        <NavLink href="?lang=en" className="font-light" onClick={onClick} language="en">
           Eng
-        </NavLink> */}
+        </NavLink>
       </div>
     </motion.div>
   );

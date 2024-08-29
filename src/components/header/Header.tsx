@@ -8,9 +8,13 @@ import Menumobile from "../menumobile/Menumobile";
 import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import NavigationMenuServices from "../services_navigationmenu/NavigationMenu";
+import {useSearchParams} from "next/navigation";
 
 function Header() {
   const [isOpen, setIsOpend] = useState<boolean>(false);
+  const searchParams = useSearchParams();
+  const lang = searchParams.get("lang");
+
   const handelChange = () => {
     setIsOpend(!isOpen);
   };
@@ -19,19 +23,19 @@ function Header() {
     <header className="w-full bg-transparent absolute z-[1] border-b border-b-white">
       {/* Desktop navigation */}
       <Nav className="relative container z-10 mt-0 md:flex hidden">
-        <NavLink href="/">
+        <NavLink href={`/?lang=${lang}`}>
           <div className="flex w-24 md:w-36 md:h-[120px]">
             <Image src={LogoWhite} alt="Print Transparent Logo" width={180} />
           </div>
         </NavLink>
         <div className="flex flex-row items-center justify-between gap-7">
           <div className="flex justify-center items-center">
-            <NavLink href="/">Головна</NavLink>
-            <NavLink href="/aboutus">Про нас</NavLink>
+            <NavLink href={`/?lang=${lang}`}>Головна</NavLink>
+            <NavLink href={`/aboutus?lang=${lang}`}>Про нас</NavLink>
             <NavigationMenuServices />
-            <NavLink href="/contacts">Контакти</NavLink>
+            <NavLink href={`/contacts?lang=${lang}`}>Контакти</NavLink>
           </div>
-          <NavLink href="?modal=true">
+          <NavLink href={`?modal=true&lang=${lang}`}>
             <Button
               type="button"
               className="h-10 md:w-36 group:text-black font-normal"
@@ -41,18 +45,18 @@ function Header() {
           </NavLink>
         </div>
         <div className="flex flex-row items-center">
-          {/* Делаю переключение на страницы с другим языком */}
-          {/* <NavLink href="/" className="font-light">
+
+           <NavLink href="?lang=ua" className="font-light" language="ua">
             Ua
           </NavLink>
           <div className="h-6 w-[1px] bg-white" />
-          <NavLink href="/ru" className="font-light">
+          <NavLink href="?lang=ru" className="font-light" language="ru">
             Ru
           </NavLink>
           <div className="h-6 w-[1px] bg-white" />
-          <NavLink href="/en" className="font-light">
+          <NavLink href="?lang=en" className="font-light" language="en">
             Eng
-          </NavLink> */}
+          </NavLink>
         </div>
       </Nav>
 

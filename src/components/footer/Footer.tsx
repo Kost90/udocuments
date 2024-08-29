@@ -16,6 +16,7 @@ function Footer() {
             </div>
           </NavLink>
 
+          {/*Move this to the client component and change path of links*/}
           <div className="flex flex-col md:flex-row text-cream">
             <NavLink href="/">Головна</NavLink>
             <NavigationMenuServices />

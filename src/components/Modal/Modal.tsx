@@ -15,6 +15,7 @@ import { Titel, Paragraph } from "../typography/Typography";
 function Modal() {
   const searchParams = useSearchParams();
   const modal = searchParams.get("modal");
+  const lang = searchParams.get("lang");
   const pathname = usePathname();
   const [error, sendCallbackMessAction] = useFormState(sendCallBackMessage, {});
 
@@ -58,7 +59,7 @@ function Modal() {
               />
               <div className="flex flex-row flex-wrap items-center justify-center gap-3">
                 <Button type="submit">Надіслати</Button>
-                <Link href={pathname}>
+                <Link href={`${pathname}?lang=${lang}`}>
                   <Button type="button" className="hover:bg-cream hover:!text-black hover:font-bold">Скасувати</Button>
                 </Link>
               </div>
