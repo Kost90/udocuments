@@ -9,15 +9,15 @@ import ContactSection from "@/components/contact_section/Contact_section";
 // TODO: Think about Suspense where is useSearchParams
 export default function Home() {
 
-  return (
-    <>
-      <FirstSection />
-      <SecondSection />
-      <ThirdSection />
-      <ApproachSection />
-      <ConsultationSection />
-      <OurPartnersSection />
-      <ContactSection />
-    </>
-  );
+    return (
+        <>
+            <FirstSection/>
+            <SecondSection/>
+            <ThirdSection/>
+            <ApproachSection/>
+            <ConsultationSection/>
+            <OurPartnersSection/>
+            <ContactSection/>
+        </>
+    );
 }

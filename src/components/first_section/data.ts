@@ -1,0 +1,5 @@
+export const paragraphData = {
+    textUa: "у сфері нерухомості, отримання та легалізації документів на території України, Великобританії, Туреччини та інших країн Європи. Наша команда досвідчених адвокатів надає експертні поради та підтримку, які допоможуть вам вирішити складні правові питання.",
+    textRu: "в сфере недвижимости, получении и легализации документов на территории Украины, Великобритании, Турции и других стран Европы. Наша команда опытных адвокатов предоставляет экспертные советы и поддержку, которые помогут решить сложные правовые вопросы.",
+    textEn: "in the field of real estate, obtaining and legalizing documents on the territory of Ukraine, Great Britain, Turkey and other European countries. Our team of experienced lawyers provide expert advice and support to help you resolve complex legal issues.",
+}
