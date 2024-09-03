@@ -110,6 +110,28 @@ export const sectionData = [
     },
 ];
 
+// Todo: Need to delete after change aboutus page
+export const contactData = [
+    {
+        id: "mail",
+        svgIcone: Mail,
+        titel: "Email",
+        contact: "leparker@ukr.net",
+    },
+    {
+        id: "phone",
+        svgIcone: Phone,
+        titel: "Телефон",
+        contact: "+380(99)773 10 93",
+    },
+    {
+        id: "map",
+        svgIcone: MapPin,
+        titel: "Офіс",
+        contact: "м.Одеса, вул. Катерининська, буд. 8",
+    },
+];
+
 export const teamArray = [
     {
         id: "belozor",
