@@ -13,6 +13,15 @@ import Barda from "../../public/assets/barda_image.png";
 import Loshakova from "../../public/assets/loshakova_image.png";
 import Sherbin from "../../public/assets/sherbin_image.png";
 
+export type Lang = 'ua' | 'ru' | 'en' | 'default';
+
+export const buttonText: Record<Lang, string> = {
+    ua: 'Консультація',
+    ru: 'Консультация',
+    en: 'Consultation',
+    default: 'Oops, data is missing',
+}
+
 export interface ICardsData {
     id: string;
     image: StaticImageData;
@@ -72,22 +81,36 @@ export const sectionData = [
     {
         id: "firstEl",
         svgIcone: FolderIcon,
-        description:
+        descriptionUA:
             "Сучасний підхід до надання високоякісних послуг у галузі оформлення нерухомості.",
+        descriptionRU:
+            "Современный подход к предоставлению высококачественных услуг в сфере оформления недвижимости.",
+        descriptionEN:
+            "A modern approach to providing high-quality services in the field of real estate processing.",
     },
     {
         id: "secondtEl",
         svgIcone: ShieldIcon,
-        description: "Захист прав та інтересів наших клієнтів – наш пріоритет.",
+        descriptionUA:
+            "Захист прав та інтересів наших клієнтів – наш пріоритет.",
+        descriptionRU:
+            "Защита прав и интересов наших клиентов – наш приоритет.",
+        descriptionEN:
+            "Protecting the rights and interests of our clients is our priority.",
     },
     {
-        id: "firstEl",
+        id: "thirdEl",
         svgIcone: HandsIcone,
-        description:
+        descriptionUA:
             "Дотримання термінів надання послуг відповідно до укладеного договору.",
+        descriptionRU:
+            "Соблюдение сроков предоставления услуг в соответствии с заключенным договором.",
+        descriptionEN:
+            "Adherence to service delivery timelines in accordance with the signed contract.",
     },
 ];
 
+// Todo: Need to delete after change aboutus page
 export const contactData = [
     {
         id: "mail",

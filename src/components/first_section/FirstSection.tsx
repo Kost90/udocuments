@@ -5,7 +5,7 @@ import {Paragraph} from "../typography/Typography";
 import Button from "../ui/Button";
 import {motion} from "framer-motion";
 import {useSearchParams} from "next/navigation";
-import {paragraphData} from "@/components/first_section/data";
+import {paragraphData, Lang, title} from "@/components/first_section/data";
 
 function FirstSection() {
     return (
@@ -17,7 +17,11 @@ function FirstSection() {
 
 function CardMainSec() {
     const searchParams = useSearchParams();
-    const lang = searchParams.get("lang");
+    const langParam = searchParams.get("lang");
+    const lang: Lang = (langParam as Lang) || 'default';
+
+    const titleText = title[lang];
+    const paragraphText = paragraphData[lang];
 
     return (
         <motion.div
@@ -31,11 +35,11 @@ function CardMainSec() {
                 className="text-large-mobile lg:text-large-desktop text-orange font-semibold leading-8 lg:leading-[40px]"
                 id="card-main-title"
             >
-                {lang === 'ua' ? 'UDocument - комплексні юридичні послуги' : lang === 'ru' ? 'UDocument - комплексные юридические услуги' : lang === 'en' ? 'UDocument - comprehensive legal services' : null}
+                {titleText}
             </h1>
             <Paragraph
                 text={
-                    lang === 'ua' ? paragraphData.textUa : lang === 'ru' ? paragraphData.textRu : lang === 'en' ? paragraphData.textEn : 'Oops something wrong, data missing'
+                    paragraphText
                 }
                 className="mt-3 md:mt-0"
             />
