@@ -77,3 +77,10 @@ export const paragraph:Record<Lang, string> = {
     en: "For consultation, please contact us at:",
     default:'Oops data is missing',
 }
+
+export const title:Record<Lang, string> = {
+    ua: "Наші контакти",
+    ru: "Наши контакты:",
+    en: "Our contacts:",
+    default:'Oops data is missing',
+}

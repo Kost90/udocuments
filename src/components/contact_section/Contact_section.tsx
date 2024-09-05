@@ -2,7 +2,7 @@
 import SectionContainer from "../containers/Container";
 import ContactsList from "./Contacts_list";
 import {Titel, Paragraph} from "../typography/Typography";
-import {contactData, paragraph} from "./data";
+import {contactData, paragraph, title} from "./data";
 import {motion} from "framer-motion";
 import {useSearchParams} from "next/navigation";
 import {Lang} from "@/constants/data";
@@ -14,6 +14,7 @@ function ContactSection({className}: { className?: string }) {
 
     const currentContactData = contactData[lang] || contactData['ua'];
     const paragraphText = paragraph[lang];
+    const titleText = title[lang];
     return (
         <SectionContainer className={`bg-light-gradient py-10 md:py-20 h-full border-b border-b-cream ${className}`}
                           ariaLabelledby="contact-details">
@@ -24,7 +25,7 @@ function ContactSection({className}: { className?: string }) {
                 viewport={{once: true, amount: 0.2}}
             >
                 <div className="flex flex-col items-start justify-start mb-10 md:mb-20">
-                    <Titel text="Наші контакти" id="section_titel"/>
+                    <Titel text={titleText} id="section_titel"/>
                     <Paragraph text={paragraphText} className="mt-3 md:mt-0"/>
                 </div>
                 <div
