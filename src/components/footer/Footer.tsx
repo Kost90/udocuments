@@ -1,3 +1,4 @@
+'use client'
 import LogoWhite from "../../../public/Print_Transparent.svg";
 import Image from "next/image";
 import { NavLink } from "../ui/Nav";
