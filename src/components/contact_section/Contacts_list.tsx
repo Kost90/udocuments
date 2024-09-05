@@ -1,4 +1,5 @@
 import { Paragraph } from "../typography/Typography";
+import React from "react";
 
 type IContacProps = {
   id: string;

@@ -134,53 +134,170 @@ export const contactData = [
 
 export const teamArray = [
     {
-        id: "belozor",
-        image: Bilozor,
-        name: "Олеся Білозор",
-        role: "керуючий партнер, адвокат",
+        ua: {
+            id: "belozor",
+            image: Bilozor,
+            name: "Олеся Білозор",
+            role: "керуючий партнер, адвокат",
+        },
+        ru: {
+            id: "belozor",
+            image: Bilozor,
+            name: "Олеся Белозор",
+            role: "управляющий партнер, адвокат",
+        },
+        en: {
+            id: "belozor",
+            image: Bilozor,
+            name: "Olesya Bilozor",
+            role: "Managing Partner, Lawyer",
+        }
     },
     {
-        id: "dontsov",
-        image: Dontsov,
-        name: "Костянтин Донцов",
-        role: "партнер, адвокат",
+        ua: {
+            id: "dontsov",
+            image: Dontsov,
+            name: "Костянтин Донцов",
+            role: "партнер, адвокат",
+        },
+        ru: {
+            id: "dontsov",
+            image: Dontsov,
+            name: "Константин Донцов",
+            role: "партнер, адвокат",
+        },
+        en: {
+            id: "dontsov",
+            image: Dontsov,
+            name: "Kostiantyn Dontsov",
+            role: "Partner, Lawyer",
+        }
     },
     {
-        id: "loshakova",
-        image: Loshakova,
-        name: "Лошакова Юлія",
-        role: "адвокат",
+        ua: {
+            id: "loshakova",
+            image: Loshakova,
+            name: "Лошакова Юлія",
+            role: "адвокат",
+        },
+        ru: {
+            id: "loshakova",
+            image: Loshakova,
+            name: "Лошакова Юлия",
+            role: "адвокат",
+        },
+        en: {
+            id: "loshakova",
+            image: Loshakova,
+            name: "Yulia Loshakova",
+            role: "Lawyer",
+        }
     },
     {
-        id: "barda",
-        image: Barda,
-        name: "Барда Катерина",
-        role: "адвокат",
+        ua: {
+            id: "barda",
+            image: Barda,
+            name: "Барда Катерина",
+            role: "адвокат",
+        },
+        ru: {
+            id: "barda",
+            image: Barda,
+            name: "Барда Екатерина",
+            role: "адвокат",
+        },
+        en: {
+            id: "barda",
+            image: Barda,
+            name: "Kateryna Barda",
+            role: "Lawyer",
+        }
     },
     {
-        id: "tsapushel",
-        image: Tsapushel,
-        name: "Тсапушел Ірина",
-        role: "юрист",
+        ua: {
+            id: "tsapushel",
+            image: Tsapushel,
+            name: "Лісковська Ірина",
+            role: "юрист",
+        },
+        ru: {
+            id: "tsapushel",
+            image: Tsapushel,
+            name: "Лисковская Ирина",
+            role: "юрист",
+        },
+        en: {
+            id: "tsapushel",
+            image: Tsapushel,
+            name: "Iryna Liskovska",
+            role: "Lawyer",
+        }
     },
     {
-        id: "sherbin",
-        image: Sherbin,
-        name: "Щербін Андрій",
-        role: "інженер з технічної інвентаризації",
-    },
+        ua: {
+            id: "sherbin",
+            image: Sherbin,
+            name: "Щербін Андрій",
+            role: "інженер з технічної інвентаризації",
+        },
+        ru: {
+            id: "sherbin",
+            image: Sherbin,
+            name: "Щербин Андрей",
+            role: "инженер по технической инвентаризации",
+        },
+        en: {
+            id: "sherbin",
+            image: Sherbin,
+            name: "Andriy Shcherbin",
+            role: "Technical Inventory Engineer",
+        }
+    }
 ];
 
-export const navigationMenuData = [{
-    id: "propertyServices",
-    href: "/propertyservice",
-    text: "у сфері нерухомості",
-},
+export const headerLinksText = {
+    ua: {
+        main: 'Головна',
+        aboutus: 'Про нас',
+        contacts: 'Контакти',
+    },
+    ru: {
+        main: 'Главная',
+        aboutus: 'О нас',
+        contacts: 'Контакты',
+    },
+    en: {
+        main: 'Home',
+        aboutus: 'About Us',
+        contacts: 'Contacts',
+    },
+    default: {
+        main: 'Oops data is missing',
+        aboutus: 'About us data is missing',
+        contacts: 'Contacts is missing',
+    },
+}
+
+export const navigationMenuData = [
+    {
+        id: "propertyServices",
+        href: "/propertyservice",
+        text: {
+            ua: "у сфері нерухомості",
+            ru: "в сфере недвижимости",
+            en: "In the field of real estate"
+        }
+    },
     {
         id: "advocateServices",
         href: "/advocateservice",
-        text: "послуги Адвоката, супровід",
-    }];
+        text: {
+            ua: "послуги Адвоката, супровід",
+            ru: "услуги Адвоката, сопровождение",
+            en: "Advocate services, support"
+        }
+    }
+];
 
 export const propertyServiceData = [
     {

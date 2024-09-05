@@ -9,6 +9,8 @@ import {
   AccordionTrigger,
 } from "../ui/accordion";
 import {useSearchParams} from "next/navigation";
+import {Lang, headerLinksText} from "@/constants/data";
+import {propertyText, businessSupport} from './data'
 
 type IProps = {
   isOpen: boolean;
@@ -34,7 +36,9 @@ const MenuVariants = {
 
 function Menumobile({ isOpen, onClick }: IProps) {
   const searchParams = useSearchParams();
-  const lang = searchParams.get("lang");
+  const langParam = searchParams.get("lang");
+  const lang: Lang = (langParam as Lang) || 'default';
+
   return (
     <motion.div
       initial="hidden"
@@ -45,11 +49,11 @@ function Menumobile({ isOpen, onClick }: IProps) {
         "flex md:hidden justify-center items-center gap-3 absolute top-0 z-[1] h-screen w-full flex-col left-0 font-semibold bg-navBar"
       )}
     >
-      <NavLink href="/" onClick={onClick}>
-        Головна
+      <NavLink href={`/?lang=${langParam}`} onClick={onClick}>
+        {headerLinksText[lang].main}
       </NavLink>
-      <NavLink href="/aboutus" onClick={onClick}>
-        Про нас
+      <NavLink href={`/aboutus?lang=${langParam}`} onClick={onClick}>
+        {headerLinksText[lang].aboutus}
       </NavLink>
       {/* Делаю дропдаун */}
       <Accordion
@@ -59,14 +63,14 @@ function Menumobile({ isOpen, onClick }: IProps) {
       >
         <AccordionItem value="service_links1">
           <AccordionTrigger className="p-2 text-cream font-bold hover:text-orange text-[14px] lg:text-lg border-b-0">
-            Послуги
+            {langParam === 'ua' ? 'Послуги' : langParam === 'ru' ? 'Услуги' : langParam === 'en' ? 'Services' : 'Oops data is missing'}
           </AccordionTrigger>
           <AccordionContent className="flex flex-col justify-start items-start gap-2">
-            <NavLink href="/propertyservice" onClick={onClick}>
-              у сфері нерухомості
+            <NavLink href={`/propertyservice?lang=${langParam}`} onClick={onClick}>
+              {propertyText[lang]}
             </NavLink>
-            <NavLink href="/advocateservice" onClick={onClick}>
-              адвоката, супровід бізнесу
+            <NavLink href={`/advocateservice?lang=${langParam}`} onClick={onClick}>
+              {businessSupport[lang]}
             </NavLink>
           </AccordionContent>
         </AccordionItem>
