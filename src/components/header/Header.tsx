@@ -39,10 +39,10 @@ function Header() {
                         <NavigationMenuServices/>
                         <NavLink href={`/contacts?lang=${langParam}`}>{headerLinksText[lang].contacts}</NavLink>
                     </div>
-                    <NavLink href={`?modal=true&lang=${langParam}`}>
+                    <NavLink href={`?modal=true&lang=${langParam}`} className='inline-block'>
                         <Button
                             type="button"
-                            className="h-10 md:w-36 group:text-black font-normal"
+                            className="min-h-11 md:w-36 group:text-black font-normal"
                         >
                             {buttonData}
                         </Button>
@@ -71,7 +71,8 @@ function Header() {
                         <Image src={LogoWhite} alt="logo" width={100}/>
                     </div>
                 </NavLink>
-                <button type="button" onClick={handelChange} className="mr-2">
+                <button type="button" onClick={handelChange} className="mr-2" aria-label={isOpen ? "Close mobile menu" : "Open mobile menu"}
+                        aria-expanded={isOpen}>
                     {!isOpen ? <MenuIcon/> : <XIcon/>}
                 </button>
             </Nav>
