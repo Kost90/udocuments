@@ -1,5 +1,11 @@
 import HeadingSection from "@/components/headingsection/HeadingSection";
 import MainSection from "./_components/mainsection/MainSection";
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: 'Оформлення нерухомості',
+    description: 'оформлення нерухомості, реєстрація права сласності, виготовлення технічного паспорту',
+}
 
 function page() {
   return (

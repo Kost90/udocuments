@@ -1,5 +1,11 @@
 import HeadingSection from "@/components/headingsection/HeadingSection";
 import MainSection from "./_components/MainSection";
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: 'Адвокатські послуги',
+    description: 'Послуги адвоката, супровід справ у суді, комплексний юридичний супровід бізнесу',
+}
 
 function page() {
   return (
