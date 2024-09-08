@@ -9,18 +9,36 @@ import React, {Suspense} from "react";
 import Loader from "../components/Loader/Loader";
 
 const author = {
-    name: "UDocument - юридичні послуги, оформлення нерухомості",
+    name: "UDocument",
     url: "https://www.udocument.net/",
 };
 
 export const metadata: Metadata = {
-    title: "UDocument - юридичні послуги, оформлення нерухомості",
-    description: "Юридичні послуги",
+    metadataBase: new URL(process.env.SITE_URL as string),
+    alternates: {
+        canonical: `${process.env.SITE_URL}`,
+        // languages: {
+        //     'en-US': '/en-US',
+        //     'de-DE': '/de-DE',
+        // },
+    },
+    title: {
+        default: 'UDocument - юридичні послуги, оформлення нерухомості',
+        template: '%s | UDocument - юридичні послуги, оформлення нерухомості',
+    },
+    description: "Юридичні послуги, оформлення нерухомості, адвокатська допомога, виготовлення технічного паспорту, реєстрація права вланості",
     keywords:
         "юридичні послуги, оформлення нерухомості, адвокатська допомога, UDocument",
     authors: [author],
     icons: {
         icon: "/public/FullLogo_Transparent.png",
+    }, openGraph: {
+        title: "UDocument - юридичні послуги, оформлення нерухомості",
+        description: "Юридичні послуги, оформлення нерухомості, адвокатська допомога, виготовлення технічного паспорту, реєстрація права вланості",
+        type: 'website',
+        locale: 'uk-UA',
+        url: process.env.SITE_URL,
+        siteName: 'UDocument',
     }
 };
 
@@ -35,7 +53,7 @@ export default function RootLayout({
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
             <meta
                 name="keywords"
-                content="юридические услуги, консультация, адвокатська допомога, оформлення нерухомості"
+                content="юридические услуги, консультация, адвокатська допомога, оформлення нерухомості одеса"
             />
             <meta name="author" content="UDocument"/>
             <meta property="og:title" content="UDocument - юридичні послуги, оформлення нерухомості"/>
@@ -43,7 +61,6 @@ export default function RootLayout({
             <meta property="og:image" content="/public/Print_Transparent.svg"/>
             <meta property="og:url" content="https://www.udocument.net/"/>
             <meta name="twitter:card" content="summary_large_image"/>
-            <title>UDocument - юридичні послуги, оформлення нерухомості</title>
         </head>
         <body
             className={clsx(`${roboto.className} min-h-screen w-full relative`)}

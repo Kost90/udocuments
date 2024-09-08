@@ -1,6 +1,11 @@
 import ContactSection from '@/components/contact_section/Contact_section'
 import React from 'react'
+import {Metadata} from "next";
 
+export const metadata: Metadata = {
+  title: 'Контакти',
+  description: 'Напишіть нам, замовте зворотній звязок, комплексний юридичний супровід бізнесу',
+}
 function page() {
   return (
     <>
