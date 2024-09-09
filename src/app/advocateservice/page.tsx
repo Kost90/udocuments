@@ -3,6 +3,9 @@ import MainSection from "./_components/MainSection";
 import {Metadata} from "next";
 
 export const metadata: Metadata = {
+    alternates:{
+        canonical:`${process.env.SITE_URL}/advocateservice`,
+    },
     title: 'Адвокатські послуги',
     description: 'Послуги адвоката, супровід справ у суді, комплексний юридичний супровід бізнесу',
 }

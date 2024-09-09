@@ -7,6 +7,9 @@ import FormSection from "./_components/FormSection"
 import {Metadata} from "next";
 
 export const metadata: Metadata = {
+    alternates:{
+      canonical:`${process.env.SITE_URL}/aboutus`,
+    },
     title: 'Про нас',
     description: 'Наша команда, історія створення UDocument, юридичні послуги, оформлення нерухомості',
 }

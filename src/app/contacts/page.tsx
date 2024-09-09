@@ -3,6 +3,9 @@ import React from 'react'
 import {Metadata} from "next";
 
 export const metadata: Metadata = {
+  alternates:{
+    canonical:`${process.env.SITE_URL}/contacts`,
+  },
   title: 'Контакти',
   description: 'Напишіть нам, замовте зворотній звязок, комплексний юридичний супровід бізнесу',
 }

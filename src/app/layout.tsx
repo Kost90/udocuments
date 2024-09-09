@@ -61,6 +61,7 @@ export default function RootLayout({
             <meta property="og:image" content="/public/Print_Transparent.svg"/>
             <meta property="og:url" content="https://www.udocument.net/"/>
             <meta name="twitter:card" content="summary_large_image"/>
+            <title>UDocument - юридичні послуги, оформлення нерухомості</title>
         </head>
         <body
             className={clsx(`${roboto.className} min-h-screen w-full relative`)}
