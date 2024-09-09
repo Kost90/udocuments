@@ -31,7 +31,7 @@ export const metadata: Metadata = {
         "юридичні послуги, оформлення нерухомості, адвокатська допомога, UDocument",
     authors: [author],
     icons: {
-        icon: "/public/FullLogo_Transparent.png",
+        icon: "/public/Logo_udocument.png",
     }, openGraph: {
         title: "UDocument - юридичні послуги, оформлення нерухомості",
         description: "Юридичні послуги, оформлення нерухомості, адвокатська допомога, виготовлення технічного паспорту, реєстрація права вланості",
