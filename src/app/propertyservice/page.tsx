@@ -3,6 +3,9 @@ import MainSection from "./_components/mainsection/MainSection";
 import {Metadata} from "next";
 
 export const metadata: Metadata = {
+    alternates:{
+        canonical:`${process.env.SITE_URL}/propertyservice`,
+    },
     title: 'Оформлення нерухомості',
     description: 'оформлення нерухомості, реєстрація права сласності, виготовлення технічного паспорту',
 }
