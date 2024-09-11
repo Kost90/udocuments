@@ -9,23 +9,19 @@ import {
     navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
-import {navigationMenuData} from "@/constants/data";
-import {useSearchParams} from "next/navigation";
+import {UDocumentData} from "@/constants/types";
 
-function NavigationMenuServices() {
-    const searchParams = useSearchParams();
-    const langParam = searchParams.get("lang");
-
+function NavigationMenuServices({lang}: { lang: UDocumentData}) {
     return (
         <NavigationMenu>
             <NavigationMenuList>
                 <NavigationMenuItem>
-                    <NavigationMenuTrigger>{langParam === 'ua' ? 'Послуги' : langParam === 'ru' ? 'Услуги' : langParam === 'en' ? 'Services' : 'Oops data is missing'}</NavigationMenuTrigger>
+                    <NavigationMenuTrigger>{lang?.header.services.lable}</NavigationMenuTrigger>
                     <NavigationMenuContent>
-                        {navigationMenuData.map((el) => (
-                            <Link href={`${el.href}?lang=${langParam}`} key={el.id} legacyBehavior passHref>
+                        {lang?.header.services.link.map((el) => (
+                            <Link href={`/${el.href}`} key={el.href} legacyBehavior passHref>
                                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                    {langParam === 'ua' ? el.text.ua : langParam === 'ru' ? el.text.ru : langParam === 'en' ? el.text.en : 'Oops data is missing'}
+                                    {el.lable}
                                 </NavigationMenuLink>
                             </Link>
                         ))}

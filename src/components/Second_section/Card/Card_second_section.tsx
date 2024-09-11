@@ -2,6 +2,7 @@
 import { Paragraph } from "../../typography/Typography";
 import { Card, CardContent, CardFooter } from "@/components/ui/Card";
 import Image, { StaticImageData } from "next/image";
+import PlanetImage from '../../../../public/assets/Planet-icone.png';
 import { motion } from "framer-motion";
 
 type IProps = {
@@ -22,7 +23,7 @@ function CardSecondSection({ ...props }: IProps) {
       className="bg-cardTransparent border border-orange h-full sm:h-[230px] w-full sm:max-w-[430px] flex items-center flex-col justify-center p-2"
     >
       <CardContent>
-        <Image src={props.image} alt="time_managment_icon" />
+        <Image src={props.image} alt="time_managment_icon" width={100} height={100}/>
       </CardContent>
       <CardFooter>
         <Paragraph text={props.description} className="text-center" />
