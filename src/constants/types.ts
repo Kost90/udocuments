@@ -1,5 +1,4 @@
 import ApproachSection from "@/components/ApproachSection/ApproachSection";
-import {string} from "zod";
 
 interface HomePageMetaData {
     title: {
@@ -122,10 +121,34 @@ type contactData = {
     contact: string;
 }
 
+type Form = {
+    inputName: string;
+    inputPhone: string;
+    inputEmail: string;
+    textareaMessage: {
+        select: {
+            label: string;
+            placeholder: string,
+            choose: string;
+            propertyValue: string,
+            advocateValue: string;
+        },
+        placeholder: string;
+        label: string;
+    };
+}
+
+type FormContactSection = {
+    title: string;
+    paragraph: string;
+    form: Form;
+}
+
 interface ContactsSection {
     contactData: contactData[];
     title: string;
     paragraph: string;
+    formContactSection: FormContactSection;
 }
 
 type HeadingSection = {
@@ -149,6 +172,33 @@ interface AboutUsPage {
     ourTeamSection: OurTeamSection;
 }
 
+type MainSection = {
+    title: string;
+    paragraph: string;
+    advocateServicesData: AdvocateService[];
+}
+
+type AdvocateService = {
+    title: string;
+    services: string[];
+}
+
+interface AdvocateServicesPage {
+    title: string;
+    paragraph: string;
+    mainSection: MainSection;
+}
+
+interface PropertyServicesPage {
+    title: string;
+    paragraph: string;
+    mainSection: MainSection;
+}
+
+interface ThankyouPage{
+    title: string;
+}
+
 export interface UDocumentData {
     homePageMetaData: HomePageMetaData;
     header: Header;
@@ -162,4 +212,7 @@ export interface UDocumentData {
     ourPartnersSection: OurPartnersSection,
     contactsSection: ContactsSection;
     aboutUsPage: AboutUsPage;
+    advocateServicesPage: AdvocateServicesPage;
+    propertyServicesPage: PropertyServicesPage;
+    thankyouPage: ThankyouPage;
 }

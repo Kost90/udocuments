@@ -44,15 +44,18 @@ function Header({lang, params}: { lang: UDocumentData, params: string }) {
                 </div>
                 <div className="flex flex-row items-center">
 
-                    <NavLink href="/ua" className="font-light" language="ua">
+                    <NavLink href="/ua" className={params === "ua" ? "font-light text-orange" : "font-light"}
+                             language="ua" params={params}>
                         Ua
                     </NavLink>
                     <div className="h-6 w-[1px] bg-white"/>
-                    <NavLink href="/ru" className="font-light" language="ru">
+                    <NavLink href="/ru" className={params === "ru" ? "font-light text-orange" : "font-light"}
+                             language="ru" params={params}>
                         Ru
                     </NavLink>
                     <div className="h-6 w-[1px] bg-white"/>
-                    <NavLink href="/en" className="font-light" language="en">
+                    <NavLink href="/en" className={params === "en" ? "font-light text-orange" : "font-light"}
+                             language="en" params={params}>
                         Eng
                     </NavLink>
                 </div>

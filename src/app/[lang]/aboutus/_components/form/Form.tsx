@@ -6,8 +6,9 @@ import { useFormState } from "react-dom";
 import Input from "../../../../../components/Input/Input";
 import SelectComponent from "../../../../../components/Select/SelectComponent";
 import TextAreaComponent from "../../../../../components/TextArea/TextAreaComponent";
+import {UDocumentData} from "@/constants/types";
 
-function Form() {
+function Form({lang}:{lang:UDocumentData}) {
   const [error, sendMessageAction] = useFormState(sendContactMessage, {});
 
   return (
@@ -17,20 +18,20 @@ function Form() {
       aria-labelledby="form-title"
     >
       <Input
-        label="Імя"
+        label={lang.modal.label.name}
         type="text"
         name="name"
         id="text_input_name"
-        placeholder="Ваше імя"
+        placeholder={lang.contactsSection.formContactSection.form.inputName}
         required={true}
         error={error?.name}
       />
       <Input
-        label="Телефон"
+        label={lang.modal.label.phone}
         type="tel"
         name="phone"
         id="text_input_phone"
-        placeholder="Ваше телефон"
+        placeholder={lang.contactsSection.formContactSection.form.inputPhone}
         error={error?.phone}
       />
       <Input
@@ -39,17 +40,17 @@ function Form() {
         type="email"
         name="email"
         id="text_input_email"
-        placeholder="Ваше email"
+        placeholder={lang.contactsSection.formContactSection.form.inputEmail}
         error={error?.email}
       />
-      <SelectComponent label="Оберіть тему" name="service" />
+      <SelectComponent label={lang.contactsSection.formContactSection.form.textareaMessage.select.label} name="service" lang={lang}/>
       <TextAreaComponent
-        label="Ваше питання"
+        label={lang.contactsSection.formContactSection.form.textareaMessage.label}
         name="message"
-        placeholder=" питання"
+        placeholder={lang.contactsSection.formContactSection.form.textareaMessage.placeholder}
         required={true}
       />
-      <Button type="submit">Надіслати</Button>
+      <Button type="submit">{lang.buttonText.send}</Button>
     </form>
   );
 }

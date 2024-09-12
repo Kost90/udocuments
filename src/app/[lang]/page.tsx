@@ -13,7 +13,7 @@ export default async function Home({params: {lang}}: { params: { lang: string } 
         <>
             <FirstSection lang={t}/>
             <SecondSection lang={t}/>
-            <ThirdSection lang={t}/>
+            <ThirdSection lang={t} params={lang}/>
             <ApproachSection lang={t}/>
             <ConsultationSection lang={t}/>
             <OurPartnersSection lang={t}/>

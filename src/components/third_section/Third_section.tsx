@@ -14,7 +14,7 @@ import {UDocumentData} from "@/constants/types";
 const MotionTitel = motion(Titel);
 const MotionParagraph = motion(Paragraph);
 
-function ThirdSection({lang}: { lang: UDocumentData }) {
+function ThirdSection({lang, params}: { lang: UDocumentData, params:string }) {
     return (
         <SectionContainer className="bg-general-gradient h-full border-y border-y-slate-400 py-10 md:py-20">
             <MotionTitel
@@ -46,7 +46,7 @@ function ThirdSection({lang}: { lang: UDocumentData }) {
                         key={el.id}
                         className="w-full sm:w-[520px] md:w-1/2 md:max-w-[640px] h-[300px] bg-navBar border-orange cursor-pointer hover:bg-orange hover:border-cream shadow-cardShadow rounded-[15px] hover:scale-105 transition-all ease-in-out duration-300 text-cream hover:text-black justify-center items-center flex flex-col text-center"
                     >
-                        <Link href={el.href}
+                        <Link href={`${params}/${el.href}`}
                               aria-label={`Детальніше про ${el.title}`}>
                             <CardHeader className="text-base md:text-2xl font-bold">
                                 {el.title}

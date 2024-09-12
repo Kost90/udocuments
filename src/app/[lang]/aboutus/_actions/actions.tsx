@@ -34,14 +34,13 @@ let transport = nodemailer.createTransport({
 
 export async function sendContactMessage(
   prevState: unknown,
-  formData: FormData
+  formData: FormData,
 ) {
   const rawFormData = sendMessageSchema.safeParse(
     Object.fromEntries(formData.entries())
   );
   const data = rawFormData.data;
   if (!rawFormData.success) {
-    console.log(rawFormData.error.formErrors.fieldErrors);
     return rawFormData.error.formErrors.fieldErrors;
   } else {
     if (data !== undefined) {

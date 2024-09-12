@@ -29,7 +29,7 @@ async function page({params: {lang}}: { params: { lang: string } }) {
             <OurTeamSection lang={t}/>
             <OurPertnersSection lang={t}/>
             <ContactsSection lang={t}/>
-            <FormSection/>
+            <FormSection lang={t}/>
         </>
     )
 }

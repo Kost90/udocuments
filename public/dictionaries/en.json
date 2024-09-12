@@ -189,7 +189,27 @@
       }
     ],
     "paragraph": "For consultation, please contact us at:",
-    "title": "Our contacts"
+    "title": "Our contacts",
+    "formContactSection": {
+      "title": "Write to us",
+      "paragraph": "For consultation, please contact us at:",
+      "form": {
+        "inputName": "Your name",
+        "inputPhone": "Your phone",
+        "inputEmail": "Your email",
+        "textareaMessage": {
+          "select": {
+            "label": "Choose a topic",
+            "placeholder": "topics:",
+            "choose": "choose one",
+            "propertyValue": "Real estate services",
+            "advocateValue": "Advocate services, business support"
+          },
+          "placeholder": "Your message",
+          "label": "Your message"
+        }
+      }
+    }
   },
   "aboutUsPage": {
     "headingSection": {
@@ -204,5 +224,52 @@
       "title": "Our Team",
       "paragraph": "Meet our team of experienced lawyers, ready to provide you with qualified legal assistance in any situation."
     }
+  },
+  "advocateServicesPage": {
+    "title": "Advocate Services and Business Legal Support",
+    "paragraph": "Explore our wide range of services in the field of advocacy and legal assistance",
+    "mainSection": {
+      "title": "Terms and Costs",
+      "paragraph": "Depend on the available documentation and the current state of affairs.\nWe are ready to provide you with qualified legal support for your business.\nYou can get a FREE consultation, and we will individually specify the terms and costs, and offer an appropriate option.",
+      "advocateServicesData": [
+        {
+          "title": "advocate services",
+          "services": ["property rights for an apartment/house/premises (sale and purchase agreement, certificates, investment agreement, etc.)", "owner's passport/code"]
+        },
+        {
+          "title": "business legal support",
+          "services": ["property rights for an apartment/house/premises (sale and purchase agreement, certificates, investment agreement, etc.)", "owner's passport/code"]
+        },
+        {
+          "title": "migration services",
+          "services": ["property rights for an apartment/house/premises (sale and purchase agreement, certificates, investment agreement, etc.)", "owner's passport/code"]
+        }
+      ]
+    }
+  },
+  "propertyServicesPage": {
+    "title": "Real Estate Services",
+    "paragraph": "Discover our wide range of services in the field of real estate and legal assistance",
+    "mainSection": {
+      "title": "Terms and Costs",
+      "paragraph": "Depend on the available documentation and the current state of affairs. We are ready to provide you with qualified support for putting your property into operation. You can get a FREE consultation, and we will individually specify the terms and costs, and offer an appropriate option.",
+      "advocateServicesData": [
+        {
+          "title": "Preparation of a technical passport or report",
+          "services": ["Property rights for an apartment, house, premises (sale and purchase agreement, certificates, investment agreement, etc.)", "Owner's passport or code"]
+        },
+        {
+          "title": "Merging or dividing the property",
+          "services": ["Property rights for an apartment, house, premises (sale and purchase agreement, certificates, investment agreement, etc.)", "Technical passport of the property", "Owner's passport or code"]
+        },
+        {
+          "title": "Registration of property rights",
+          "services": [ "Property rights for an apartment, house, premises (sale and purchase agreement, certificates, investment agreement, etc.)", "Technical passport of the property", "Owner's passport or code"]
+        }
+      ]
+    }
+  },
+  "thankyouPage": {
+    "title": "Thank you, we have received your request. A manager will contact you shortly."
   }
 }

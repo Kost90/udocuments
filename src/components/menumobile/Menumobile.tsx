@@ -63,10 +63,10 @@ function Menumobile({isOpen, onClick, lang, params}: IProps) {
                         {lang.header.services.lable}
                     </AccordionTrigger>
                     <AccordionContent className="flex flex-col justify-start items-start gap-2">
-                        <NavLink href={`/propertyservice`} onClick={onClick}>
+                        <NavLink href={`/${params}/propertyservice`} onClick={onClick}>
                             {lang.header.services.link[0].lable}
                         </NavLink>
-                        <NavLink href={`/advocateservice`} onClick={onClick}>
+                        <NavLink href={`/${params}/advocateservice`} onClick={onClick}>
                             {lang.header.services.link[1].lable}
                         </NavLink>
                     </AccordionContent>
@@ -77,15 +77,18 @@ function Menumobile({isOpen, onClick, lang, params}: IProps) {
                 {lang.header.contacts}
             </NavLink>
             <div className="flex flex-row items-center">
-                <NavLink href="/ua" className="font-light" onClick={onClick} language="ua">
+                <NavLink href="/ua" className={params === "ua" ? "font-light text-orange" : "font-light"}
+                         onClick={onClick} language="ua" params={params}>
                     Ua
                 </NavLink>
                 <div className="h-6 w-[1px] bg-white"/>
-                <NavLink href="/ru" className="font-light" onClick={onClick} language="ru">
+                <NavLink href="/ru" className={params === "ru" ? "font-light text-orange" : "font-light"}
+                         onClick={onClick} language="ru" params={params}>
                     Ru
                 </NavLink>
                 <div className="h-6 w-[1px] bg-white"/>
-                <NavLink href="/en" className="font-light" onClick={onClick} language="en">
+                <NavLink href="/en" className={params === "en" ? "font-light text-orange" : "font-light"}
+                         onClick={onClick} language="en" params={params}>
                     Eng
                 </NavLink>
             </div>

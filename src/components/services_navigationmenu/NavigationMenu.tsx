@@ -11,7 +11,7 @@ import {
 import Link from "next/link";
 import {UDocumentData} from "@/constants/types";
 
-function NavigationMenuServices({lang}: { lang: UDocumentData}) {
+function NavigationMenuServices({lang, params}: { lang: UDocumentData, params: string }) {
     return (
         <NavigationMenu>
             <NavigationMenuList>
@@ -19,7 +19,7 @@ function NavigationMenuServices({lang}: { lang: UDocumentData}) {
                     <NavigationMenuTrigger>{lang?.header.services.lable}</NavigationMenuTrigger>
                     <NavigationMenuContent>
                         {lang?.header.services.link.map((el) => (
-                            <Link href={`/${el.href}`} key={el.href} legacyBehavior passHref>
+                            <Link href={`/${params}/${el.href}`} key={el.href} legacyBehavior passHref>
                                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                                     {el.lable}
                                 </NavigationMenuLink>
