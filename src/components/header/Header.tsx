@@ -30,7 +30,7 @@ function Header({lang, params}: { lang: UDocumentData, params: string }) {
                     <div className="flex justify-center items-center">
                         <NavLink href={`/${params}`}>{lang.header.main}</NavLink>
                         <NavLink href={`/${params}/aboutus`}>{lang.header.aboutus}</NavLink>
-                        <NavigationMenuServices lang={lang}/>
+                        <NavigationMenuServices lang={lang} params={params} />
                         <NavLink href={`/${params}/contacts`}>{lang.header.contacts}</NavLink>
                     </div>
                     <NavLink href={`?modal=true`} className='inline-block'>
