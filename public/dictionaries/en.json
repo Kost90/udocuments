@@ -1,0 +1,275 @@
+{
+  "homePageMetaData": {
+    "title": {
+      "default": "UDocument - legal services, real estate documentation",
+      "template": "%s | UDocument - legal services, real estate documentation"
+    },
+    "description": "Legal services, real estate documentation, legal assistance, technical passport issuance, property registration",
+    "keywords": "legal services, real estate documentation, legal assistance, UDocument",
+    "author": {
+      "name": "UDocument",
+      "url": "https://www.udocument.net/"
+    },
+    "icons": {
+      "icon": "/public/Logo_udocument.png"
+    },
+    "openGraph": {
+      "title": "UDocument - legal services, real estate documentation",
+      "description": "Legal services, real estate documentation, legal assistance, technical passport issuance, property registration",
+      "type": "website",
+      "locale": "en-US",
+      "url": "process.env.SITE_URL",
+      "siteName": "UDocument"
+    }
+  },
+  "header": {
+    "main": "Home",
+    "aboutus": "About us",
+    "contacts": "Contacts",
+    "services": {
+      "lable": "Services",
+      "link": [
+        {
+          "lable": "Real Estate Services",
+          "href": "propertyservice"
+        },
+        {
+          "lable": "Legal Support for Business",
+          "href": "advocateservice"
+        }
+      ]
+    }
+  },
+  "modal": {
+    "title": "Request a callback",
+    "paragraph": "Our manager will provide you with a free consultation",
+    "cancel": "Cancel",
+    "send": "Send",
+    "label": {
+      "name": "Name",
+      "phone": "Phone"
+    },
+    "placeholders": {
+      "name": "Your name",
+      "phone": "Your phone"
+    }
+  },
+  "buttonText": {
+    "consultations": "Consultation",
+    "cancel": "Cancel",
+    "send": "Send"
+  },
+  "firstSection": {
+    "title": "UDocument - comprehensive legal services",
+    "paragraph": "in real estate, document acquisition, and legalization across Ukraine, the United Kingdom, Turkey, and other European countries. Our team of experienced attorneys provides expert advice and support to help you navigate complex legal matters.",
+    "callBack": "Request a call"
+  },
+  "secondSection": {
+    "title": "Our Team",
+    "paragraph": "Meet our team of professionals, specializing in providing high-quality legal services in real estate and other legal fields.",
+    "cardsData": [
+      {
+        "id": "first",
+        "image": "/en/assets/TimeManagment-icon.png",
+        "description": "Working from 2016"
+      },
+      {
+        "id": "second",
+        "image": "/en/assets/Planet-icone.png",
+        "description": "Representations in United Kingdom, Turkey, Ukraine"
+      },
+      {
+        "id": "third",
+        "image": "/en/assets/Light-icon.png",
+        "description": "300+ satisfied customers"
+      }
+    ],
+    "carouselData": {
+      "teamArray": [
+        {
+          "id": "belozor",
+          "image": "/en/assets/belozor_image.png",
+          "name": "Olesya Belozor",
+          "role": "Managing Partner, Attorney"
+        },
+        {
+          "id": "dontsov",
+          "image": "/en/assets/dontsov_image.png",
+          "name": "Konstantin Dontsov",
+          "role": "Partner, Attorney"
+        },
+        {
+          "id": "loshakova",
+          "image": "/en/assets/loshakova_image.png",
+          "name": "Yulia Loshakova",
+          "role": "Attorney"
+        },
+        {
+          "id": "barda",
+          "image": "/en/assets/barda_image.png",
+          "name": "Kateryna Barda",
+          "role": "Attorney"
+        },
+        {
+          "id": "tsapushel",
+          "image": "/en/assets/tsapushel_image.png",
+          "name": "Iryna Liskovska",
+          "role": "Lawyer"
+        },
+        {
+          "id": "sherbin",
+          "image": "/en/assets/sherbin_image.png",
+          "name": "Andrii Shcherbin",
+          "role": "Technical Inventory Engineer"
+        }
+      ]
+    }
+  },
+  "thirdSection": {
+    "title": "Our Services",
+    "paragraph": "We specialize in consultations on real estate, legal documentation, and general legal assistance.",
+    "cardData": [
+      {
+        "id": "firstCard",
+        "title": "Business Legal Support",
+        "href": "/advocateservice",
+        "description": "We provide a full cycle of legal support for businesses"
+      },
+      {
+        "id": "secondCard",
+        "title": "Real Estate Services",
+        "href": "/propertyservice",
+        "description": "Our team of experienced lawyers and real estate documentation engineers"
+      }
+    ]
+  },
+  "aproachSection":[
+    {
+      "id": "firstElAproch",
+      "svgIcone": "/ua/assets/folder-icone.svg",
+      "description": "A modern approach to providing high-quality services in the field of real estate processing."
+    },
+    {
+      "id": "secondElAproch",
+      "svgIcone": "/ua/assets/shield_icone.svg",
+      "description": "Protecting the rights and interests of our clients is our priority."
+    },
+    {
+      "id": "thirdElAproch",
+      "svgIcone": "/ua/assets/hands_cone.svg",
+      "description": "Adherence to service delivery timelines in accordance with the signed contract."
+    }
+  ],
+  "consultationSection":{
+    "title": "Expert Legal Assistance and Consultations",
+    "paragraph": "Schedule a free consultation with our lawyers to get the necessary assistance."
+  },
+  "ourPartnersSection":{
+    "title": "Trusted by leading companies across the country"
+  },
+  "contactsSection": {
+    "contactData": [
+      {
+        "id": "mail",
+        "svgIcone": "Mail",
+        "titel": "Email",
+        "contact": "leparker@ukr.net"
+      },
+      {
+        "id": "phone",
+        "svgIcone": "Phone",
+        "titel": "Phone",
+        "contact": "+380(99)773 10 93"
+      },
+      {
+        "id": "map",
+        "svgIcone": "MapPin",
+        "titel": "Office",
+        "contact": "8 Katerynynska St, Odesa, Ukraine"
+      }
+    ],
+    "paragraph": "For consultation, please contact us at:",
+    "title": "Our contacts",
+    "formContactSection": {
+      "title": "Write to us",
+      "paragraph": "For consultation, please contact us at:",
+      "form": {
+        "inputName": "Your name",
+        "inputPhone": "Your phone",
+        "inputEmail": "Your email",
+        "textareaMessage": {
+          "select": {
+            "label": "Choose a topic",
+            "placeholder": "topics:",
+            "choose": "choose one",
+            "propertyValue": "Real estate services",
+            "advocateValue": "Advocate services, business support"
+          },
+          "placeholder": "Your message",
+          "label": "Your message"
+        }
+      }
+    }
+  },
+  "aboutUsPage": {
+    "headingSection": {
+      "title": "Experienced Legal Professionals",
+      "paragraph": "Providing expert legal consultations and assistance in the field of real estate and more"
+    },
+    "ourHistorySection": {
+      "title": "Our History and Dedication to the Legal Profession",
+      "paragraph": "UDocument is a leading legal association founded on the principles of providing exceptional legal assistance and consultations. With a team of highly qualified lawyers, we are dedicated to serving our clients in the fields of real estate and general legal assistance. Our dedication and professionalism make us a trusted partner in legal matters."
+    },
+    "ourTeamSection": {
+      "title": "Our Team",
+      "paragraph": "Meet our team of experienced lawyers, ready to provide you with qualified legal assistance in any situation."
+    }
+  },
+  "advocateServicesPage": {
+    "title": "Advocate Services and Business Legal Support",
+    "paragraph": "Explore our wide range of services in the field of advocacy and legal assistance",
+    "mainSection": {
+      "title": "Terms and Costs",
+      "paragraph": "Depend on the available documentation and the current state of affairs.\nWe are ready to provide you with qualified legal support for your business.\nYou can get a FREE consultation, and we will individually specify the terms and costs, and offer an appropriate option.",
+      "advocateServicesData": [
+        {
+          "title": "advocate services",
+          "services": ["property rights for an apartment/house/premises (sale and purchase agreement, certificates, investment agreement, etc.)", "owner's passport/code"]
+        },
+        {
+          "title": "business legal support",
+          "services": ["property rights for an apartment/house/premises (sale and purchase agreement, certificates, investment agreement, etc.)", "owner's passport/code"]
+        },
+        {
+          "title": "migration services",
+          "services": ["property rights for an apartment/house/premises (sale and purchase agreement, certificates, investment agreement, etc.)", "owner's passport/code"]
+        }
+      ]
+    }
+  },
+  "propertyServicesPage": {
+    "title": "Real Estate Services",
+    "paragraph": "Discover our wide range of services in the field of real estate and legal assistance",
+    "mainSection": {
+      "title": "Terms and Costs",
+      "paragraph": "Depend on the available documentation and the current state of affairs. We are ready to provide you with qualified support for putting your property into operation. You can get a FREE consultation, and we will individually specify the terms and costs, and offer an appropriate option.",
+      "advocateServicesData": [
+        {
+          "title": "Preparation of a technical passport or report",
+          "services": ["Property rights for an apartment, house, premises (sale and purchase agreement, certificates, investment agreement, etc.)", "Owner's passport or code"]
+        },
+        {
+          "title": "Merging or dividing the property",
+          "services": ["Property rights for an apartment, house, premises (sale and purchase agreement, certificates, investment agreement, etc.)", "Technical passport of the property", "Owner's passport or code"]
+        },
+        {
+          "title": "Registration of property rights",
+          "services": [ "Property rights for an apartment, house, premises (sale and purchase agreement, certificates, investment agreement, etc.)", "Technical passport of the property", "Owner's passport or code"]
+        }
+      ]
+    }
+  },
+  "thankyouPage": {
+    "title": "Thank you, we have received your request. A manager will contact you shortly."
+  }
+}

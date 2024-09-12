@@ -1,14 +1,27 @@
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
+import {NextRequest, NextResponse} from "next/server";
 
-export function middleware(req: NextRequest) {
-    const url = req.nextUrl;
-    const lang = url.searchParams.get('lang');
+let locales = ["ua", "ru", "en"];
+let defaultLocale = "ua";
 
-    if (!lang) {
-        url.searchParams.set('lang', 'ua');
-        return NextResponse.redirect(url);
-    }
-
-    return NextResponse.next();
+function getLocale(request: NextRequest) {
+    return defaultLocale;
 }
+
+export function middleware(request: NextRequest) {
+    const {pathname} = request.nextUrl;
+    const pathnameHasLocale = locales.some(
+        (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
+    );
+
+    if (pathnameHasLocale) return;
+
+    const locale = getLocale(request);
+    request.nextUrl.pathname = `/${locale}${pathname}`;
+    return NextResponse.redirect(request.nextUrl);
+}
+
+export const config = {
+    matcher: [
+        "/((?!_next).*)",
+    ],
+};

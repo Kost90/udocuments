@@ -2,19 +2,11 @@
 import SectionContainer from "../containers/Container";
 import ContactsList from "./Contacts_list";
 import {Titel, Paragraph} from "../typography/Typography";
-import {contactData, paragraph, title} from "./data";
 import {motion} from "framer-motion";
-import {useSearchParams} from "next/navigation";
-import {Lang} from "@/constants/data";
+import {UDocumentData} from "@/constants/types";
 
-function ContactSection({className}: { className?: string }) {
-    const searchParams = useSearchParams();
-    const langParam = searchParams.get("lang");
-    const lang: Lang = (langParam as Lang) || 'default';
+function ContactSection({className, lang}: { className?: string, lang:UDocumentData }) {
 
-    const currentContactData = contactData[lang] || contactData['ua'];
-    const paragraphText = paragraph[lang];
-    const titleText = title[lang];
     return (
         <SectionContainer className={`bg-light-gradient py-10 md:py-20 h-full border-b border-b-cream ${className}`}
                           ariaLabelledby="contact-details">
@@ -25,17 +17,17 @@ function ContactSection({className}: { className?: string }) {
                 viewport={{once: true, amount: 0.2}}
             >
                 <div className="flex flex-col items-start justify-start mb-10 md:mb-20">
-                    <Titel text={titleText} id="section_titel"/>
-                    <Paragraph text={paragraphText} className="mt-3 md:mt-0"/>
+                    <Titel text={lang.contactsSection.title} id="section_titel"/>
+                    <Paragraph text={lang.contactsSection.paragraph} className="mt-3 md:mt-0"/>
                 </div>
                 <div
                     className="flex flex-col lg:flex-row justify-center lg:justify-between items-center gap-10 bg-general-gradient border border-orange p-4 rounded-lg">
                     <div
                         className="flex flex-col md:flex-row lg:flex-col items-center justify-center md:items-start md:justify-start lg:items-start lg:justify-start gap-8">
-                        {currentContactData.map((el) => (
+                        {lang.contactsSection.contactData.map((el) => (
                             <ContactsList
                                 id={el.id}
-                                titel={el.titel}
+                                titel={el.title}
                                 svgIcone={el.svgIcone}
                                 contact={el.contact}
                                 key={el.id}

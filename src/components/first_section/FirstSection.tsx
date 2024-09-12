@@ -4,25 +4,17 @@ import SectionContainer from "../containers/Container";
 import {Paragraph} from "../typography/Typography";
 import Button from "../ui/Button";
 import {motion} from "framer-motion";
-import {useSearchParams} from "next/navigation";
-import {paragraphData, Lang, title} from "@/components/first_section/data";
+import {UDocumentData} from "@/constants/types";
 
-function FirstSection() {
+function FirstSection({lang}: { lang: UDocumentData }) {
     return (
         <SectionContainer className="bg-header-section bg-cover h-full">
-            <CardMainSec/>
+            <CardMainSec lang={lang}/>
         </SectionContainer>
     );
 }
 
-function CardMainSec() {
-    const searchParams = useSearchParams();
-    const langParam = searchParams.get("lang");
-    const lang: Lang = (langParam as Lang) || 'default';
-
-    const titleText = title[lang];
-    const paragraphText = paragraphData[lang];
-
+function CardMainSec({lang}: { lang: UDocumentData }) {
     return (
         <motion.div
             initial={{opacity: 0, x: -20}}
@@ -35,21 +27,21 @@ function CardMainSec() {
                 className="text-large-mobile lg:text-large-desktop text-orange font-semibold leading-8 lg:leading-[40px]"
                 id="card-main-title"
             >
-                {titleText}
+                {lang.firstSection.title}
             </h1>
             <Paragraph
                 text={
-                    paragraphText
+                    lang.firstSection.paragraph
                 }
                 className="mt-3 md:mt-0"
             />
-            <Link href={`?modal=true&lang=${lang}`}>
+            <Link href={`?modal=true`}>
                 <Button
                     type="button"
                     className="h-12 md:w-48 flex items-center justify-center text-sm md:text-base"
                     aria-label="Замовити дзвінок"
                 >
-                    {lang === 'ua' ? 'Замовити дзвінок' : lang === 'ru' ? 'Заказать звонок' : lang === 'en' ? 'Book a call' : null}
+                    {lang.firstSection.callBack}
                 </Button>
             </Link>
         </motion.div>

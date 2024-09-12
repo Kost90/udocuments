@@ -23,6 +23,7 @@ export function Nav({
 interface NavLinkProps extends Omit<ComponentProps<typeof Link>, "className"> {
   className?: string;
   language?: string;
+  params?:string;
 }
 
 export function NavLink({ className, href, language, ...rest }: NavLinkProps) {
@@ -36,7 +37,7 @@ export function NavLink({ className, href, language, ...rest }: NavLinkProps) {
       href={href}
       className={clsx(
         `p-2 text-cream font-bold hover:text-orange text-[14px] lg:text-lg ${className}`,
-        href === `${pathname}?lang=${lang}` || language === lang ? "text-orange" : null
+        href === `${pathname}` ? "text-orange" : null
       )}
     />
   );

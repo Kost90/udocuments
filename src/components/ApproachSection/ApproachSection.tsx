@@ -3,17 +3,15 @@ import SectionContainer from "../containers/Container";
 import Image from "next/image";
 import {Paragraph} from "../typography/Typography";
 import {Separator} from "../ui/separator";
-import {sectionData} from "@/constants/data";
 import {motion} from "framer-motion";
-import {useSearchParams} from "next/navigation";
+import {UDocumentData} from "@/constants/types";
 
-function ApproachSection() {
-    const searchParams = useSearchParams();
-    const lang = searchParams.get("lang");
+function ApproachSection({lang}: { lang: UDocumentData }) {
+
     return (
         <SectionContainer className="bg-general-gradient h-full border-y border-y-slate-400 py-10 md:py-20">
             <div className="flex flex-col justify-start items-start gap-5">
-                {sectionData.map((el, i) => (
+                {lang.aproachSection.map((el, i) => (
                     <motion.div
                         initial={{opacity: 0}}
                         whileInView={{opacity: 1}}
@@ -22,9 +20,9 @@ function ApproachSection() {
                         key={el.id}
                     >
                         <div className="flex flex-row justify-start items-center gap-5">
-                            <Image src={el.svgIcone} alt={`${el.id} icon`}/>
+                            <Image src={el.svgIcone} alt={`${el.id} icon`} width={50} height={50}/>
                             <Paragraph
-                                text={lang === 'ua' ? el.descriptionUA : lang === 'ru' ? el.descriptionRU : lang === 'en' ? el.descriptionEN : 'Oops data is missing'}/>
+                                text={el.description}/>
                         </div>
                         {i < 2 ? (
                             <Separator orientation="vertical" className="m-4 h-14 md:h-20"/>

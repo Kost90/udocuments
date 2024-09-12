@@ -3,7 +3,6 @@ import SectionContainer from "../containers/Container";
 import Image from "next/image";
 import WebflowIcon from "../../../public/assets/webflow_icon.svg";
 import RelumeIcon from "../../../public/assets/relum_icon.svg";
-// import { Paragraph } from "../typography/Typography";
 import {motion} from "framer-motion";
 import {
     verticalAnimate,
@@ -11,18 +10,11 @@ import {
     transitionWithoutDelay,
     transition,
 } from "@/constants/animation_variants";
-import {useSearchParams} from "next/navigation";
-import {Lang} from "@/constants/data";
-import {title} from './data';
+import {UDocumentData} from "@/constants/types";
 
 const iconsArr = [WebflowIcon, RelumeIcon, WebflowIcon, RelumeIcon];
 
-function OurPartnersSection() {
-    const searchParams = useSearchParams();
-    const langParam = searchParams.get("lang");
-    const lang: Lang = (langParam as Lang) || 'default';
-
-    const titleText = title[lang];
+function OurPartnersSection({lang}: { lang: UDocumentData }) {
 
     return (
         <SectionContainer
@@ -39,7 +31,7 @@ function OurPartnersSection() {
                     className="!text-black font-semibold"
                     aria-label="Leading companies from across the country trust us"
                 >
-                    {titleText}
+                    {lang.ourPartnersSection.title}
                 </motion.h2>
                 <motion.div
                     initial={{opacity: 0}}
