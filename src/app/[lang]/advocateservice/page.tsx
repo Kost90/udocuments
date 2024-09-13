@@ -7,9 +7,14 @@ import {UDocumentData} from "@/constants/types";
 export const metadata: Metadata = {
     alternates: {
         canonical: `${process.env.SITE_URL}/advocateservice`,
+        languages: {
+            'en': '/en',
+            'uk': '/ua',
+            'ru': '/ru'
+        },
     },
-    title: 'Адвокатські послуги',
-    description: 'Послуги адвоката, супровід справ у суді, комплексний юридичний супровід бізнесу',
+    title: 'Комплексні адвокатські послуги та юридичний супровід бізнесу.',
+    description: 'Професійні послуги юридичні послуги з супроводу бізнесу в Одесі. Юридична перевірка, податкова консультація, оформлення договорів купівлі-продажу. Дізнайтесь більше!',
 }
 
 async function page({params: {lang}}: { params: { lang: string } }) {
