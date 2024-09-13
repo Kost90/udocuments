@@ -7,9 +7,14 @@ import {getDictionary} from "@/app/[lang]/dictionaries";
 export const metadata: Metadata = {
     alternates: {
         canonical: `${process.env.SITE_URL}/propertyservice`,
+        languages: {
+            'en': '/en',
+            'uk': '/ua',
+            'ru': '/ru'
+        },
     },
-    title: 'Оформлення нерухомості',
-    description: 'оформлення нерухомості, реєстрація права сласності, виготовлення технічного паспорту',
+    title: 'Комплексні послуги у сфері нерухомості',
+    description: 'Професійні послуги з оформлення нерухомості в Одесі. Юридична перевірка, оформлення договорів купівлі-продажу. Дізнайтесь більше!',
 }
 
 async function page({params: {lang}}: { params: { lang: string } }) {

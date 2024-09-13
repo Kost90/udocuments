@@ -20,7 +20,6 @@ function AccordionComponent({ ...props }: AccordionProps) {
       >
         <AccordionTrigger className="text-lg font-bold">{props.triggerName}</AccordionTrigger>
         <AccordionContent className="flex flex-col justify-start items-start gap-2">
-          <h3 className="text-black font-semibold">Документи:</h3>
           <ul className="flex flex-col justify-start items-start gap-2 px-4">
             {props.content.map((el, i) => (
               <li key={i} className="text-black list-disc">

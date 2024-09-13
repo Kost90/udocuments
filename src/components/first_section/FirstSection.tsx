@@ -20,11 +20,11 @@ function CardMainSec({lang}: { lang: UDocumentData }) {
             initial={{opacity: 0, x: -20}}
             animate={{opacity: 1, x: 0}}
             transition={{duration: 0.3, ease: "linear"}}
-            className="flex flex-col w-full h-full max-h-[26rem] sm:w-[420px] md:w-[520px] lg:w-[588px] md:h-[391px] bg-darkTransparent p-4 items-start justify-around rounded-2xl mt-[200px] md:mt-[300px] mb-[200px] md:mb-[320px] border-orange border"
+            className="flex flex-col w-full h-full sm:w-[420px] md:w-[520px] lg:w-[700px] md:h-[391px] bg-darkTransparent p-4 items-start justify-around rounded-2xl mt-[200px] md:mt-[300px] mb-[200px] md:mb-[320px] border-orange border"
             aria-labelledby="card-main-title"
         >
             <h1
-                className="text-large-mobile lg:text-large-desktop text-orange font-semibold leading-8 lg:leading-[40px]"
+                className="text-large-mobile lg:text-3xl sm:text-2xl text-xl text-orange font-semibold leading-8 lg:leading-[40px]"
                 id="card-main-title"
             >
                 {lang.firstSection.title}
@@ -33,7 +33,7 @@ function CardMainSec({lang}: { lang: UDocumentData }) {
                 text={
                     lang.firstSection.paragraph
                 }
-                className="mt-3 md:mt-0"
+                className="mt-3 md:mt-0 lg:text-lg"
             />
             <Link href={`?modal=true`}>
                 <Button

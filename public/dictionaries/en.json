@@ -1,10 +1,10 @@
 {
   "homePageMetaData": {
     "title": {
-      "default": "UDocument - legal services, real estate documentation",
-      "template": "%s | UDocument - legal services, real estate documentation"
+      "default": "UDocument - Legal Services, Real Estate Documentation",
+      "template": "%s | UDocument - Legal Services, Real Estate Documentation"
     },
-    "description": "Legal services, real estate documentation, legal assistance, technical passport issuance, property registration",
+    "description": "Legal services, real estate documentation, legal assistance, technical passport issuance, property rights registration",
     "keywords": "legal services, real estate documentation, legal assistance, UDocument",
     "author": {
       "name": "UDocument",
@@ -14,8 +14,8 @@
       "icon": "/public/Logo_udocument.png"
     },
     "openGraph": {
-      "title": "UDocument - legal services, real estate documentation",
-      "description": "Legal services, real estate documentation, legal assistance, technical passport issuance, property registration",
+      "title": "UDocument - Legal Services, Real Estate Documentation",
+      "description": "Legal services, real estate documentation, legal assistance, technical passport issuance, property rights registration",
       "type": "website",
       "locale": "en-US",
       "url": "process.env.SITE_URL",
@@ -24,24 +24,24 @@
   },
   "header": {
     "main": "Home",
-    "aboutus": "About us",
+    "aboutus": "About Us",
     "contacts": "Contacts",
     "services": {
-      "lable": "Services",
+      "label": "Services",
       "link": [
         {
-          "lable": "Real Estate Services",
+          "label": "Real Estate",
           "href": "propertyservice"
         },
         {
-          "lable": "Legal Support for Business",
+          "label": "Legal and Business Support",
           "href": "advocateservice"
         }
       ]
     }
   },
   "modal": {
-    "title": "Request a callback",
+    "title": "Request a Callback",
     "paragraph": "Our manager will provide you with a free consultation",
     "cancel": "Cancel",
     "send": "Send",
@@ -50,8 +50,8 @@
       "phone": "Phone"
     },
     "placeholders": {
-      "name": "Your name",
-      "phone": "Your phone"
+      "name": "Your Name",
+      "phone": "Your Phone"
     }
   },
   "buttonText": {
@@ -60,211 +60,233 @@
     "send": "Send"
   },
   "firstSection": {
-    "title": "UDocument - comprehensive legal services",
-    "paragraph": "in real estate, document acquisition, and legalization across Ukraine, the United Kingdom, Turkey, and other European countries. Our team of experienced attorneys provides expert advice and support to help you navigate complex legal matters.",
-    "callBack": "Request a call"
+    "title": "UDocument - Professional Document Services for Real Estate in Ukraine and Document Legalization in the UK, Turkey, and European Countries.",
+    "paragraph": "Our team of experienced lawyers specializes in legal support for real estate transactions. We assist you in obtaining and legalizing property documents, providing complete support at every stage. With years of experience, we successfully handle even the most complex legal issues, regardless of the country where you are conducting operations.",
+    "callBack": "Request a Callback"
   },
   "secondSection": {
-    "title": "Our Team",
-    "paragraph": "Meet our team of professionals, specializing in providing high-quality legal services in real estate and other legal fields.",
+    "title": "Our Team of Professionals",
+    "paragraph": "Meet our team of experienced lawyers and attorneys with years of experience in real estate, international transaction support, and legal issue resolution. We provide a personalized approach to each client, ensuring high service standards and reliable legal solutions for complex situations.",
     "cardsData": [
       {
         "id": "first",
-        "image": "/en/assets/TimeManagment-icon.png",
-        "description": "Working from 2016"
+        "image": "/ua/assets/TimeManagment-icon.png",
+        "description": "Operating since 2016"
       },
       {
         "id": "second",
-        "image": "/en/assets/Planet-icone.png",
-        "description": "Representations in United Kingdom, Turkey, Ukraine"
+        "image": "/ua/assets/Planet-icone.png",
+        "description": "Offices in the UK, Turkey, Ukraine"
       },
       {
         "id": "third",
-        "image": "/en/assets/Light-icon.png",
-        "description": "300+ satisfied customers"
+        "image": "/ua/assets/Light-icon.png",
+        "description": "300+ satisfied clients"
       }
     ],
     "carouselData": {
       "teamArray": [
         {
           "id": "belozor",
-          "image": "/en/assets/belozor_image.png",
+          "image": "/ua/assets/belozor_image.png",
           "name": "Olesya Belozor",
           "role": "Managing Partner, Attorney"
         },
         {
           "id": "dontsov",
-          "image": "/en/assets/dontsov_image.png",
+          "image": "/ua/assets/dontsov_image.png",
           "name": "Konstantin Dontsov",
           "role": "Partner, Attorney"
         },
         {
           "id": "loshakova",
-          "image": "/en/assets/loshakova_image.png",
+          "image": "/ua/assets/loshakova_image.png",
           "name": "Yulia Loshakova",
           "role": "Attorney"
         },
         {
           "id": "barda",
-          "image": "/en/assets/barda_image.png",
+          "image": "/ua/assets/barda_image.png",
           "name": "Kateryna Barda",
           "role": "Attorney"
         },
         {
           "id": "tsapushel",
-          "image": "/en/assets/tsapushel_image.png",
-          "name": "Iryna Liskovska",
+          "image": "/ua/assets/tsapushel_image.png",
+          "name": "Irina Liskovska",
           "role": "Lawyer"
         },
         {
           "id": "sherbin",
-          "image": "/en/assets/sherbin_image.png",
-          "name": "Andrii Shcherbin",
+          "image": "/ua/assets/sherbin_image.png",
+          "name": "Andriy Sherbin",
           "role": "Technical Inventory Engineer"
         }
       ]
     }
   },
   "thirdSection": {
-    "title": "Our Services",
-    "paragraph": "We specialize in consultations on real estate, legal documentation, and general legal assistance.",
+    "title": "Our Professional Legal Services",
+    "paragraph": "Our team offers a wide range of legal services, from real estate consultations to legal documentation and assistance in complex situations. We provide reliable solutions for your business and real estate, ensuring legal support at every stage.",
     "cardData": [
       {
         "id": "firstCard",
         "title": "Business Legal Support",
         "href": "/advocateservice",
-        "description": "We provide a full cycle of legal support for businesses"
+        "description": "We offer comprehensive legal support for your business, including legal consultations, document preparation, and court representation. We assist with taxation, contracts, and corporate law issues."
       },
       {
         "id": "secondCard",
         "title": "Real Estate Services",
         "href": "/propertyservice",
-        "description": "Our team of experienced lawyers and real estate documentation engineers"
+        "description": "Our experts provide complete legal and technical support in real estate: from document verification to transaction processing. We ensure the safety of your investments and compliance with legal standards."
       }
     ]
   },
-  "aproachSection":[
+  "aproachSection": [
     {
       "id": "firstElAproch",
       "svgIcone": "/ua/assets/folder-icone.svg",
-      "description": "A modern approach to providing high-quality services in the field of real estate processing."
+      "description": "Innovative Solutions for Real Estate Documentation"
     },
     {
       "id": "secondElAproch",
       "svgIcone": "/ua/assets/shield_icone.svg",
-      "description": "Protecting the rights and interests of our clients is our priority."
+      "description": "Reliable Protection of Your Rights and Interests"
     },
     {
       "id": "thirdElAproch",
       "svgIcone": "/ua/assets/hands_cone.svg",
-      "description": "Adherence to service delivery timelines in accordance with the signed contract."
+      "description": "Timely Fulfillment of Obligations Guaranteed"
     }
   ],
-  "consultationSection":{
+  "consultationSection": {
     "title": "Expert Legal Assistance and Consultations",
-    "paragraph": "Schedule a free consultation with our lawyers to get the necessary assistance."
+    "paragraph": "Schedule a free consultation with our experienced lawyers to receive personalized advice on real estate, business, and other legal matters. We will help you find the optimal solutions for your legal needs."
   },
-  "ourPartnersSection":{
-    "title": "Trusted by leading companies across the country"
+  "ourPartnersSection": {
+    "title": "Leading Companies Trust Us"
   },
   "contactsSection": {
     "contactData": [
       {
         "id": "mail",
         "svgIcone": "Mail",
-        "titel": "Email",
+        "title": "Email",
         "contact": "leparker@ukr.net"
       },
       {
         "id": "phone",
         "svgIcone": "Phone",
-        "titel": "Phone",
+        "title": "Phone",
         "contact": "+380(99)773 10 93"
       },
       {
         "id": "map",
         "svgIcone": "MapPin",
-        "titel": "Office",
-        "contact": "8 Katerynynska St, Odesa, Ukraine"
+        "title": "Office",
+        "contact": "Odesa, Katerynynska St., Building 8"
       }
     ],
-    "paragraph": "For consultation, please contact us at:",
-    "title": "Our contacts",
+    "paragraph": "For consultations, please contact us using the following information:",
+    "title": "Our Contacts",
     "formContactSection": {
-      "title": "Write to us",
-      "paragraph": "For consultation, please contact us at:",
+      "title": "Write to Us",
+      "paragraph": "For consultations, please contact us using the following information:",
       "form": {
-        "inputName": "Your name",
-        "inputPhone": "Your phone",
-        "inputEmail": "Your email",
+        "inputName": "Your Name",
+        "inputPhone": "Your Phone",
+        "inputEmail": "Your Email",
         "textareaMessage": {
           "select": {
-            "label": "Choose a topic",
-            "placeholder": "topics:",
+            "label": "Select Topic",
+            "placeholder": "Topics:",
             "choose": "choose one",
-            "propertyValue": "Real estate services",
-            "advocateValue": "Advocate services, business support"
+            "propertyValue": "Real Estate Services",
+            "advocateValue": "Legal Services, Business Support"
           },
-          "placeholder": "Your message",
-          "label": "Your message"
+          "placeholder": "Your Question",
+          "label": "Your Question"
         }
       }
     }
   },
   "aboutUsPage": {
     "headingSection": {
-      "title": "Experienced Legal Professionals",
-      "paragraph": "Providing expert legal consultations and assistance in the field of real estate and more"
+      "title": "Expert Legal and Real Estate Specialists",
+      "paragraph": "We provide high-quality legal consultations and services in the fields of real estate, business, and general law. Our team of experts is ready to help you resolve any legal issue quickly and professionally."
     },
     "ourHistorySection": {
-      "title": "Our History and Dedication to the Legal Profession",
-      "paragraph": "UDocument is a leading legal association founded on the principles of providing exceptional legal assistance and consultations. With a team of highly qualified lawyers, we are dedicated to serving our clients in the fields of real estate and general legal assistance. Our dedication and professionalism make us a trusted partner in legal matters."
+      "title": "Our History and Commitment to Legal Excellence",
+      "paragraph": "UDocument is a leading legal organization established to provide exceptional legal support in the areas of real estate, business, and general legal assistance. Dedicated to high standards, our highly qualified lawyers have been successfully resolving complex legal issues for clients for many years. Professionalism and a personal approach make us reliable partners for your legal needs."
     },
     "ourTeamSection": {
-      "title": "Our Team",
-      "paragraph": "Meet our team of experienced lawyers, ready to provide you with qualified legal assistance in any situation."
+      "title": "Our Team of Experienced Lawyers",
+      "paragraph": "Meet our team of professionals, each with extensive experience in various fields of law. We offer personalized consultations and comprehensive solutions to ensure successful legal support for your interests."
     }
   },
   "advocateServicesPage": {
-    "title": "Advocate Services and Business Legal Support",
-    "paragraph": "Explore our wide range of services in the field of advocacy and legal assistance",
+    "title": "Comprehensive Legal Services and Business Legal Support",
+    "paragraph": "Our lawyers offer a wide range of services for businesses and individuals. From legal support for real estate transactions to comprehensive protection of your rights and interests in court. We will assist you in resolving the most complex legal issues.",
     "mainSection": {
-      "title": "Terms and Costs",
-      "paragraph": "Depend on the available documentation and the current state of affairs.\nWe are ready to provide you with qualified legal support for your business.\nYou can get a FREE consultation, and we will individually specify the terms and costs, and offer an appropriate option.",
+      "title": "Execution Times and Custom Pricing",
+      "paragraph": "Execution times and the cost of our services depend on the complexity of the case and the availability of necessary documents. We offer a free consultation during which our specialists will assess your situation and provide detailed information about possible solutions, timelines, and costs. Our team is always focused on effective solutions tailored to your needs. Our lawyers will assist with all aspects of legal matters related to real estate and other areas of law. We provide assistance with the following:",
       "advocateServicesData": [
         {
-          "title": "advocate services",
-          "services": ["property rights for an apartment/house/premises (sale and purchase agreement, certificates, investment agreement, etc.)", "owner's passport/code"]
+          "title": "Legal Services",
+          "services": [
+            "Property ownership documentation for apartments, houses, or commercial spaces (buying-selling, certificates, investment contracts, etc.).",
+            "Obtaining and processing the owner’s passport and identification code.",
+            "Court representation in commercial, administrative, civil, and criminal cases."
+          ]
         },
         {
-          "title": "business legal support",
-          "services": ["property rights for an apartment/house/premises (sale and purchase agreement, certificates, investment agreement, etc.)", "owner's passport/code"]
+          "title": "Business Legal Support",
+          "services": [
+            "Drafting property purchase agreements for your business.",
+            "Assistance with business registration, tax consultations, court representation, obtaining necessary licenses and permits, ongoing legal support for business activities."
+          ]
         },
         {
-          "title": "migration services",
-          "services": ["property rights for an apartment/house/premises (sale and purchase agreement, certificates, investment agreement, etc.)", "owner's passport/code"]
+          "title": "Migration Services",
+          "services": [
+            "Processing residence permits and citizenship.",
+            "Obtaining necessary documents for property ownership abroad."
+          ]
         }
       ]
     }
   },
   "propertyServicesPage": {
-    "title": "Real Estate Services",
-    "paragraph": "Discover our wide range of services in the field of real estate and legal assistance",
+    "title": "Comprehensive Real Estate Services",
+    "paragraph": "We offer a full range of services in real estate: from technical support to legal assistance. Our experts will assist you at all stages—from document processing to bringing the property into operation.",
     "mainSection": {
-      "title": "Terms and Costs",
-      "paragraph": "Depend on the available documentation and the current state of affairs. We are ready to provide you with qualified support for putting your property into operation. You can get a FREE consultation, and we will individually specify the terms and costs, and offer an appropriate option.",
+      "title": "Service Times and Costs",
+      "paragraph": "Times and costs depend on the complexity of your case, available documentation, and the current status of the property. We are ready to provide qualified support at all stages of bringing the property into operation or processing ownership rights. During the free consultation, our experts will assess your needs and tailor optimal timelines and costs for the services.",
       "advocateServicesData": [
         {
-          "title": "Preparation of a technical passport or report",
-          "services": ["Property rights for an apartment, house, premises (sale and purchase agreement, certificates, investment agreement, etc.)", "Owner's passport or code"]
+          "title": "Technical Passport and Reports",
+          "services": [
+            "Property ownership documentation for apartments, houses, or commercial spaces (buying-selling, certificates, investment contracts, etc.).",
+            "Obtaining a technical passport or relevant reports.",
+            "Preparing passports and identification codes for owners."
+          ]
         },
         {
-          "title": "Merging or dividing the property",
-          "services": ["Property rights for an apartment, house, premises (sale and purchase agreement, certificates, investment agreement, etc.)", "Technical passport of the property", "Owner's passport or code"]
+          "title": "Combining or Dividing Real Estate",
+          "services": [
+            "Property ownership documentation for real estate.",
+            "Preparation and updating of technical passports.",
+            "Assistance with obtaining necessary documents and registering ownership."
+          ]
         },
         {
-          "title": "Registration of property rights",
-          "services": [ "Property rights for an apartment, house, premises (sale and purchase agreement, certificates, investment agreement, etc.)", "Technical passport of the property", "Owner's passport or code"]
+          "title": "Property Ownership Registration",
+          "services": [
+            "Preparation and submission of necessary documents for property ownership registration.",
+            "Issuance of technical passports.",
+            "Registration of passports and identification codes for owners."
+          ]
         }
       ]
     }
@@ -273,3 +295,5 @@
     "title": "Thank you, we have received your request. A manager will contact you shortly."
   }
 }
+
+

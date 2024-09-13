@@ -25,15 +25,15 @@ export const metadata: Metadata = {
         },
     },
     title: {
-        default: 'UDocument - юридичні послуги, оформлення нерухомості',
+        default: 'UDocument - Оформлення нерухомості в Одесі - Юридичні послуги з нерухомості',
         template: '%s | UDocument - юридичні послуги, оформлення нерухомості',
     },
-    description: "Юридичні послуги, оформлення нерухомості, адвокатська допомога, виготовлення технічного паспорту, реєстрація права вланості",
+    description: "Професійні послуги з оформлення нерухомості в Одесі. Юридична перевірка, оформлення договорів купівлі-продажу. Дізнайтесь більше!",
     keywords:
         "юридичні послуги, оформлення нерухомості, адвокатська допомога, UDocument",
     authors: [author],
     icons: {
-        icon: "/Logo_udocument.png",
+        icon: "/ua/Logo_udocument.png",
     }, openGraph: {
         title: "UDocument - юридичні послуги, оформлення нерухомості",
         description: "Юридичні послуги, оформлення нерухомості, адвокатська допомога, виготовлення технічного паспорту, реєстрація права вланості",
@@ -59,13 +59,12 @@ export default async function RootLayout({children, params: {lang}}: Readonly<{
                 content="юридические услуги, консультация, адвокатська допомога, оформлення нерухомості одеса"
             />
             <meta name="author" content="UDocument"/>
-            <meta property="og:title" content="UDocument - юридичні послуги, оформлення нерухомості"/>
-            <meta property="og:description" content="Юридичні послуги"/>
+            <meta property="og:title" content="UDocument - Оформлення нерухомості в Одесі - Юридичні послуги з нерухомості"/>
+            <meta property="og:description" content="Професійні послуги з оформлення нерухомості в Одесі. Юридична перевірка, оформлення договорів купівлі-продажу. Дізнайтесь більше!"/>
             <meta property="og:image" content="/Print_Transparent.svg"/>
             <meta property="og:url" content="https://www.udocument.net/"/>
             <meta name="twitter:card" content="summary_large_image"/>
-            {/*TODO: Add here from json data*/}
-            <title>UDocument - юридичні послуги, оформлення нерухомості</title>
+            <title>UDocument - Оформлення нерухомості в Одесі - Юридичні послуги з нерухомості</title>
         </head>
         <body
             className={clsx(`${roboto.className} min-h-screen w-full relative`)}
