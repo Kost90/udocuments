@@ -35,6 +35,7 @@ export function NavLink({ className, href, language, ...rest }: NavLinkProps) {
     <Link
       {...rest}
       href={href}
+      rel="canonical"
       className={clsx(
         `p-2 text-cream font-bold hover:text-orange text-[14px] lg:text-lg ${className}`,
         href === `${pathname}` ? "text-orange" : null
