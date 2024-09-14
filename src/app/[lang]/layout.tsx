@@ -35,12 +35,13 @@ export const metadata: Metadata = {
     icons: {
         icon: "/ua/Logo_udocument.png",
     }, openGraph: {
-        title: "UDocument - юридичні послуги, оформлення нерухомості",
-        description: "Юридичні послуги, оформлення нерухомості, адвокатська допомога, виготовлення технічного паспорту, реєстрація права вланості",
+        title: "UDocument - Оформлення нерухомості в Одесі - Юридичні послуги з нерухомості",
+        description: "Професійні послуги з оформлення нерухомості в Одесі. Юридична перевірка, оформлення договорів купівлі-продажу. Дізнайтесь більше!",
         type: 'website',
         locale: 'uk-UA',
         url: process.env.SITE_URL,
         siteName: 'UDocument',
+        images:'/ua/Logo_udocument.png',
     }
 };
 
