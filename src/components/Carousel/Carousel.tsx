@@ -37,7 +37,7 @@ function CarouselSpacing({ lang }: { lang: UDocumentData }) {
                 <CardContent className="w-full p-0 overflow-hidden max-h-[450px]">
                   <Image
                     src={el.image}
-                    alt={el.id}
+                    alt={`${el.name} photos`}
                     placeholder="blur"
                     width={500}
                     height={100}

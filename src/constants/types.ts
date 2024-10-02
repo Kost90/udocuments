@@ -1,5 +1,3 @@
-import ApproachSection from "@/components/ApproachSection/ApproachSection";
-
 interface HomePageMetaData {
     title: {
         default: string;
