@@ -24,9 +24,9 @@ function ApproachSection({lang}: { lang: UDocumentData }) {
                             <Paragraph
                                 text={el.description}/>
                         </div>
-                        {i < 2 ? (
+                        {i < 2 && (
                             <Separator orientation="vertical" className="m-4 h-14 md:h-20"/>
-                        ) : null}
+                        )}
                     </motion.div>
                 ))}
             </div>
