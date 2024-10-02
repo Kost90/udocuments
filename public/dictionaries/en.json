@@ -27,14 +27,14 @@
     "aboutus": "About Us",
     "contacts": "Contacts",
     "services": {
-      "label": "Services",
+      "lable": "Services",
       "link": [
         {
-          "label": "Real Estate",
+          "lable": "Real Estate",
           "href": "propertyservice"
         },
         {
-          "label": "Legal and Business Support",
+          "lable": "Legal and Business Support",
           "href": "advocateservice"
         }
       ]

@@ -23,7 +23,7 @@ function Header({lang, params}: { lang: UDocumentData, params: string }) {
             <Nav className="relative container z-10 mt-0 md:flex hidden">
                 <NavLink href={`/${params}`}>
                     <div className="flex w-24 md:w-36 md:h-[120px]">
-                        <Image src={LogoWhite} alt="Print Transparent Logo" width={180}/>
+                        <Image src={LogoWhite} alt="Print Transparent Logo" width={180} priority/>
                     </div>
                 </NavLink>
                 <div className="flex flex-row items-center justify-between gap-7">
