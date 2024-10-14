@@ -24,11 +24,10 @@ const sendCallBackMessSchema = z.object({
 });
 
 let transport = nodemailer.createTransport({
-  host: "live.smtp.mailtrap.io",
-  port: 587,
+  service:'gmail',
   auth: {
-    user: process.env.EMAIL_USERNAME,
-    pass: process.env.EMAIL_PASS,
+    user: process.env.EMAIL_FROM_SEND,
+    pass: process.env.APP_PASSWORD,
   },
 });
 
@@ -45,8 +44,8 @@ export async function sendContactMessage(
   } else {
     if (data !== undefined) {
       let mailOptions = {
-        from: "hi@demomailtrap.com",
-        to: "leparker2024@gmail.com",
+        from: 'Udocument',
+        to: process.env.EMAIL_TO_SEND,
         subject: `Надіслано від ${data?.name} тема ${data?.service}`,
         html: `<h1>Надіслано від ${data.name}</h1>
               <h3>Email: ${data.email}</h3>
