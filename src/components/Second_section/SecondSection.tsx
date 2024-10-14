@@ -1,20 +1,11 @@
-"use client";
 import dynamic from 'next/dynamic'
-import {motion} from "framer-motion";
 import SectionContainer from "../containers/Container";
 import {Paragraph, Titel} from "../typography/Typography";
-import {
-    animateTyphograpyVariants,
-    transitionWithoutDelay,
-    viewPort,
-} from "@/constants/animation_variants";
 import {UDocumentData} from "@/constants/types";
 
 const CardSecondSection = dynamic(() => import('@/components/Second_section/Card/Card_second_section'), {ssr: false});
 const CarouselSpacing = dynamic(() => import('@/components/Carousel/Carousel'), {ssr: false});
 
-const MotionTitel = motion(Titel);
-const MotionParagraph = motion(Paragraph);
 
 function SecondSection({lang}: { lang: UDocumentData }) {
     return (
@@ -30,22 +21,13 @@ function SecondSection({lang}: { lang: UDocumentData }) {
                     />
                 ))}
             </div>
-            <MotionTitel
-                initial="initial"
-                whileInView="whileInView"
-                viewport={{once: true, amount: 0.2}}
-                transition={{duration: 0.3, ease: "linear"}}
-                variants={animateTyphograpyVariants}
+            <Titel
                 text={lang.secondSection.title}
                 id="section_main_titel"
                 className="xl:mt-[320px] lg:mt-[500px] md:mt-[140px] mt-[120px]"
                 aria-label="Our Team Section Title"
             />
-            <MotionParagraph
-                initial={{opacity: 0, y: 20}}
-                whileInView={{opacity: 1, y: 0}}
-                transition={transitionWithoutDelay}
-                viewport={viewPort}
+            <Paragraph
                 text={lang.secondSection.paragraph}
                 className="mt-3 md:mt-3"
                 aria-label="Section Description"

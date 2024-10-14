@@ -1,25 +1,13 @@
-"use client";
 import Image from "next/image";
 import SectionContainer from "@/components/containers/Container";
 import {Paragraph, Titel} from "@/components/typography/Typography";
-import {
-    verticalAnimate,
-    viewPort,
-    transitionWithoutDelay,
-} from "@/constants/animation_variants";
-import {motion} from "framer-motion";
 import Picture from "../../../../../public/assets/our_history_image.png";
 import {UDocumentData} from "@/constants/types";
 
 function OurHistirySection({lang}: { lang: UDocumentData }) {
     return (
         <SectionContainer className="bg-light-gradient h-full w-full py-20 md:py-32 border-b border-b-slate-400">
-            <motion.div
-                initial="initial"
-                whileInView="whileInView"
-                viewport={viewPort}
-                transition={transitionWithoutDelay}
-                variants={verticalAnimate}
+            <div
                 className="flex flex-col lg:flex-row justify-between items-start gap-6"
                 aria-labelledby="heading-our-history-section"
             >
@@ -38,7 +26,7 @@ function OurHistirySection({lang}: { lang: UDocumentData }) {
                         className="max-w-full md:max-w-[520px] lg:max-w-[640px]"
                     />
                 </div>
-            </motion.div>
+            </div>
         </SectionContainer>
     );
 }
