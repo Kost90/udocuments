@@ -78,8 +78,8 @@ export async function sendCallBackMessage(
   } else {
     if (data !== undefined) {
       let mailOptions = {
-        from: "hi@demomailtrap.com",
-        to: "leparker2024@gmail.com",
+        from: "Udocument",
+        to: process.env.EMAIL_TO_SEND,
         subject: `Надіслано від ${data?.name} замовлення зворотній звонок`,
         html: `<h1>Надіслано від ${data.name}</h1>
               <h3>Телефон: ${data.phone}</h3>
