@@ -61,6 +61,7 @@ interface ButtonText {
 interface FirstSection {
     title: string;
     paragraph: string;
+    servicesList:string[];
     callBack: string;
 }
 

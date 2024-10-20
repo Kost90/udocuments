@@ -24,7 +24,7 @@ const sendCallBackMessSchema = z.object({
 });
 
 let transport = nodemailer.createTransport({
-  service:'gmail',
+  service: "gmail",
   auth: {
     user: process.env.EMAIL_FROM_SEND,
     pass: process.env.APP_PASSWORD,
@@ -33,18 +33,18 @@ let transport = nodemailer.createTransport({
 
 export async function sendContactMessage(
   prevState: unknown,
-  formData: FormData,
+  formData: FormData
 ) {
   const rawFormData = sendMessageSchema.safeParse(
     Object.fromEntries(formData.entries())
   );
-  const data = rawFormData.data;
   if (!rawFormData.success) {
     return rawFormData.error.formErrors.fieldErrors;
   } else {
+    const data = rawFormData.data;
     if (data !== undefined) {
       let mailOptions = {
-        from: 'Udocument',
+        from: "Udocument",
         to: process.env.EMAIL_TO_SEND,
         subject: `Надіслано від ${data?.name} тема ${data?.service}`,
         html: `<h1>Надіслано від ${data.name}</h1>
@@ -72,10 +72,10 @@ export async function sendCallBackMessage(
   const rawFormData = sendCallBackMessSchema.safeParse(
     Object.fromEntries(formData.entries())
   );
-  const data = rawFormData.data;
   if (!rawFormData.success) {
     return rawFormData.error.formErrors.fieldErrors;
   } else {
+    const data = rawFormData.data;
     if (data !== undefined) {
       let mailOptions = {
         from: "Udocument",

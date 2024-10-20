@@ -6,9 +6,9 @@ import { useFormState } from "react-dom";
 import Input from "../../../../../components/Input/Input";
 import SelectComponent from "../../../../../components/Select/SelectComponent";
 import TextAreaComponent from "../../../../../components/TextArea/TextAreaComponent";
-import {UDocumentData} from "@/constants/types";
+import { UDocumentData } from "@/constants/types";
 
-function Form({lang}:{lang:UDocumentData}) {
+function Form({ lang }: { lang: UDocumentData }) {
   const [error, sendMessageAction] = useFormState(sendContactMessage, {});
 
   return (
@@ -43,11 +43,23 @@ function Form({lang}:{lang:UDocumentData}) {
         placeholder={lang.contactsSection.formContactSection.form.inputEmail}
         error={error?.email}
       />
-      <SelectComponent label={lang.contactsSection.formContactSection.form.textareaMessage.select.label} name="service" lang={lang}/>
+      <SelectComponent
+        label={
+          lang.contactsSection.formContactSection.form.textareaMessage.select
+            .label
+        }
+        name="service"
+        lang={lang}
+      />
       <TextAreaComponent
-        label={lang.contactsSection.formContactSection.form.textareaMessage.label}
+        label={
+          lang.contactsSection.formContactSection.form.textareaMessage.label
+        }
         name="message"
-        placeholder={lang.contactsSection.formContactSection.form.textareaMessage.placeholder}
+        placeholder={
+          lang.contactsSection.formContactSection.form.textareaMessage
+            .placeholder
+        }
         required={true}
       />
       <Button type="submit">{lang.buttonText.send}</Button>

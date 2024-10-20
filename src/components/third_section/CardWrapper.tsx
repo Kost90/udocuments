@@ -24,6 +24,7 @@ function CardWrapper({
           key={el.id}
           className="w-full sm:w-[520px] md:w-1/2 md:max-w-[640px] h-[300px] bg-navBar border-orange cursor-pointer hover:bg-orange hover:border-cream shadow-cardShadow rounded-[15px] hover:scale-105 transition-all ease-in-out duration-300 text-cream hover:text-black justify-center items-center flex flex-col text-center"
         >
+          {/* TODO: Добавить сюда табы раздвигающиеся с услугами, убрать линк */}
           <Link
             href={`${params}/${el.href}`}
             aria-label={`Детальніше про ${el.title}`}

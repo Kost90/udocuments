@@ -10,10 +10,10 @@ function ThirdSection({lang, params}: { lang: UDocumentData, params:string }) {
                 text={lang.thirdSection.title}
                 id="main_titel"
             />
-            <Paragraph
+            {/* <Paragraph
                 text={lang.thirdSection.paragraph}
                 className="mt-3 md:mt-3"
-            />
+            /> */}
             <CardWrapper lang={lang} params={params}/>
         </SectionContainer>
     );

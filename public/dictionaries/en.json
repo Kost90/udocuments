@@ -60,13 +60,14 @@
     "send": "Send"
   },
   "firstSection": {
-    "title": "UDocument - Professional Document Services for Real Estate in Ukraine.",
-    "paragraph": "Our team of experienced lawyers specializes in legal support for real estate transactions. We assist you in obtaining and legalizing property documents, providing complete support at every stage. With years of experience, we successfully handle even the most complex legal issues, regardless of the country where you are conducting operations.",
+    "title": "UDocument – legal services in the field of real estate and business.",
+    "paragraph": "Our company provides legal services in the following areas:",
+    "servicesList":["real estate", "business management","representation in civil, commercial, administrative, and criminal court cases", "assistance with migration matters and license acquisition."],
     "callBack": "Request a Callback"
   },
   "secondSection": {
-    "title": "Our Team of Professionals",
-    "paragraph": "Meet our team of experienced lawyers and attorneys with years of experience in real estate, international transaction support, and legal issue resolution. We provide a personalized approach to each client, ensuring high service standards and reliable legal solutions for complex situations.",
+    "title": "Our Team",
+    "paragraph": "UDocument – a team of attorneys and lawyers with experience in real estate, legal support for transactions, and resolving a wide range of legal issues. We offer a personalized approach to each client.",
     "cardsData": [
       {
         "id": "first",
@@ -126,7 +127,7 @@
     }
   },
   "thirdSection": {
-    "title": "Our Professional Legal Services",
+    "title": "Our Services",
     "paragraph": "Our team offers a wide range of legal services, from real estate consultations to legal documentation and assistance in complex situations. We provide reliable solutions for your business and real estate, ensuring legal support at every stage.",
     "cardData": [
       {
