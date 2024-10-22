@@ -52,7 +52,7 @@ function Menumobile({isOpen, onClick, lang, params}: IProps) {
             <NavLink href={`/${params}/aboutus`} onClick={onClick}>
                 {lang.header.aboutus}
             </NavLink>
-            <Accordion
+            {/* <Accordion
                 type="single"
                 collapsible
                 className="flex justify-center items-center md:max-w-[70%] gap-4"
@@ -71,7 +71,7 @@ function Menumobile({isOpen, onClick, lang, params}: IProps) {
                         </NavLink>
                     </AccordionContent>
                 </AccordionItem>
-            </Accordion>
+            </Accordion> */}
 
             <NavLink href={`/${params}/contacts`} onClick={onClick}>
                 {lang.header.contacts}

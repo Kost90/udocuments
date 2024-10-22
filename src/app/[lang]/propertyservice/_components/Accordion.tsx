@@ -1,34 +1,31 @@
-"use client";
 import AccordionComponent from "@/components/accordion/Accordion";
-import {
-  verticalAnimate,
-  transitionWithoutDelay,
-  viewPort,
-} from "@/constants/animation_variants";
-import { motion } from "framer-motion";
 import { UDocumentData } from "@/constants/types";
 
-function Accordion({ lang }: { lang: UDocumentData }) {
+interface Services {
+  title: string;
+  services: string[];
+}
+
+function Accordion({
+  titel,
+  services,
+}: {
+  titel?: string;
+  lang: UDocumentData;
+  services: Services[];
+}) {
   return (
-    <motion.div
-      initial="initial"
-      whileInView="whileInView"
-      viewport={viewPort}
-      transition={transitionWithoutDelay}
-      variants={verticalAnimate}
-      className="mt-5 md:mt-10"
-    >
-      {lang.propertyServicesPage.mainSection.advocateServicesData.map(
-        (el, i) => (
-          <AccordionComponent
-            value={el.title}
-            triggerName={el.title}
-            key={i}
-            content={el.services}
-          />
-        )
-      )}
-    </motion.div>
+    <div className="md:mt-5 rounded-md overflow-hidden bg-cream p-2 w-full md:w-2/5">
+      <h2 className="text-3xl font-bold text-center">{titel}</h2>
+      {services.map((el, i) => (
+        <AccordionComponent
+          value={el.title}
+          triggerName={el.title}
+          key={i}
+          content={el.services}
+        />
+      ))}
+    </div>
   );
 }
 

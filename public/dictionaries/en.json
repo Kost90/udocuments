@@ -62,7 +62,12 @@
   "firstSection": {
     "title": "UDocument – legal services in the field of real estate and business.",
     "paragraph": "Our company provides legal services in the following areas:",
-    "servicesList":["real estate", "business management","representation in civil, commercial, administrative, and criminal court cases", "assistance with migration matters and license acquisition."],
+    "servicesList": [
+      "real estate",
+      "business management",
+      "representation in civil, commercial, administrative, and criminal court cases",
+      "assistance with migration matters and license acquisition."
+    ],
     "callBack": "Request a Callback"
   },
   "secondSection": {
@@ -226,75 +231,65 @@
       "paragraph": "Meet our team of professionals, each with extensive experience in various fields of law. We offer personalized consultations and comprehensive solutions to ensure successful legal support for your interests."
     }
   },
-  "advocateServicesPage": {
-    "title": "Comprehensive Legal Services and Business Legal Support",
-    "paragraph": "Our lawyers offer a wide range of services for businesses and individuals. From legal support for real estate transactions to comprehensive protection of your rights and interests in court. We will assist you in resolving the most complex legal issues.",
-    "mainSection": {
-      "title": "Execution Times and Custom Pricing",
-      "paragraph": "Execution times and the cost of our services depend on the complexity of the case and the availability of necessary documents. We offer a free consultation during which our specialists will assess your situation and provide detailed information about possible solutions, timelines, and costs. Our team is always focused on effective solutions tailored to your needs. Our lawyers will assist with all aspects of legal matters related to real estate and other areas of law. We provide assistance with the following:",
-      "advocateServicesData": [
+  "services": [
+    {
+      "title": "Legal support for business",
+      "mainContent": [
         {
-          "title": "Legal Services",
+          "title": "Lawyer services",
           "services": [
-            "Property ownership documentation for apartments, houses, or commercial spaces (buying-selling, certificates, investment contracts, etc.).",
-            "Obtaining and processing the owner’s passport and identification code.",
-            "Court representation in commercial, administrative, civil, and criminal cases."
+            "Property ownership registration for an apartment, house, or commercial premises (purchase-sale, certificates, investment contracts, etc.).",
+            "Obtaining and registering the owner's passport and identification code.",
+            "Legal support in commercial, administrative, civil, and criminal cases."
           ]
         },
         {
-          "title": "Business Legal Support",
+          "title": "Business legal support",
           "services": [
-            "Drafting property purchase agreements for your business.",
-            "Assistance with business registration, tax consultations, court representation, obtaining necessary licenses and permits, ongoing legal support for business activities."
+            "Real estate purchase-sale contracts for your business.",
+            "Assistance in company registration, tax consultations, legal defense in courts, obtaining necessary licenses and permits, ongoing legal support for business operations."
           ]
         },
         {
-          "title": "Migration Services",
+          "title": "Migration services",
           "services": [
-            "Processing residence permits and citizenship.",
-            "Obtaining necessary documents for property ownership abroad."
+            "Residence permit and citizenship application.",
+            "Obtaining the necessary documents for property ownership abroad."
           ]
         }
       ]
-    }
-  },
-  "propertyServicesPage": {
-    "title": "Comprehensive Real Estate Services",
-    "paragraph": "We offer a full range of services in real estate: from technical support to legal assistance. Our experts will assist you at all stages—from document processing to bringing the property into operation.",
-    "mainSection": {
-      "title": "Service Times and Costs",
-      "paragraph": "Times and costs depend on the complexity of your case, available documentation, and the current status of the property. We are ready to provide qualified support at all stages of bringing the property into operation or processing ownership rights. During the free consultation, our experts will assess your needs and tailor optimal timelines and costs for the services.",
-      "advocateServicesData": [
+    },
+    {
+      "title": "Real estate services",
+      "mainContent": [
         {
-          "title": "Technical Passport and Reports",
+          "title": "Technical passport and reports preparation",
           "services": [
-            "Property ownership documentation for apartments, houses, or commercial spaces (buying-selling, certificates, investment contracts, etc.).",
+            "Property ownership registration for an apartment, house, or commercial premises (purchase-sale, certificates, investment contracts, etc.).",
             "Obtaining a technical passport or relevant reports.",
-            "Preparing passports and identification codes for owners."
+            "Preparation of passports and identification codes for owners."
           ]
         },
         {
-          "title": "Combining or Dividing Real Estate",
+          "title": "Merging or dividing real estate objects",
           "services": [
-            "Property ownership documentation for real estate.",
-            "Preparation and updating of technical passports.",
-            "Assistance with obtaining necessary documents and registering ownership."
+            "Property ownership registration for real estate objects.",
+            "Preparation and renewal of technical passports.",
+            "Assistance in obtaining the necessary documents and registering the owner."
           ]
         },
         {
-          "title": "Property Ownership Registration",
+          "title": "Property ownership registration",
           "services": [
             "Preparation and submission of necessary documents for property ownership registration.",
-            "Issuance of technical passports.",
-            "Registration of passports and identification codes for owners."
+            "Technical passport preparation.",
+            "Owner passport and identification code registration."
           ]
         }
       ]
     }
-  },
+  ],
   "thankyouPage": {
     "title": "Thank you, we have received your request. A manager will contact you shortly."
   }
 }
-
-
