@@ -92,7 +92,7 @@ const config = {
         navBar: "rgba(28, 46, 56, 1)",
         orange: "rgba(234, 126, 31, 1)",
         transparent: "rgba(0, 0, 0, 0.2)",
-        darkTransparent: "rgba(0, 0, 0, 0.5)",
+        darkTransparent: "rgba(0, 0, 0, 0.7)",
         cream: "rgba(253, 250, 236, 1)",
         cardTransparent: "rgba(17, 42, 48, 0.9)",
       },
