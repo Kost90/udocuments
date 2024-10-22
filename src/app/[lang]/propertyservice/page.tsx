@@ -21,12 +21,12 @@ async function page({params: {lang}}: { params: { lang: string } }) {
     const t: UDocumentData = await getDictionary(lang);
     return (
         <>
-            <HeadingSection
+            {/* <HeadingSection
                 titelText={t.propertyServicesPage.title}
                 paragraphText={t.propertyServicesPage.paragraph}
                 className="border-b border-b-slate-400 md:pb-10"
-            />
-            <MainSection lang={t}/>
+            /> */}
+            {/* <MainSection lang={t}/> */}
         </>
     );
 }
