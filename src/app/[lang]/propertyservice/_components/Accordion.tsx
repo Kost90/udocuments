@@ -15,7 +15,7 @@ function Accordion({
   services: Services[];
 }) {
   return (
-    <div className="md:mt-5 rounded-md overflow-hidden bg-cream p-6 w-full sm:w-2/3 md:w-2/5 flex flex-col items-center justify-start h-full md:min-h-[380px] xl:min-h-0">
+    <div className="md:mt-5 rounded-md overflow-hidden bg-cream p-6 w-full sm:w-2/3 md:w-2/5 flex flex-col items-center justify-start h-full md:min-h-[380px] xl:min-h-0 shadow-cardShadow">
       <h2 className="text-3xl font-bold text-center">{titel}</h2>
       {services.map((el, i) => (
         <AccordionComponent
