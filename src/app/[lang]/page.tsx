@@ -5,9 +5,10 @@ const ConsultationSection = dynamic(() => import('@/components/Consultation_sect
 const FirstSection = dynamic(() => import ('@/components/first_section/FirstSection'));
 const SecondSection = dynamic(() => import('@/components/Second_section/SecondSection'));
 const ThirdSection = dynamic(() => import('@/components/third_section/Third_section'));
-const ApproachSection = dynamic(() => import('@/components/ApproachSection/ApproachSection'));
+// const ApproachSection = dynamic(() => import('@/components/ApproachSection/ApproachSection'));
 const OurPartnersSection = dynamic(() => import('@/components/OurPartners_section/OurPartners_section'));
 const ContactSection = dynamic(() => import('@/components/contact_section/Contact_section'));
+const FormSection = dynamic(() => import('@/components/FormSection'));
 
 
 export default async function Home({params: {lang}}: { params: { lang: string } }) {
@@ -17,9 +18,10 @@ export default async function Home({params: {lang}}: { params: { lang: string } 
             <FirstSection lang={t}/>
             <SecondSection lang={t}/>
             <ThirdSection lang={t} params={lang}/>
-            <ApproachSection lang={t}/>
-            <ConsultationSection lang={t}/>
+            {/* <ApproachSection lang={t}/> */}
             <OurPartnersSection lang={t}/>
+            <ConsultationSection lang={t}/>
+            <FormSection lang={t}/>
             <ContactSection lang={t}/>
         </>
     );

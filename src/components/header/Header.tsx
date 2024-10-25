@@ -29,7 +29,7 @@ function Header({lang, params}: { lang: UDocumentData, params: string }) {
                 <div className="flex flex-row items-center justify-between gap-7">
                     <div className="flex justify-center items-center">
                         <NavLink href={`/${params}`}>{lang.header.main}</NavLink>
-                        <NavLink href={`/${params}/aboutus`}>{lang.header.aboutus}</NavLink>
+                        {/* <NavLink href={`/${params}/aboutus`}>{lang.header.aboutus}</NavLink> */}
                         {/* <NavigationMenuServices lang={lang} params={params} /> */}
                         <NavLink href={`/${params}/contacts`}>{lang.header.contacts}</NavLink>
                     </div>

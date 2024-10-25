@@ -49,9 +49,9 @@ function Menumobile({isOpen, onClick, lang, params}: IProps) {
             <NavLink href={`/${params}`} onClick={onClick}>
                 {lang.header.main}
             </NavLink>
-            <NavLink href={`/${params}/aboutus`} onClick={onClick}>
+            {/* <NavLink href={`/${params}/aboutus`} onClick={onClick}>
                 {lang.header.aboutus}
-            </NavLink>
+            </NavLink> */}
             {/* <Accordion
                 type="single"
                 collapsible

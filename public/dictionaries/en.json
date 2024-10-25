@@ -168,7 +168,7 @@
   ],
   "consultationSection": {
     "title": "Expert Legal Assistance and Consultations",
-    "paragraph": "Schedule a free consultation with our experienced lawyers to receive personalized advice on real estate, business, and other legal matters. We will help you find the optimal solutions for your legal needs."
+    "paragraph": "A preliminary free consultation is an opportunity not only to get acquainted but also to receive initial answers to your questions. Our experts will select the optimal legal tools to solve your tasks, and you will be able to assess our level of professionalism."
   },
   "ourPartnersSection": {
     "title": "Leading Companies Trust Us"
@@ -198,7 +198,7 @@
     "title": "Our Contacts",
     "formContactSection": {
       "title": "Write to Us",
-      "paragraph": "For consultations, please contact us using the following information:",
+      "paragraph": "Leave your message, and our specialists will review it and contact you as soon as possible.",
       "form": {
         "inputName": "Your Name",
         "inputPhone": "Your Phone",
