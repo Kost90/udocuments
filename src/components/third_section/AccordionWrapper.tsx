@@ -16,7 +16,7 @@ function AccordionWrapper({
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3, ease: "linear" }}
       viewport={{ once: true, amount: 0.2 }}
-      className="flex flex-col md:flex-row justify-center items-start gap-10 my-10"
+      className="flex flex-col md:flex-row justify-center items-center md:items-start gap-10 my-10"
     >
       {lang.services.map((el, i) => (
         <>

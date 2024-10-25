@@ -20,7 +20,7 @@ function Footer({lang, params}: { lang: UDocumentData, params: string }) {
 
                     <div className="flex flex-col md:flex-row text-cream">
                         <NavLink href={`/${params}`}>{lang.header.main}</NavLink>
-                        <NavigationMenuServices lang={lang} params={params}/>
+                        {/* <NavigationMenuServices lang={lang} params={params}/> */}
                         <NavLink href={`/${params}/contacts`}>{lang.header.contacts}</NavLink>
                     </div>
                     <div className="flex justify-center items-center">

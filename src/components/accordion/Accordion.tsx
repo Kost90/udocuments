@@ -18,12 +18,12 @@ function AccordionComponent({ value, triggerName, content }: AccordionProps) {
       collapsible
       className="flex justify-center items-center w-full"
     >
-      <AccordionItem value={value} className="bg-cream p-3 w-full">
-        <AccordionTrigger className="text-lg font-semibold">
+      <AccordionItem value={value} className="bg-cream w-full">
+        <AccordionTrigger className="text-lg font-semibold text-start">
           {triggerName}
         </AccordionTrigger>
-        <AccordionContent className="flex flex-col justify-start items-start gap-2 p-3">
-          <ul className="flex flex-col justify-start items-start gap-2 px-4">
+        <AccordionContent className="flex flex-col justify-start items-start gap-2">
+          <ul className="flex flex-col justify-start items-start gap-2 pl-6">
             {content.map((item, index) => (
               <li
                 key={`${item} + ${index}`}

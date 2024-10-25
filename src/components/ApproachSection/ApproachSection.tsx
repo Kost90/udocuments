@@ -15,7 +15,7 @@ function ApproachSection({lang}: { lang: UDocumentData }) {
                     <motion.div
                         initial={{opacity: 0}}
                         whileInView={{opacity: 1}}
-                        transition={{duration: 0.5, delay: 0.3 * i, ease: "linear"}}
+                        transition={{duration: 0.3, delay: 0.2 * i, ease: "linear"}}
                         viewport={{once: true, amount: 0.2}}
                         key={el.id}
                     >
