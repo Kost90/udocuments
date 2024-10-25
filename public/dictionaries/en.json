@@ -233,57 +233,56 @@
   },
   "services": [
     {
-      "title": "Legal support for business",
+      "title": "Business Legal Support",
       "mainContent": [
         {
-          "title": "Lawyer services",
+          "title": "Attorney Services",
           "services": [
-            "Property ownership registration for an apartment, house, or commercial premises (purchase-sale, certificates, investment contracts, etc.).",
-            "Obtaining and registering the owner's passport and identification code.",
-            "Legal support in commercial, administrative, civil, and criminal cases."
+            "Court support: commercial cases, administrative cases, civil cases, criminal cases.",
+            "Attorney protection during investigative actions.",
+            "Attorney consultations."
           ]
         },
         {
-          "title": "Business legal support",
+          "title": "Business Legal Support",
           "services": [
-            "Real estate purchase-sale contracts for your business.",
-            "Assistance in company registration, tax consultations, legal defense in courts, obtaining necessary licenses and permits, ongoing legal support for business operations."
+            "Assistance in the registration, liquidation, and reorganization of businesses.",
+            "Tax consultations, obtaining necessary licenses and permits, ongoing legal support for business operations."
           ]
         },
         {
-          "title": "Migration services",
+          "title": "Migration Services",
           "services": [
-            "Residence permit and citizenship application.",
-            "Obtaining the necessary documents for property ownership abroad."
+            "Processing residence permits and citizenship.",
+            "Obtaining necessary documents for property ownership abroad."
           ]
         }
       ]
     },
     {
-      "title": "Real estate services",
+      "title": "Real Estate Services",
       "mainContent": [
         {
-          "title": "Technical passport and reports preparation",
+          "title": "Technical Passport and Report Preparation",
           "services": [
-            "Property ownership registration for an apartment, house, or commercial premises (purchase-sale, certificates, investment contracts, etc.).",
-            "Obtaining a technical passport or relevant reports.",
-            "Preparation of passports and identification codes for owners."
+            "Preparation of technical passports for residential and non-residential premises or structures.",
+            "Drafting relevant technical reports."
           ]
         },
         {
-          "title": "Merging or dividing real estate objects",
+          "title": "Combining or Dividing Real Estate",
           "services": [
-            "Property ownership registration for real estate objects.",
-            "Preparation and renewal of technical passports.",
-            "Assistance in obtaining the necessary documents and registering the owner."
+            "Preparation of technical documentation for the division or combination of real estate.",
+            "Providing a new address for combined or divided real estate objects.",
+            "Assistance in obtaining necessary documents and registering property rights."
           ]
         },
         {
-          "title": "Property ownership registration",
+          "title": "Property Rights Registration",
           "services": [
-            "Preparation and submission of necessary documents for property ownership registration.",
-            "Technical passport preparation.",
-            "Owner passport and identification code registration."
+            "Preparation and submission of necessary documents for property rights registration.",
+            "Preparation and submission of necessary documents for land ownership registration.",
+            "Cancellation of property arrest."
           ]
         }
       ]
