@@ -3,7 +3,7 @@ import {useSearchParams, usePathname} from "next/navigation";
 import {useFormState} from "react-dom";
 import Input from "../Input/Input";
 import Button from "../ui/Button";
-import {sendCallBackMessage} from "@/app/[lang]/aboutus/_actions/actions";
+import {sendCallBackMessage} from "@/_actions/actions";
 import Link from "next/link";
 import {motion} from "framer-motion";
 import {

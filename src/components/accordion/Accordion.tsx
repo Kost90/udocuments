@@ -1,42 +1,32 @@
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import AccordionComponent from "@/components/accordion/AccordionComponent";
+import { UDocumentData } from "@/constants/types";
 
-interface AccordionProps {
-  value: string;
-  triggerName: string;
-  content: string[];
+interface Services {
+  title: string;
+  services: string[];
 }
 
-function AccordionComponent({ value, triggerName, content }: AccordionProps) {
+function Accordion({
+  titel,
+  services,
+}: {
+  titel?: string;
+  lang: UDocumentData;
+  services: Services[];
+}) {
   return (
-    <Accordion
-      type="single"
-      collapsible
-      className="flex justify-center items-center w-full"
-    >
-      <AccordionItem value={value} className="bg-cream w-full">
-        <AccordionTrigger className="text-lg font-semibold text-start">
-          {triggerName}
-        </AccordionTrigger>
-        <AccordionContent className="flex flex-col justify-start items-start gap-2">
-          <ul className="flex flex-col justify-start items-start gap-2 pl-6">
-            {content.map((item, index) => (
-              <li
-                key={`${item} + ${index}`}
-                className="text-black list-disc text-base"
-              >
-                {item}
-              </li>
-            ))}
-          </ul>
-        </AccordionContent>
-      </AccordionItem>
-    </Accordion>
+    <div className="md:mt-5 rounded-md overflow-hidden bg-cream p-6 w-full sm:w-2/3 md:w-2/5 flex flex-col items-center justify-start h-full md:min-h-[380px] xl:min-h-0 shadow-cardShadow">
+      <h2 className="text-3xl font-bold text-center">{titel}</h2>
+      {services.map((el, i) => (
+        <AccordionComponent
+          value={el.title}
+          triggerName={el.title}
+          key={i}
+          content={el.services}
+        />
+      ))}
+    </div>
   );
 }
 
-export default AccordionComponent;
+export default Accordion;

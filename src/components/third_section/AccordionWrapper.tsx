@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { UDocumentData } from "@/constants/types";
-import Accordion from "../../app/[lang]/propertyservice/_components/Accordion";
+import Accordion from "@/components/accordion/Accordion";
 
 function AccordionWrapper({
   lang,
