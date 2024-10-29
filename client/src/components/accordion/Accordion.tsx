@@ -1,4 +1,4 @@
-import AccordionComponent from "@/components/accordion/Accordion";
+import AccordionComponent from "@/components/accordion/AccordionComponent";
 import { UDocumentData } from "@/constants/types";
 
 interface Services {
