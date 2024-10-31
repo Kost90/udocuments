@@ -3,6 +3,7 @@ import http from 'http';
 import cors from 'cors';
 import { config } from './config/default';
 import getLogger from './utils/logger';
+import './dbconnect/connection';
 
 const { port } = config.server;
 const logger = getLogger('server');
