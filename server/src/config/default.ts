@@ -17,4 +17,9 @@ export const config: IConfig = {
   db: {
     url: getEnvVar('MONGO_DB_CONNECT'),
   },
+  session: {
+    secureCookie: getEnvVar('NODE_ENV') === 'production',
+    cookieName: 'sid',
+    secret: getEnvVar('SESSION_SECRET'),
+  },
 };

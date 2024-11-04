@@ -20,4 +20,9 @@ exports.config = {
     db: {
         url: getEnvVar('MONGO_DB_CONNECT'),
     },
+    session: {
+        secureCookie: getEnvVar('NODE_ENV') === 'production', // httpS || http
+        cookieName: 'sid',
+        secret: getEnvVar('SESSION_SECRET'),
+    },
 };
