@@ -22,4 +22,8 @@ export const config: IConfig = {
     cookieName: 'sid',
     secret: getEnvVar('SESSION_SECRET'),
   },
+  apiAuth: {
+    key: getEnvVar('API_KEY'),
+    name: getEnvVar('API_KEY_NAKE'),
+  },
 };

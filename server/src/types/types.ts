@@ -12,8 +12,14 @@ interface ISessionConfig {
   secret: string;
 }
 
+interface IAuthApiKey {
+  key: string;
+  name: string;
+}
+
 export interface IConfig {
   server: ServerConfig;
   db: DbConfig;
   session: ISessionConfig;
+  apiAuth: IAuthApiKey;
 }
