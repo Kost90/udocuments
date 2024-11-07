@@ -10,6 +10,7 @@ const coockieParams = {
     httpOnly: true,
     sameSite: 'strict',
     secure: default_1.config.session.secureCookie,
+    maxAge: 24 * 60 * 60 * 1000,
 };
 const sessionStore = connect_mongo_1.default.create({
     mongoUrl: default_1.config.db.url,

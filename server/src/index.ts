@@ -6,6 +6,8 @@ import { config } from './config/default';
 import getLogger from './utils/logger';
 import './dbconnect/connection';
 import sessionMddleware from './session/session';
+import authorizationRoute from './routes/authorizationRoutes';
+import errorHandlingMiddleware from './midlewares/errorHandlingMiddleware';
 
 const { port } = config.server;
 const logger = getLogger('server');
@@ -13,17 +15,14 @@ const logger = getLogger('server');
 // Express server
 const app: Express = express();
 
-app.use(
-  cors({
-    origin: 'http://localhost:3000',
-    credentials: true,
-  }),
-);
+app.use(cors());
 
 app.use(cookieParser());
 
 app.use(express.json());
 app.use(sessionMddleware);
+app.use('/auth', authorizationRoute);
+app.use(errorHandlingMiddleware);
 
 const server = http.createServer(app);
 
