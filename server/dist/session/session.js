@@ -7,9 +7,13 @@ const default_1 = require("../config/default");
 const express_session_1 = __importDefault(require("express-session"));
 const connect_mongo_1 = __importDefault(require("connect-mongo"));
 const coockieParams = {
-    httpOnly: true,
-    sameSite: 'strict',
-    secure: default_1.config.session.secureCookie,
+    // httpOnly: true,
+    // sameSite: 'strict',
+    // secure: config.session.secureCookie,
+    // maxAge: 24 * 60 * 60 * 1000,
+    httpOnly: true, // cookie не доступна JavaScript на клиенте
+    sameSite: 'lax', // установите 'lax' для отправки cookie с кросс-доменными запросами в Postman
+    secure: false, // false для локальной среды, true для HTTPS
     maxAge: 24 * 60 * 60 * 1000,
 };
 const sessionStore = connect_mongo_1.default.create({

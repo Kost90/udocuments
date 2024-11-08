@@ -11,6 +11,9 @@ const userSchema: Schema = new Schema({
     type: String,
     trim: true,
     required: [true, 'Required !'],
+    unique: true,
+    match: [/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/, 'Please provide a valid email address'],
+    index: true,
   },
   password: {
     type: String,
@@ -36,13 +39,15 @@ const userSchema: Schema = new Schema({
   },
   created_on: {
     type: String,
-    trim: true,
+    default: Date.now,
   },
   updated_on: {
     type: String,
-    trim: true,
+    default: Date.now,
   },
 });
+
+userSchema.index({ email: 1 });
 
 const User = mongoose.model<IUser>('User', userSchema);
 

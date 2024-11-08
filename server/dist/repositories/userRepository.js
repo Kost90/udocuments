@@ -13,7 +13,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const User_1 = __importDefault(require("../models/User"));
-const validationHelper_1 = __importDefault(require("../helpers/validationHelper"));
 const user_1 = __importDefault(require("../dto/user"));
 class UserRepository {
     save(user) {
@@ -21,15 +20,30 @@ class UserRepository {
             try {
                 const newUser = new User_1.default(user);
                 const savedUser = yield newUser.save();
-                const response = new user_1.default(savedUser);
-                validationHelper_1.default.checkForNullorUndefined(response, `${this.constructor.name}: response`);
-                return response;
+                return new user_1.default(savedUser);
             }
             catch (error) {
                 if (error instanceof Error) {
                     throw new Error(`Error in ${this.constructor.name} save method: ${error.message}`);
                 }
                 throw new Error('An unknown error occurred in UserRepository save method.');
+            }
+        });
+    }
+    findOne(userEmail) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const user = yield User_1.default.findOne({ email: userEmail }).lean();
+                if (!user) {
+                    throw new Error(`User with email ${userEmail} not found.`);
+                }
+                return new user_1.default(user);
+            }
+            catch (error) {
+                if (error instanceof Error) {
+                    throw new Error(`Error in ${this.constructor.name} findOne method: ${error.message}`);
+                }
+                throw new Error('An unknown error occurred in UserRepository findOne method.');
             }
         });
     }

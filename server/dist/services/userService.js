@@ -44,5 +44,20 @@ class UserService {
             }
         });
     }
+    findOne(userEmail) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                validationHelper_1.default.checkForNullorUndefined(userEmail, `${this.constructor.name}: userEmail`);
+                const user = yield userRepository.findOne(userEmail);
+                return user;
+            }
+            catch (error) {
+                if (error instanceof Error) {
+                    throw new Error(`Error in ${this.constructor.name} save method: ${error.message}`);
+                }
+                throw new Error('An unknown error occurred in UserService findOne method.');
+            }
+        });
+    }
 }
 exports.default = UserService;

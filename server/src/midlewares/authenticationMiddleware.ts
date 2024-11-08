@@ -1,7 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
-// import { Jwt } from 'jsonwebtoken';
+import jwt from 'jsonwebtoken';
 import { config } from '../config/default';
-// import User from '../models/User';
 import HttpCodesHelper from '../helpers/httpCodesHelpers';
 import ErrorWithContext from '../errors/errorWithContext';
 
@@ -16,6 +15,26 @@ class AuthenticationMiddleware {
     }
     next();
   };
+
+  authenticateSessionToken(req: Request, res: Response, next: NextFunction) {
+    const token = req.session.jwt;
+
+    if (!token) {
+      return res.status(HttpCodesHelper.FORBIDDEN).json('Access denied. No token provided.');
+    }
+
+    try {
+      const decoded = jwt.verify(token, config.session.secret);
+
+      req.user = decoded;
+
+      next();
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        next(new ErrorWithContext({}, 'Invalid token', HttpCodesHelper.UNATHORIZED));
+      }
+    }
+  }
 }
 
 export default AuthenticationMiddleware;

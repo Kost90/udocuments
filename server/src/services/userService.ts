@@ -23,6 +23,21 @@ class UserService {
       throw new Error('An unknown error occurred in UserRepository save method.');
     }
   }
+
+  async findOne(userEmail: string): Promise<UserDTO> {
+    try {
+      ValidationHelper.checkForNullorUndefined(userEmail, `${this.constructor.name}: userEmail`);
+
+      const user = await userRepository.findOne(userEmail);
+
+      return user;
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        throw new Error(`Error in ${this.constructor.name} save method: ${error.message}`);
+      }
+      throw new Error('An unknown error occurred in UserService findOne method.');
+    }
+  }
 }
 
 export default UserService;
