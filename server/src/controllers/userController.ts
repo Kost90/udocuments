@@ -6,9 +6,12 @@ import HttpCodesHelper from '../helpers/httpCodesHelpers';
 import { IUserWithOptionalFields } from '../types/userTypes';
 import UserService from '../services/userService';
 
-const userService = new UserService();
-
 class UserController {
+  private userService: UserService;
+
+  constructor(userService: UserService) {
+    this.userService = userService;
+  }
   async register(req: Request, res: Response, next: NextFunction): Promise<void> {
     try {
       const { validationErrors, matchedData } = ValidationHelper.validateRequest(req);
@@ -30,9 +33,26 @@ class UserController {
         password: hashedPass,
       };
 
-      const savedUser = await userService.save(user);
+      const savedUser = await this.userService.save(user);
 
       res.status(HttpCodesHelper.OK).json(savedUser);
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        next(new ErrorWithContext({}, error.message, HttpCodesHelper.BAD));
+      } else {
+        next(new ErrorWithContext({}, 'Unknown error occurred', HttpCodesHelper.BAD));
+      }
+    }
+  }
+
+  // TODO:think bout changing these method and fetch all information about user - user created before documents
+  async findUser(req: Request, res: Response, next: NextFunction): Promise<void> {
+    try {
+      const user = req.user;
+
+      ValidationHelper.checkForNullorUndefined(user, `${this.constructor.name}: user`);
+
+      res.status(HttpCodesHelper.OK).json(user);
     } catch (error: unknown) {
       if (error instanceof Error) {
         next(new ErrorWithContext({}, error.message, HttpCodesHelper.BAD));

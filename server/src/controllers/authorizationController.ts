@@ -7,10 +7,16 @@ import UserService from '../services/userService';
 import AuthorizationService from '../services/autorizationService';
 import { config } from '../config/default';
 
-const userService = new UserService();
-const authorizationService = new AuthorizationService();
+
 
 export default class AuthorizationContoller {
+  private userService: UserService;
+  private authorizationService: AuthorizationService;
+
+  constructor(userService: UserService, authorizationService:AuthorizationService) {
+    this.userService = userService;
+    this.authorizationService = authorizationService;
+  }
   async signIn(req: Request, res: Response, next: NextFunction) {
     try {
       const { validationErrors, matchedData } = ValidationHelper.validateRequest(req);
@@ -20,16 +26,16 @@ export default class AuthorizationContoller {
         return next(new ErrorWithContext({}, errorMessage, HttpCodesHelper.BAD, true));
       }
 
-      const user = await userService.findOne(matchedData.email);
+      const user = await this.userService.findOne(matchedData.email);
 
-      const isPasswordCorrect = authorizationService.comparePassword(matchedData.password, user.password);
+      const isPasswordCorrect = this.authorizationService.comparePassword(matchedData.password, user.password);
 
       if (!isPasswordCorrect) {
         next(new ErrorWithContext({ userId: user.id }, 'Password incorrect', HttpCodesHelper.FORBIDDEN));
       }
 
       // TODO:Change for jwt secret
-      const token = jwt.sign({ id: user.id, email: user.email }, config.session.secret, { expiresIn: '1d' });
+      const token = jwt.sign({ userId: user.id }, config.session.secret, { expiresIn: '1d' });
 
       req.session.jwt = token;
 
