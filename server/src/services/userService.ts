@@ -3,6 +3,7 @@ import UserRepository from '../repositories/userRepository';
 import { IUserWithOptionalFields } from '../types/userTypes';
 import UserDTO from '../dto/user';
 
+// TODO:Create injection class
 const userRepository = new UserRepository();
 
 class UserService {
